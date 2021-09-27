@@ -22,7 +22,9 @@
     <title></title>
 </head>
 <body>
-        <div id="mapid"></div>
+        <div id="mapid">
+            <!-- Map Content -->
+        </div>
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/MainPageMap.js"></script>
 </body>

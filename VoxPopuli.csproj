@@ -102,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\MainPage.css" />
-    <Content Include="District Coordinates\TexasD1.txt" />
+    <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
     <Content Include="JavaScript\MainPageMap.js" />
     <Content Include="VoxPopuliMap_Version1.0.html" />
@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="Districts\District1.csv" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
