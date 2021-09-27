@@ -2,15 +2,17 @@
  * Make the map view over texas and set it.
  * 
  * */
-const mymap = L.map('mapid').setView([31.9686, -99.9018], 6);
+var mymap = L.map('mapid', {
+
+    center: [31.9686, -99.9018],
+    zoom: 6,
+});
 
 /**
  * Function...? to set the mapdata tileset from mapbox
  * Currently using dylans API key here.
- * 
- * 
  **/
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGNvbndlbGwiLCJhIjoiY2t0cm81ZnB1MG1tcTJ1cWl6amphOGcweCJ9.pGlSQaNNRpVamXrhvzsmmA', {
+var country = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGNvbndlbGwiLCJhIjoiY2t0cm81ZnB1MG1tcTJ1cWl6amphOGcweCJ9.pGlSQaNNRpVamXrhvzsmmA', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox/streets-v11',
@@ -21,38 +23,9 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
-var data = $.csv.toObjects(Districts.District1.csv);
-
-$(document).ready(function () {
-    $.ajax({
-        type: "GET",
-        url: "data.txt",
-        dataType: "text",
-        success: function (data) { processData(data); }
-    });
-});
-
-function processData(allText) {
-    var allTextLines = allText.split(/\r\n|\n/);
-    var headers = allTextLines[0].split(',');
-    var lines = [];
-
-    for (var i = 1; i < allTextLines.length; i++) {
-        var data = allTextLines[i].split(',');
-        if (data.length == headers.length) {
-
-            var tarr = [];
-            for (var j = 0; j < headers.length; j++) {
-                tarr.push(headers[j] + ":" + data[j]);
-            }
-            lines.push(tarr);
-        }
-    }
-    // alert(lines);
-}
-
 
 var district1 = L.polygon([
+
     [32.962196, -95.231193],
     [32.961829, -95.172947],
     [32.990285, -95.152248],
@@ -232,9 +205,7 @@ var district1 = L.polygon([
     [32.928137, -95.247554],
     [32.959974, -95.243788],
     [32.962196, -95.29431634]
-
 ]).addTo(mymap);
-
 
 var district2 = L.polygon([
 
@@ -321,7 +292,7 @@ var district2 = L.polygon([
     [29.912453, -95.584589],
     [29.932988, -95.584796]
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district3 = L.polygon([
     [33.086456, -96.841849],
@@ -370,7 +341,7 @@ var district3 = L.polygon([
 
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district4 = L.polygon([
     [33.95435879, -96.93479067],
@@ -610,7 +581,7 @@ var district4 = L.polygon([
     [33.798011, -96.944703],
     [33.949217, -96.944611]
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district5 = L.polygon([
     [32.813616, -96.51897],
@@ -815,7 +786,7 @@ var district5 = L.polygon([
     [32.79815, -96.532151],
     [32.813616, -96.51897]
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district6 = L.polygon([
     [32.64374, -97.321371],
@@ -906,7 +877,7 @@ var district6 = L.polygon([
     [32.618964, -97.388563],
     [32.634832, -97.369867],
     [32.635202, -97.327344]
-]).addTo(mymap)
+]).addTo(mymap);
 
 
 var district7 = L.polygon([
@@ -957,7 +928,7 @@ var district7 = L.polygon([
     [29.932967, -95.620244],
     [29.925083, -95.597861],
     [29.932988, -95.584796]
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district8 = L.polygon([
     [31.297908, -95.946943],
@@ -1131,7 +1102,7 @@ var district8 = L.polygon([
     [31.307827, -95.973909],
     [31.297908, -95.946943]
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district9 = L.polygon([
     [29.710862, -95.688349],
@@ -1179,7 +1150,7 @@ var district9 = L.polygon([
     [29.705285, -95.715452],
     [29.710862, -95.688349],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district10 = L.polygon([
     [30.50161, -97.857505],
@@ -1386,7 +1357,7 @@ var district10 = L.polygon([
     [30.482868, -97.872002],
     [30.50161, -97.857505],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 
 var district11 = L.polygon([
@@ -1539,7 +1510,7 @@ var district11 = L.polygon([
     [32.087051, -103.064344],
     [32.522193, -103.064696],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district12 = L.polygon([
     [33.003332, -98.056094],
@@ -1622,7 +1593,7 @@ var district12 = L.polygon([
     [32.749237, -98.061574],
     [33.003332, -98.056094],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district13 = L.polygon([
     [36.500397, -103.002434],
@@ -1857,7 +1828,7 @@ var district13 = L.polygon([
     [36.500439, -103.041924],
     [36.500397, -103.002434],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district14A = L.polygon([
     [29.334827, -94.749671],
@@ -1881,8 +1852,8 @@ var district14A = L.polygon([
     [29.337344, -94.766568],
     [29.334827, -94.749671],
 
-]).addTo(mymap)
-
+]).addTo(mymap);
+    
 var district14B = L.polygon([
     [29.508031, -95.117139],
     [29.510734, -95.104326],
@@ -1975,7 +1946,7 @@ var district14B = L.polygon([
     [29.498352, -95.164217],
     [29.508031, -95.117139],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district14C = L.polygon([
     [29.864991, -93.85434264],
@@ -2055,10 +2026,8 @@ var district14C = L.polygon([
     [29.929526, -93.838775],
     [29.864991, -93.85434264],
 
-]).addTo(mymap)
-
-
-
+]).addTo(mymap);
+    
 
 var district15 = L.polygon([
     [29.551213, -98.27371],
@@ -2204,7 +2173,7 @@ var district15 = L.polygon([
     [29.551213, -98.27371],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district16 = L.polygon([
     [32.002328, -105.998003],
@@ -2234,7 +2203,7 @@ var district16 = L.polygon([
     [32.000495, -106.618486],
     [32.002328, -105.998003],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 
 var district17 = L.polygon([
@@ -2432,7 +2401,7 @@ var district17 = L.polygon([
     [31.320202, -97.418606],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district18 = L.polygon([
     [29.954512, -95.268172],
@@ -2507,7 +2476,7 @@ var district18 = L.polygon([
     [29.965714, -95.284595],
     [29.954512, -95.268172],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district19 = L.polygon([
     [34.11283405, -103.04358],
@@ -2596,7 +2565,7 @@ var district19 = L.polygon([
     [33.974629, -103.04395],
     [34.11283405, -103.04358],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district20 = L.polygon([
     [29.57637, -98.56562],
@@ -2648,7 +2617,7 @@ var district20 = L.polygon([
     [29.592073, -98.576413],
     [29.57637, -98.56562],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district21 = L.polygon([
     [30.290698, -99.754142],
@@ -2804,7 +2773,7 @@ var district21 = L.polygon([
     [30.290698, -99.754142],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 var district22 = L.polygon([
 
     [29.601658, -96.088912],
@@ -3389,7 +3358,7 @@ var district23 = L.polygon([
     [32.002328, -105.998003],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district24 = L.polygon([
     [32.879848, -97.185994],
@@ -3438,7 +3407,7 @@ var district24 = L.polygon([
     [32.833342, -97.192756],
     [32.879848, -97.185994],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district25 = L.polygon([
     [32.555484, -97.617066],
@@ -3620,7 +3589,7 @@ var district25 = L.polygon([
     [32.318618, -97.615286],
     [32.555484, -97.617066],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district26 = L.polygon([
     [33.183509, -97.39267],
@@ -3661,7 +3630,7 @@ var district26 = L.polygon([
     [32.990839, -97.39848],
     [33.183509, -97.39267],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district27A = L.polygon([
     [27.57649486, -97.22265061],
@@ -3682,7 +3651,7 @@ var district27A = L.polygon([
     [27.622263, -97.199164],
     [27.57649486, -97.22265061],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district27B = L.polygon([
     [27.87646192, -97.0499796],
@@ -3694,7 +3663,7 @@ var district27B = L.polygon([
     [27.90231, -97.053603],
     [27.87646192, -97.0499796],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district27C = L.polygon([
     [29.601658, -96.088912],
@@ -4034,9 +4003,7 @@ var district27C = L.polygon([
 
 
 
-]).addTo(mymap)
-
-
+]).addTo(mymap);
 
 var district28 = L.polygon([
     [28.19683716, -100.2121655],
@@ -4263,7 +4230,7 @@ var district28 = L.polygon([
     [28.16745, -100.157945],
     [28.19683716, -100.2121655],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district29 = L.polygon([
     [29.954512, -95.268172],
@@ -4333,8 +4300,8 @@ var district29 = L.polygon([
     [29.94016, -95.287673],
     [29.954512, -95.268172],
 
-]).addTo(mymap)
-
+]).addTo(mymap);
+    
 var district30 = L.polygon([
 
     [32.693188, -97.036417],
@@ -4388,7 +4355,7 @@ var district30 = L.polygon([
     [32.693188, -97.036417],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district31 = L.polygon([
     [31.320202, -97.418606],
@@ -4445,7 +4412,7 @@ var district31 = L.polygon([
     [31.320202, -97.418606],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district32 = L.polygon([
     [32.987003, -96.803375],
@@ -4494,7 +4461,7 @@ var district32 = L.polygon([
     [32.924999, -96.803578],
     [32.987003, -96.803375],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district33 = L.polygon([
     [32.778329, -97.212769],
@@ -4598,7 +4565,7 @@ var district33 = L.polygon([
     [32.775322, -97.234389],
     [32.778329, -97.212769],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district34A = L.polygon([
     [26.562706, -97.279137],
@@ -4620,7 +4587,7 @@ var district34A = L.polygon([
     [26.549202, -97.288223],
     [26.562706, -97.279137],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district34B = L.polygon([
     [27.57597137, -97.26815956],
@@ -4666,7 +4633,7 @@ var district34B = L.polygon([
     [27.57597137, -97.26815956],
 
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district34C = L.polygon([
     [27.56107684, -97.32463744],
@@ -4909,9 +4876,7 @@ var district34C = L.polygon([
     [27.56107684, -97.32463744],
 
 
-]).addTo(mymap)
-
-
+]).addTo(mymap);
 
 var district35 = L.polygon([
     [29.456838, -98.491803],
@@ -5044,7 +5009,7 @@ var district35 = L.polygon([
     [29.466482, -98.499289],
     [29.456838, -98.491803],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district36 = L.polygon([
     [29.883205, -95.197191],
@@ -5266,13 +5231,11 @@ var district36 = L.polygon([
     [29.872747, -95.188177],
     [29.883205, -95.197191],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
-district1.on('click', function () {
-    window.location.replace("/Htmlpage1.html");
-});
+
 district1.on('mouseover', function () {
     district1.setStyle({
         color: "#00FF00",
@@ -5969,9 +5932,9 @@ district36.on('mouseover', function () {
         fillColor: "#00FF00"
     });
 });
-district36.on('mouseout', function () {
-    district36.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+    district36.on('mouseout', function () {
+        district36.setStyle({
+            color: "#FF0000",
+            fillColor: "#FF0000"
+        });
     });
-});

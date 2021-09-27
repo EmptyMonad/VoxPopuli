@@ -127,6 +127,7 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="Districts\District1.csv" />
+    <Content Include="JavaScript\districts.geojson" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
