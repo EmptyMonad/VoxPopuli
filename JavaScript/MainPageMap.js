@@ -21,6 +21,7 @@ var country = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
     accessToken: 'pk.eyJ1IjoiZGNvbndlbGwiLCJhIjoiY2t0cm81ZnB1MG1tcTJ1cWl6amphOGcweCJ9.pGlSQaNNRpVamXrhvzsmmA'
 }).addTo(mymap);
 
+var sidebar = L.control.sidebar('sidebar').addTo(mymap);
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
 
@@ -879,7 +880,6 @@ var district6 = L.polygon([
     [32.635202, -97.327344]
 ]).addTo(mymap);
 
-
 var district7 = L.polygon([
     [29.932988, -95.584796],
     [29.912453, -95.584589],
@@ -1358,7 +1358,6 @@ var district10 = L.polygon([
     [30.50161, -97.857505],
 
 ]).addTo(mymap);
-
 
 var district11 = L.polygon([
     [32.522193, -103.064696],
@@ -2026,8 +2025,7 @@ var district14C = L.polygon([
     [29.929526, -93.838775],
     [29.864991, -93.85434264],
 
-]).addTo(mymap);
-    
+]).addTo(mymap);  
 
 var district15 = L.polygon([
     [29.551213, -98.27371],
@@ -2204,7 +2202,6 @@ var district16 = L.polygon([
     [32.002328, -105.998003],
 
 ]).addTo(mymap);
-
 
 var district17 = L.polygon([
     [31.320202, -97.418606],
@@ -2887,7 +2884,7 @@ var district22 = L.polygon([
     [29.591524, -96.062322],
     [29.601658, -96.088912],
 
-]).addTo(mymap)
+]).addTo(mymap);
 
 var district23 = L.polygon([
     [32.002328, -105.998003],

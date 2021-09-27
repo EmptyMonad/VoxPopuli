@@ -102,8 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\MainPage.css" />
+    <Content Include="CSS\sidebar.css" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
+    <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
     <Content Include="VoxPopuliMap_Version1.0.html" />
     <Content Include="Web.config" />
