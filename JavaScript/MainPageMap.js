@@ -21,6 +21,8 @@ var country = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
     accessToken: 'pk.eyJ1IjoiZGNvbndlbGwiLCJhIjoiY2t0cm81ZnB1MG1tcTJ1cWl6amphOGcweCJ9.pGlSQaNNRpVamXrhvzsmmA'
 }).addTo(mymap);
 
+//var sidebar = L.control.sidebar('sidebar', { position: 'right' }).addTo(map);
+
 var sidebar = L.control.sidebar('sidebar').addTo(mymap);
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 

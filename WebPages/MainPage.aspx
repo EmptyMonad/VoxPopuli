@@ -9,7 +9,7 @@
         of leaflet -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/css/ol3-sidebar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/css/leaflet-sidebar.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -72,11 +72,10 @@
             </div>
         </div>
     </div>
-        <div id="mapid" ></div>
+        <div id="mapid" class="sidebar-map"></div>
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
         
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/js/ol3-sidebar.js"></script>
     </body>
 </html>
