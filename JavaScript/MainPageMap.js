@@ -5937,3 +5937,9 @@ district36.on('mouseover', function () {
             fillColor: "#FF0000"
         });
     });
+function paintDistrictBlack(district) {
+    district.setStyle({
+        color: "#000000",
+        fillColor: "#000000"
+    });
+}

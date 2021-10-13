@@ -25,6 +25,7 @@
     <title></title>
 </head>
     <body>
+        <form id="form1" runat="server">
     <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
@@ -76,6 +77,9 @@
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
+        
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuliConnectionString2 %>" SelectCommand="SELECT * FROM [VotingInformation]"></asp:SqlDataSource>
+        </form>
         
     </body>
 </html>
