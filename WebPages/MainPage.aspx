@@ -5,8 +5,7 @@
 <html>
 <head runat="server">
 
-    <!-- This is the space used for api access and the hosted version
-        of leaflet -->
+
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/css/leaflet-sidebar.css">
@@ -76,6 +75,6 @@
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
-        
+    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
     </body>
 </html>
