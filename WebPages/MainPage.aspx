@@ -53,7 +53,8 @@
 
             <div class="sidebar-pane" id="profile">
                 <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <img src="https://picsum.photos/id/1/200/300" alt="Computer Stock Image" class="RepPic"/> <!-- The reps picture-->
+                <img src="https://picsum.photos/id/1/200/300" alt="Computer Stock Image" id="RepPic" /> <!-- The reps picture-->
+              
                  <p class="RepName">Name: Billy Bob</p>
                 <p class="call"></p>
                 
