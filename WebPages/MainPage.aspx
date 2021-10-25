@@ -7,12 +7,11 @@
 
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-      <link href="http://codegena.com/assets/css/image-preview-for-link.css" rel="stylesheet">     
+          
 
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-    <script src="http://codegena.com/assets/js/image-preview-for-link.js"></script>
     <link rel="stylesheet" href="../CSS/sidebar.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -58,8 +57,25 @@
                 <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <img src="../Pictures/example-Image.png" id="RepImage" />
                 <p id="RepName">Example Name</p>
-                <button id="Button1" 
-             
+                <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button" onclick="openCity('About')">About</button>
+                    <button class="w3-bar-item w3-button" onclick="openCity('Bills')">Bills</button>
+                </div>
+           
+               <div id="About" class="city">
+                   <span onclick="this.parentElement.style.display='none'"
+                    class="w3-button w3-display-topright">X</span>
+                  <h2>About</h2>
+                <p id="polAbout"></p>
+                </div>
+
+                <div id="Bills" class="city" style="display:none">
+                  <h2>Bills</h2>
+                  <p id="polBills"></p>
+                </div>
+           </div>
+         
+            
             </div>
          
 
@@ -67,7 +83,6 @@
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
         </div>
-    </div>
         <div id="mapid" class="sidebar-map"></div>
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>

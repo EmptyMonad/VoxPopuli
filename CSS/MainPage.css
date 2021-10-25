@@ -7,3 +7,37 @@
     padding: 0;
     margin: 0;
 }
+
+button#Button1 {
+    position: relative;
+    left: 4em;
+}
+
+div.items p {
+    display: none
+}
+
+    div.items p:target {
+        display: block
+    }
+
+    div.items p:not(:target) {
+        display: none
+    }
+
+    div.items p:target {
+        display: block
+    }
+
+img#RepImage {
+    height: 140px;
+    width: auto;
+    position: relative;
+    left: 8em;
+}
+
+p#RepName {
+    position: relative;
+    left: 8em;
+}
+

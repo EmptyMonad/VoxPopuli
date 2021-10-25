@@ -308,14 +308,3 @@
     }
 }
 
-img#RepImage {
-    height: 140px;
-    width: auto;
-    position: relative;
-    right: -43px;
-}
-
-p#RepName {
-    position: relative;
-    left: 4em;
-}
