@@ -112,6 +112,7 @@
     <Content Include="Global.asax" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
+    <Content Include="Pictures\example-Image.png" />
     <Content Include="VoxPopuliMap_Version1.0.html" />
     <Content Include="Web.config" />
     <Content Include="WebPages\MainPage.aspx" />
