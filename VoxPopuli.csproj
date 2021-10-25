@@ -110,6 +110,7 @@
     <Content Include="CSS\sidebar.css" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
+    <Content Include="JavaScript\jquery-3.6.0.min.js" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
     <Content Include="Pictures\example-Image.png" />
