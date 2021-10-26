@@ -61,7 +61,7 @@
 
                 <div id="Bills" class="Tabs" style="display: none">
                     <h2>Bills</h2>
-                    <!--<button class="bill-button"><a href="www.google.com"></a></button> -->
+                    <button class="bill-button" onclick="IsAgentInProgram()"></button> 
                     <p id="polBills"></p>
                 </div>
             <!-- This ends the tab content section -->
@@ -79,6 +79,6 @@
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [congress2]" OnSelecting="Unnamed1_Selecting"></asp:SqlDataSource>
     </body>
 </html>

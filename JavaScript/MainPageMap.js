@@ -43,16 +43,21 @@ document.addEventListener('DOMContentLoaded', function ()
     button.className = 'bill-button';
 
     button.onclick = function () {
-        // …
+        document.getElementById(AboutButton).style.color = "red";
     };
 
     var container = document.getElementById('About');
     container.appendChild(button);
 }, false);
 
-$(document).ready(function () {
-    $('#About').append('<button class="bill-button" type="button">Press me</button>');
-});
+function IsAgentInProgram() {
+    var optStatus = "<%=AgentOptInStatus%>";
+
+    if (optStatus == "True")
+        alert("You are opted in!");
+    else
+        alert("You are opted OUT");
+}
 
 var district1 = L.polygon([
 
