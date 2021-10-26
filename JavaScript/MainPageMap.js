@@ -25,7 +25,39 @@ var country = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
 
 var sidebar = L.control.sidebar('sidebar').addTo(mymap);
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
-    
+
+function openblock(Tabname) {
+    var i;
+    var x = document.getElementsByClassName("Tabs");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    document.getElementById(Tabname).style.display = "block";
+}
+
+document.addEventListener('DOMContentLoaded', function ()
+{
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.innerHTML = 'www.google.com';
+    button.className = 'bill-button';
+
+    button.onclick = function () {
+        document.getElementById(AboutButton).style.color = "red";
+    };
+
+    var container = document.getElementById('About');
+    container.appendChild(button);
+}, false);
+
+function IsAgentInProgram() {
+    var optStatus = "<%=AgentOptInStatus%>";
+
+    if (optStatus == "True")
+        alert("You are opted in!");
+    else
+        alert("You are opted OUT");
+}
 
 var district1 = L.polygon([
 

@@ -7,3 +7,129 @@
     padding: 0;
     margin: 0;
 }
+
+button#Button1 {
+    position: relative;
+    left: 4em;
+}
+
+div.items p {
+    display: none
+}
+
+    div.items p:target {
+        display: block
+    }
+
+    div.items p:not(:target) {
+        display: none
+    }
+
+    div.items p:target {
+        display: block
+    }
+
+img#RepImage {
+    height: 10em;
+    width: auto;
+    position: relative;
+    border: 0.5em solid dodgerblue;
+    margin: auto;
+    display: block;
+}
+
+p#RepName {
+    position: relative;
+    text-align: center;
+}
+
+.w3-bar .w3-bar-item {
+    padding: 8px 16px;
+    float: left;
+    width: auto;
+    border: none;
+    display: block;
+    outline: 0;
+}
+
+button#BillsButton {
+    position: relative;
+    left: 11em;
+}
+
+button#AboutButton {
+    position: relative;
+    left: 23%;
+}
+
+button#BillsButton:hover {
+    color:blue;
+    background-color:darkslategray;
+}
+
+button#AboutButton:hover {
+    color: blue;
+    background-color: darkslategrey;
+}
+
+.bill-button {
+    border-radius: 50%;
+    padding: 2em;
+    text-align: center;
+    border-color: red;
+    margin: auto;
+    position: relative;
+}
+
+    .w3-black, .w3-hover-black:hover {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+
+
+.w3-bar {
+    width: 100%;
+    overflow: hidden;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.w3-btn, .w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+
+
+}
+
+.w3-container:after, .w3-container:before, .w3-panel:after, .w3-panel:before, .w3-row:after, .w3-row:before, .w3-row-padding:after, .w3-row-padding:before, .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.w3-container:after, .w3-container:before, .w3-panel:after, .w3-panel:before, .w3-row:after, .w3-row:before, .w3-row-padding:after, .w3-row-padding:before, .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
