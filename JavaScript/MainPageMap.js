@@ -5241,6 +5241,10 @@ district1.on('mouseover', function () {
         fillColor: "#00FF00"
     });
 });
+district1.on('click', function () {
+
+    document.getElementById('btn').click();
+});
 district1.on('mouseout', function () {
     district1.setStyle({
         color: "#FF0000",

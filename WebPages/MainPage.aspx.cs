@@ -6,6 +6,7 @@ using System.Data.Sql;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Services;
 
 namespace MapProject.WebPages
 {
@@ -20,13 +21,31 @@ namespace MapProject.WebPages
             {
               
                 int district1value = (Int32)district1count.ExecuteScalar();
-                if (district1value < 3)
+                if (district1value > 3)
                 {
-                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "MainPageMap.js", "paintDistrictBlack(district13)", true);
+                    ScriptManager.RegisterStartupScript(this.Page, Page.GetType(), "MainPageMap.js", "paintDistrictBlack(district1)", true);
                 }
                
             }
             db.Close();
+          
+
         }
+
+        protected void btn_Click(object sender, EventArgs e, )
+        {
+            SqlConnection db = new SqlConnection(SqlDataSource1.ConnectionString);
+            SqlCommand district1Name = new SqlCommand("SELECT DistrictName FROM VotingInformation WHERE DistrictNumber = 1", db);
+
+            db.Open();
+            {
+                string district1Namestring = (String)district1Name.ExecuteScalar();
+                RepTitle.InnerText = "This is " + district1Namestring;
+            }
+            db.Close();
+
+        }
+            
+ 
     }
 }
