@@ -75,10 +75,12 @@
             </div>
         </div>
         <div id="mapid" class="sidebar-map"></div>
+        <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
+
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [congress2]" OnSelecting="Unnamed1_Selecting"></asp:SqlDataSource>
+    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
     </body>
 </html>

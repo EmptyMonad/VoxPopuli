@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace MapProject.WebPages
 {
@@ -13,13 +15,14 @@ namespace MapProject.WebPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.AgentOptInStatus = true;
+           
 
         }
-
-        protected void Unnamed1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        public static void callData()
         {
-
+            //some operations
         }
+
+
     }
 }

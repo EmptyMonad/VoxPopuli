@@ -50,14 +50,6 @@ document.addEventListener('DOMContentLoaded', function ()
     container.appendChild(button);
 }, false);
 
-function IsAgentInProgram() {
-    var optStatus = "<%=AgentOptInStatus%>";
-
-    if (optStatus == "True")
-        alert("You are opted in!");
-    else
-        alert("You are opted OUT");
-}
 
 var district1 = L.polygon([
 
@@ -5265,9 +5257,15 @@ var district36 = L.polygon([
 ]).addTo(mymap);
 
 
+
+
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-district1.on('mouseover', function () {
+district1.on('click', function () {
+
+})
+
+district1.on('click', function () {
     district1.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
