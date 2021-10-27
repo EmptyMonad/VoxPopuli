@@ -106,6 +106,7 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\ScriptofVoxPopuli.sql" />
     <Content Include="CSS\MainPage.css" />
     <Content Include="CSS\sidebar.css" />
     <Content Include="Districts\TexasD1.txt" />
