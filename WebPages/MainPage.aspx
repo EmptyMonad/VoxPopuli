@@ -56,6 +56,7 @@
            <!-- This section determines whats in the tabbed sections on the profile page -->
                <div id="About" class="Tabs">
                     <h2>About</h2>
+                   <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                     <p id="polAbout"></p>
                </div>
 

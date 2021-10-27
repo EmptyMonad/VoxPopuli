@@ -37,17 +37,21 @@ function openblock(Tabname) {
 
 document.addEventListener('DOMContentLoaded', function ()
 {
-    var button = document.createElement('button');
-    button.type = 'button';
-    button.innerHTML = 'www.google.com';
-    button.className = 'bill-button';
+    for (i = 0; i < 10; i++) {
 
-    button.onclick = function () {
-        document.getElementById(AboutButton).style.color = "red";
-    };
 
-    var container = document.getElementById('About');
-    container.appendChild(button);
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.innerHTML = 'www.google.com';
+        button.className = 'bill-button';
+
+        button.onclick = function () {
+            document.getElementById(AboutButton).style.color = "red";
+        };
+
+        var container = document.getElementById('Bills');
+        container.appendChild(button);
+    }
 }, false);
 
 
