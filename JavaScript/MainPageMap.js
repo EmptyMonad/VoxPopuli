@@ -5279,6 +5279,9 @@ district1.on('mouseout', function () {
         fillColor: "#FF0000"
     });
 });
+district1.on('click', function () {
+    PageMethods.GetInfo(1);
+});
 district2.on('mouseover', function () {
     district2.setStyle({
         color: "#00FF00",
