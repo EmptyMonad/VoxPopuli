@@ -75,7 +75,7 @@
             </div>
         </div>
         <div id="mapid" class="sidebar-map"></div>
-        <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
+       
 
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
