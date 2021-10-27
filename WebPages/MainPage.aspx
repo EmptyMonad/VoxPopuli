@@ -68,13 +68,13 @@
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
         </div>
-    </div>
-        <!-- SideBar DIV End -->
-       
-        <div id="mapid" class="sidebar-map"></div>  <!-- Map needs to be located after the sidenav -->
-        
-        <script src="../JavaScript/leaflet-sidebar.js"></script> 
-        <script src="../JavaScript/MainPageMap.js"></script> <!-- Link to the Javascript for the main page -->
-        
+        <div id="mapid" class="sidebar-map"></div>
+        <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
+
+        <!-- Link to the Javascript for the main page -->
+        <script src="../JavaScript/leaflet-sidebar.js"></script>
+        <script src="../JavaScript/MainPageMap.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
     </body>
 </html>

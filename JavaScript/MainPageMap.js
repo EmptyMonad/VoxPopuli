@@ -27,6 +27,21 @@ var sidebar = L.control.sidebar('sidebar').addTo(mymap); //Add side bar to map
 
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
+document.addEventListener('DOMContentLoaded', function ()
+{
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.innerHTML = 'www.google.com';
+    button.className = 'bill-button';
+
+    button.onclick = function () {
+        document.getElementById(AboutButton).style.color = "red";
+    };
+
+    var container = document.getElementById('About');
+    container.appendChild(button);
+}, false);
+
 
 var district1 = L.polygon([
 
@@ -5234,9 +5249,15 @@ var district36 = L.polygon([
 ]).addTo(mymap);
 
 
+
+
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-district1.on('mouseover', function () {
+district1.on('click', function () {
+
+})
+
+district1.on('click', function () {
     district1.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
