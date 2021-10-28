@@ -32,7 +32,7 @@ namespace MapProject.WebPages
 
         }
 
-        protected void btn_Click(object sender, EventArgs e, )
+        protected void btn_Click(object sender, EventArgs e)
         {
             SqlConnection db = new SqlConnection(SqlDataSource1.ConnectionString);
             SqlCommand district1Name = new SqlCommand("SELECT DistrictName FROM VotingInformation WHERE DistrictNumber = 1", db);
