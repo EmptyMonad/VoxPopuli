@@ -1,5 +1,14 @@
 ﻿<?php
 	//server connection here
+	
+$conn = new mysqli($SQLEXPRESS, $Admin, $Asylo);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+//get table elements
 	$code = $GET['results_members_first_name'];
 	$code1 = $GET['results_members_last_name'];
 	$code2 = $GET['results_members_party'];

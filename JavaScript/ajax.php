@@ -36,7 +36,7 @@ $("#btn").click(function()
         alert(result2);
         $( "#div_name" ).html( result2 );
     })
-     $ajax.({
+/*     $ajax.({
         url: "./getBill.php",
         data: 
         {
@@ -46,6 +46,6 @@ $("#btn").click(function()
     {   
         alert(result3);
         $( "#div_name" ).html( result3 );
-    })
+    })*/
 });
 </script>

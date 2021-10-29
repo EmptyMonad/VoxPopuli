@@ -1,5 +1,14 @@
 ﻿<?php
 	//server connection here
+	
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+//get elements
 	$code = $GET['bill1-Row?'];
 	$code = $GET['bill2-Row?'];
 	$code = $GET['bill3-Row?'];
