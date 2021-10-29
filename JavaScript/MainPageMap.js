@@ -5266,10 +5266,6 @@ var district36 = L.polygon([
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
 district1.on('click', function () {
-
-})
-
-district1.on('click', function () {
     district1.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
