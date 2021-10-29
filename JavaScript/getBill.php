@@ -1,11 +1,13 @@
-﻿$code = $GET['name_element'];
-	$code1 = $GET['name_element'];
-	$code2 = $GET['name_element'];
-	$code3 = $GET['name_element'];
-	$code4 = $GET['name_element'];
-	$code5 = $GET['name_element'];
-	$code6 = $GET['name_element'];
-	$code7 = $GET['name_element'];
-	$code8 = $GET['name_element'];
-	$code9 = $GET['name_element'];
-	$code0 = $GET['name_element'];
+﻿<?php
+	//server connection here
+	$code = $GET['bill1-Row?'];
+	$code = $GET['bill2-Row?'];
+	$code = $GET['bill3-Row?'];
+	$code = $GET['bill4-Row?'];
+	$code = $GET['bill5-Row?'];
+	$code = $GET['bill6-Row?'];
+	$code = $GET['bill7-Row?'];
+	$code = $GET['bill8-Row?'];
+	$code = $GET['bill9-Row?'];
+	$code = $GET['bill0-Row?'];
+	?>

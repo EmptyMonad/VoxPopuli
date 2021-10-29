@@ -9,7 +9,7 @@ $("#btn").click(function()
 {
     alert("Function is being called.");
     $ajax.({
-        url: "./filename.php",
+        url: "./getCongress.php",
         data: 
         {
             fname: 0,
@@ -22,19 +22,30 @@ $("#btn").click(function()
         },
     success: function( result ) 
     {   
-        alert(result);
-        $( "#div_name" ).html( result );
+        alert(result2);
+        $( "#div_name" ).html( result2 );
     })
  $ajax.({
-        url: "./filename2.php",
+        url: "./getPic.php",
         data: 
         {
             pic: 0
         },
     success: function( result2 ) 
     {   
-        alert(result);
+        alert(result2);
         $( "#div_name" ).html( result2 );
+    })
+     $ajax.({
+        url: "./getBill.php",
+        data: 
+        {
+            //Fuck I don't know
+        },
+    success: function( result3 ) 
+    {   
+        alert(result3);
+        $( "#div_name" ).html( result3 );
     })
 });
 </script>

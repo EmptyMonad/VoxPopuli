@@ -1,5 +1,5 @@
 ﻿<?php
 	//server connection here
-	$code = $GET['picture'];
+	$code = $GET['picurl'];
 	echo $code;
 ?>

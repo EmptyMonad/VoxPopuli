@@ -1,13 +1,16 @@
 ﻿<?php
 	//server connection here
-	$code = $GET['name_element'];
-	$code1 = $GET['name_element'];
-	$code2 = $GET['name_element'];
-	$code3 = $GET['name_element'];
-	$code4 = $GET['name_element'];
-	$code5 = $GET['name_element'];
-	$code6 = $GET['name_element'];
-
+	$code = $GET['results_members_first_name'];
+	$code1 = $GET['results_members_last_name'];
+	$code2 = $GET['results_members_party'];
+	$code3 = $GET['results_members_state'];
+	$code4 = $GET['results_members_district'];
+	$code5 = $GET['results_members_office'];
+	$code6 = $GET['results_members_next_election'];
+	$code7 = $GET['results_members_url'];
+	$code8 = $GET['results_members_facebook_account'];
+	$code9 = $GET['results_members_twitter_account'];
+	//testing section
 	echo $code;
 	echo $code1;
 	echo $code2;
@@ -15,5 +18,7 @@
 	echo $code4;
 	echo $code5;
 	echo $code6;
-
+	echo $code7;
+	echo $code8;
+	echo $code9;
 ?>
