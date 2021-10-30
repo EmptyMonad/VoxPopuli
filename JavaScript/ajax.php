@@ -2,9 +2,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
 </head>
 
-<button id="" type="button"></button>
-
+<button id="district1" type="button"></button>
 <script>
+$("#btn").click(function()
 $("#btn").click(function()
 {
     alert("Function is being called.");
@@ -17,13 +17,15 @@ $("#btn").click(function()
             party: 0,
             state: 0,
             district: 0,
-            memURL: 0,
-            affinity: 0,
+            election: 0,
+            website: 0,
+            facebook: 0,
+            twitter: 0,
         },
-    success: function( result ) 
+    success: function( data ) 
     {   
-        alert(result2);
-        $( "#div_name" ).html( result2 );
+        alert(data);
+        $( "#messages" ).html( data );
     })
  $ajax.({
         url: "./getPic.php",
@@ -34,7 +36,7 @@ $("#btn").click(function()
     success: function( result2 ) 
     {   
         alert(result2);
-        $( "#div_name" ).html( result2 );
+        $( "#repphoto" ).html( result2 );
     })
 /*     $ajax.({
         url: "./getBill.php",

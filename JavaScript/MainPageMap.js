@@ -5260,13 +5260,53 @@ var district36 = L.polygon([
 
 ]).addTo(mymap);
 
-
-
-
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-district1.on('click', function () {
-    district1.setStyle({
+$("#district1").click(function () {
+    alert("Function is being called.");
+    $ajax.({
+        url: "./getCongress.php",
+        data:
+        {
+            fname: 0,
+            lname: 0,
+            party: 0,
+            state: 0,
+            district: 0,
+            election: 0,
+            website: 0,
+            facebook: 0,
+            twitter: 0,
+        },
+        success: function (result) {
+            alert(result);
+            $("#messages").html(result);
+        }),
+    $ajax.({
+        url: "./getPic.php",
+        data:
+        {
+            pic: 0
+        },
+        success: function (result2) {
+            alert(result2);
+            $("#repphoto").html(result2);
+        })
+    /*     $ajax.({
+            url: "./getBill.php",
+            data: 
+            {
+                //Fuck I don't know
+            },
+        success: function( result3 ) 
+        {   
+            alert(result3);
+            $( "#div_name" ).html( result3 );
+        })*/
+});
+
+district1.on('mouseover', function () {
+    district2.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
     });
@@ -5276,9 +5316,6 @@ district1.on('mouseout', function () {
         color: "#FF0000",
         fillColor: "#FF0000"
     });
-});
-district1.on('click', function () {
-    PageMethods.GetInfo(1);
 });
 district2.on('mouseover', function () {
     district2.setStyle({

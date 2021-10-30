@@ -1,13 +1,19 @@
 ﻿<?php
 	//server connection here
 	
-$conn = new mysqli($SQLEXPRESS, $Admin, $Asylo);
+$servername = "VoxPopuli";
+$username = "username";
+$password = "password";
+$dbname = "masterConnectionString2";
 
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
+
+$result = $conn->query($sql);
 //get table elements
 	$code = $GET['results_members_first_name'];
 	$code1 = $GET['results_members_last_name'];

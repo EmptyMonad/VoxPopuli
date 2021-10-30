@@ -1,7 +1,7 @@
 ﻿<?php
 	//server connection here
 	
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli ($masterConnectionString2);
 
 // Check connection
 if ($conn->connect_error) {
