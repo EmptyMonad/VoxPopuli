@@ -23,35 +23,22 @@ var country = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{
 
 //var sidebar = L.control.sidebar('sidebar', { position: 'right' }).addTo(map);
 
-var sidebar = L.control.sidebar('sidebar').addTo(mymap);
+var sidebar = L.control.sidebar('sidebar').addTo(mymap); //Add side bar to map
+
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
-function openblock(Tabname) {
-    var i;
-    var x = document.getElementsByClassName("Tabs");
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    document.getElementById(Tabname).style.display = "block";
-}
+document.addEventListener('DOMContentLoaded', function () {
+    var button = document.createElement('button');
+    button.type = 'button';
+    button.innerHTML = 'www.google.com';
+    button.className = 'bill-button';
 
-document.addEventListener('DOMContentLoaded', function ()
-{
-    for (i = 0; i < 10; i++) {
+    button.onclick = function () {
+        document.getElementById(AboutButton).style.color = "red";
+    };
 
-
-        var button = document.createElement('button');
-        button.type = 'button';
-        button.innerHTML = 'www.google.com';
-        button.className = 'bill-button';
-
-        button.onclick = function () {
-            document.getElementById(AboutButton).style.color = "red";
-        };
-
-        var container = document.getElementById('Bills');
-        container.appendChild(button);
-    }
+    var container = document.getElementById('About');
+    container.appendChild(button);
 }, false);
 
 
@@ -1882,7 +1869,7 @@ var district14A = L.polygon([
     [29.334827, -94.749671],
 
 ]).addTo(mymap);
-    
+
 var district14B = L.polygon([
     [29.508031, -95.117139],
     [29.510734, -95.104326],
@@ -2055,7 +2042,7 @@ var district14C = L.polygon([
     [29.929526, -93.838775],
     [29.864991, -93.85434264],
 
-]).addTo(mymap);  
+]).addTo(mymap);
 
 var district15 = L.polygon([
     [29.551213, -98.27371],
@@ -4328,7 +4315,7 @@ var district29 = L.polygon([
     [29.954512, -95.268172],
 
 ]).addTo(mymap);
-    
+
 var district30 = L.polygon([
 
     [32.693188, -97.036417],
@@ -5260,53 +5247,17 @@ var district36 = L.polygon([
 
 ]).addTo(mymap);
 
+
+
+
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-$("#district1").click(function () {
-    alert("Function is being called.");
-    $ajax.({
-        url: "./getCongress.php",
-        data:
-        {
-            fname: 0,
-            lname: 0,
-            party: 0,
-            state: 0,
-            district: 0,
-            election: 0,
-            website: 0,
-            facebook: 0,
-            twitter: 0,
-        },
-        success: function (result) {
-            alert(result);
-            $("#messages").html(result);
-        }),
-    $ajax.({
-        url: "./getPic.php",
-        data:
-        {
-            pic: 0
-        },
-        success: function (result2) {
-            alert(result2);
-            $("#repphoto").html(result2);
-        })
-    /*     $ajax.({
-            url: "./getBill.php",
-            data: 
-            {
-                //Fuck I don't know
-            },
-        success: function( result3 ) 
-        {   
-            alert(result3);
-            $( "#div_name" ).html( result3 );
-        })*/
-});
+district1.on('click', function () {
 
-district1.on('mouseover', function () {
-    district2.setStyle({
+})
+
+district1.on('click', function () {
+    district1.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
     });
@@ -6001,9 +5952,9 @@ district36.on('mouseover', function () {
         fillColor: "#00FF00"
     });
 });
-    district36.on('mouseout', function () {
-        district36.setStyle({
-            color: "#FF0000",
-            fillColor: "#FF0000"
-        });
+district36.on('mouseout', function () {
+    district36.setStyle({
+        color: "#FF0000",
+        fillColor: "#FF0000"
     });
+});
