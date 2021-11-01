@@ -5253,13 +5253,29 @@ var district36 = L.polygon([
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
 district1.on('click', function () {
-
-})
-
-district1.on('click', function () {
     district1.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
+    });
+    alert("Function is being called.");
+    $.ajax({
+        url: "./getCongress.php",
+        data:
+        {
+            fname: 0,
+            lname: 0,
+            party: 0,
+            state: 0,
+            district: 0,
+            election: 0,
+            website: 0,
+            facebook: 0,
+            twitter: 0,
+        },
+        success: function (result) {
+            alert(result);
+            $("#messages").html(result);
+        }
     });
 });
 district1.on('mouseout', function () {
