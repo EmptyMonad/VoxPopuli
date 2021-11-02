@@ -5,10 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link rel="stylesheet" href="CSS/Register.css"/>
 </head>
-<body>
+<body class="form-v7">
     <form id="form1" runat="server">
-        <div>
+        <div class="page-content">
             <asp:Label ID="lblUsername" runat="server" Text="Username: "></asp:Label>
             <asp:TextBox ID="txtboxUsername" runat="server"></asp:TextBox>
             <asp:Label ID="lblUsernameExist" runat="server" ForeColor="Red" Text="*Username Already Taken" Visible="False"></asp:Label>
@@ -40,11 +41,6 @@
             <asp:Label ID="lblTest" runat="server" Text="Label" Visible="False"></asp:Label>
             <br />
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [VP_Users]"></asp:SqlDataSource>
-        </div>
-    </form>
-</body>
-</html>
-
         </div>
     </form>
 </body>

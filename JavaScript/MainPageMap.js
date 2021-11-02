@@ -5243,7 +5243,7 @@ district1.on('mouseover', function () {
 });
 district1.on('click', function () {
 
-    document.getElementById('btn').click();
+    window.location.replace("../WebPages/TXDistrict1.aspx");
 });
 district1.on('mouseout', function () {
     district1.setStyle({
