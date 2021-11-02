@@ -60,7 +60,7 @@
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString2 %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
             <asp:Button ID="btn" runat="server" style="display:none;" autopostback="false" />
         </form>

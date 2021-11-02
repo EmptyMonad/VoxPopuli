@@ -5260,6 +5260,7 @@ district1.on('click', function () {
     alert("Function is being called.");
     $.ajax({
         url: "./getCongress.php",
+        type: 'get',
         data:
         {
             fname: 0,
@@ -5275,6 +5276,9 @@ district1.on('click', function () {
         success: function (result) {
             alert(result);
             $("#messages").html(result);
+        },
+        error: function (request, error) {
+            alert('404 Error');
         }
     });
 });

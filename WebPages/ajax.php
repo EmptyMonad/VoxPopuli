@@ -5,8 +5,9 @@
 <button id="district1" type="button"></button>
 <script>$("#district1").click(function () {
     alert("Function is being called.");
-    $ajax.({
+       $.ajax({
         url: "./getCongress.php",
+        type: 'get',
         data:
         {
             fname: 0,
@@ -22,8 +23,13 @@
         success: function (result) {
             alert(result);
             $("#messages").html(result);
-        }),
-    $ajax.({
+        },
+         error: function (request, error) {
+            alert(error);
+        }
+    });
+});
+    $.ajax({
         url: "./getPic.php",
         data:
         {
@@ -32,7 +38,8 @@
         success: function (result2) {
             alert(result2);
             $("#repphoto").html(result2);
-        })
+        },
+        });
     /*     $ajax.({
             url: "./getBill.php",
             data: 
