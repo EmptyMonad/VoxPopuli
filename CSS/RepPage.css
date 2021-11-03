@@ -1,0 +1,59 @@
+﻿body {
+}
+
+img#RepImage {
+    position: relative;
+    height: auto;
+    margin: auto;
+    display: block;
+    width: 17em;
+}
+
+.Rep-Top {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: fit-content; 
+    box-shadow: 0 4px 8px 0 grey;
+    text-align:center;
+}
+
+.Rep-Top p {
+    position: inherit;
+    margin: inherit;
+    text-align: center;
+    
+   
+}
+
+.Scroll {
+    width: 51em;
+    height: 25em;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    scrollbar-3dlight-color: cornflowerblue;
+    align-content: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 4em;
+    box-shadow: 0 4px 8px 0 grey;
+}
+
+.Scroll button {
+    border-radius: 50%;
+    display:block;
+    text-decoration: none;
+    padding: 3em;
+    margin:1em 1em 1em 1em;
+}
+
+.Scroll p {
+    position: inherit;
+    display: inline;
+    text-align: end;
+    top: -4em;
+    left: 7em;
+    text-wrap: normal;
+    line-break:loose;
+}

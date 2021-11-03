@@ -102,18 +102,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\MainPage.css" />
+    <Content Include="CSS\RepPage.css" />
     <Content Include="CSS\sidebar.css" />
     <Content Include="CSS\Register.css" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
-    <Content Include="Photos\30-307416_profile-icon-png-image-free-download-searchpng-employee.png" />
+    <Content Include="Photos\border-image.png" />
+    <Content Include="Photos\default_picture.png" />
     <Content Include="VoxPopuliMap_Version1.0.html" />
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
     <Content Include="WebPages\Register.aspx" />
+    <Content Include="WebPages\RepPage.aspx" />
     <Content Include="WebPages\TXDistrict1.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +146,13 @@
     </Compile>
     <Compile Include="WebPages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\RepPage.aspx.cs">
+      <DependentUpon>RepPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\RepPage.aspx.designer.cs">
+      <DependentUpon>RepPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebPages\TXDistrict1.aspx.cs">
       <DependentUpon>TXDistrict1.aspx</DependentUpon>
