@@ -5254,39 +5254,30 @@ var district36 = L.polygon([
 
 district1.on('click', function () {
     district1.setStyle({
+        color: "#FFFFFF",
+        fillColor: "#000000"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_1_gohmert_louie_200.jpg');
+    $('#textcontainer').html('Name </br> Lastname </br> Party</br> Test</br>');
+});
+district2.on('mouseover', function () {
+    district2.setStyle({
         color: "#00FF00",
         fillColor: "#00FF00"
-    });
-    alert("Function is being called.");
-    $.ajax({
-        url: "./getCongress.php",
-        type: 'get',
-        data:
-        {
-            fname: 0,
-            lname: 0,
-            party: 0,
-            state: 0,
-            district: 0,
-            election: 0,
-            website: 0,
-            facebook: 0,
-            twitter: 0,
-        },
-        success: function (result) {
-            alert(result);
-            $("#messages").html(result);
-        },
-        error: function (request, error) {
-            alert('404 Error');
-        }
     });
 });
 district1.on('mouseout', function () {
     district1.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district2.on('click', function () {
+    district1.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001120_200.jpg');
 });
 district2.on('mouseover', function () {
     district2.setStyle({
@@ -5296,9 +5287,16 @@ district2.on('mouseover', function () {
 });
 district2.on('mouseout', function () {
     district2.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district3.on('click', function () {
+    district3.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/t000479_200.jpg');
 });
 district3.on('mouseover', function () {
     district3.setStyle({
@@ -5308,9 +5306,16 @@ district3.on('mouseover', function () {
 });
 district3.on('mouseout', function () {
     district3.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district4.on('click', function () {
+    district3.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/f000246_200.jpg');
 });
 district4.on('mouseover', function () {
     district4.setStyle({
@@ -5320,9 +5325,16 @@ district4.on('mouseover', function () {
 });
 district4.on('mouseout', function () {
     district4.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district5.on('click', function () {
+    district5.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000589_200.jpg');
 });
 district5.on('mouseover', function () {
     district5.setStyle({
@@ -5332,11 +5344,17 @@ district5.on('mouseover', function () {
 });
 district5.on('mouseout', function () {
     district5.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district6.on('click', function () {
+    district6.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000827_200.jpg');
+});
 district6.on('mouseover', function () {
     district6.setStyle({
         color: "#00FF00",
@@ -5345,11 +5363,17 @@ district6.on('mouseover', function () {
 });
 district6.on('mouseout', function () {
     district6.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district7.on('click', function () {
+    district7.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/f000468_200.jpg');
+});
 district7.on('mouseover', function () {
     district7.setStyle({
         color: "#00FF00",
@@ -5358,11 +5382,17 @@ district7.on('mouseover', function () {
 });
 district7.on('mouseout', function () {
     district7.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district8.on('click', function () {
+    district8.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b000755_200.jpg');
+});
 district8.on('mouseover', function () {
     district8.setStyle({
         color: "#00FF00",
@@ -5371,11 +5401,17 @@ district8.on('mouseover', function () {
 });
 district8.on('mouseout', function () {
     district8.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district9.on('click', function () {
+    district9.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg');
+});
 district9.on('mouseover', function () {
     district9.setStyle({
         color: "#00FF00",
@@ -5384,11 +5420,17 @@ district9.on('mouseover', function () {
 });
 district9.on('mouseout', function () {
     district9.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district10.on('click', function () {
+    district10.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_10_mccaul_michael_200.jpg');
+});
 district10.on('mouseover', function () {
     district10.setStyle({
         color: "#00FF00",
@@ -5397,11 +5439,17 @@ district10.on('mouseover', function () {
 });
 district10.on('mouseout', function () {
     district10.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district11.on('click', function () {
+    district11.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/p000048_200.jpg');
+});
 district11.on('mouseover', function () {
     district11.setStyle({
         color: "#00FF00",
@@ -5410,11 +5458,17 @@ district11.on('mouseover', function () {
 });
 district11.on('mouseout', function () {
     district11.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district12.on('click', function () {
+    district12.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000377_200.jpg');
+});
 district12.on('mouseover', function () {
     district12.setStyle({
         color: "#00FF00",
@@ -5423,11 +5477,17 @@ district12.on('mouseover', function () {
 });
 district12.on('mouseout', function () {
     district12.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district13.on('click', function () {
+    district13.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000304_200.jpg');
+});
 district13.on('mouseover', function () {
     district13.setStyle({
         color: "#00FF00",
@@ -5436,11 +5496,55 @@ district13.on('mouseover', function () {
 });
 district13.on('mouseout', function () {
     district13.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district14A.on('click', function () {
+    district14A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+});
+district14B.on('click', function () {
+    district14A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+});
+district14C.on('click', function () {
+    district14A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district14C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+});
 district14A.on('mouseover', function () {
     district14A.setStyle({
         color: "#00FF00",
@@ -5460,18 +5564,18 @@ district14A.on('mouseover', function () {
 });
 district14A.on('mouseout', function () {
     district14A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
 });
@@ -5495,18 +5599,18 @@ district14B.on('mouseover', function () {
 });
 district14B.on('mouseout', function () {
     district14A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
 });
@@ -5530,22 +5634,28 @@ district14C.on('mouseover', function () {
 });
 district14C.on('mouseout', function () {
     district14A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
     district14C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 
 });
-
+district15.on('click', function () {
+    district15.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg');
+});
 district15.on('mouseover', function () {
     district15.setStyle({
         color: "#00FF00",
@@ -5554,11 +5664,17 @@ district15.on('mouseover', function () {
 });
 district15.on('mouseout', function () {
     district15.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district16.on('click', function () {
+    district16.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/e000299_200.jpg');
+});
 district16.on('mouseover', function () {
     district16.setStyle({
         color: "#00FF00",
@@ -5567,11 +5683,17 @@ district16.on('mouseover', function () {
 });
 district16.on('mouseout', function () {
     district16.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district17.on('click', function () {
+    district17.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_32_sessions_pete_200.jpg');
+});
 district17.on('mouseover', function () {
     district17.setStyle({
         color: "#00FF00",
@@ -5580,11 +5702,17 @@ district17.on('mouseover', function () {
 });
 district17.on('mouseout', function () {
     district17.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district18.on('click', function () {
+    district18.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000032_200.jpg');
+});
 district18.on('mouseover', function () {
     district18.setStyle({
         color: "#00FF00",
@@ -5593,11 +5721,17 @@ district18.on('mouseover', function () {
 });
 district18.on('mouseout', function () {
     district18.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district19.on('click', function () {
+    district19.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_19_arrington_jodey_200.jpg');
+});
 district19.on('mouseover', function () {
     district19.setStyle({
         color: "#00FF00",
@@ -5606,11 +5740,17 @@ district19.on('mouseover', function () {
 });
 district19.on('mouseout', function () {
     district19.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district20.on('click', function () {
+    district20.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001091_200.jpg');
+});
 district20.on('mouseover', function () {
     district20.setStyle({
         color: "#00FF00",
@@ -5619,11 +5759,17 @@ district20.on('mouseover', function () {
 });
 district20.on('mouseout', function () {
     district20.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district21.on('click', function () {
+    district21.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/r000614_200.jpg');
+});
 district21.on('mouseover', function () {
     district21.setStyle({
         color: "#00FF00",
@@ -5632,12 +5778,17 @@ district21.on('mouseover', function () {
 });
 district21.on('mouseout', function () {
     district21.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
-
+district22.on('click', function () {
+    district22.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/n000026_200.jpg');
+});
 district22.on('mouseover', function () {
     district22.setStyle({
         color: "#00FF00",
@@ -5646,11 +5797,17 @@ district22.on('mouseover', function () {
 });
 district22.on('mouseout', function () {
     district22.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district23.on('click', function () {
+    district23.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000594_200.jpg');
+});
 district23.on('mouseover', function () {
     district23.setStyle({
         color: "#00FF00",
@@ -5659,11 +5816,17 @@ district23.on('mouseover', function () {
 });
 district23.on('mouseout', function () {
     district23.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district24.on('click', function () {
+    district24.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.');
+});
 district24.on('mouseover', function () {
     district24.setStyle({
         color: "#00FF00",
@@ -5672,11 +5835,17 @@ district24.on('mouseover', function () {
 });
 district24.on('mouseout', function () {
     district24.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district25.on('click', function () {
+    district25.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000816_200.jpg');
+});
 district25.on('mouseover', function () {
     district25.setStyle({
         color: "#00FF00",
@@ -5685,11 +5854,17 @@ district25.on('mouseover', function () {
 });
 district25.on('mouseout', function () {
     district25.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district26.on('click', function () {
+    district26.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001248_200.jpg');
+});
 district26.on('mouseover', function () {
     district26.setStyle({
         color: "#00FF00",
@@ -5698,11 +5873,55 @@ district26.on('mouseover', function () {
 });
 district26.on('mouseout', function () {
     district26.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district27A.on('click', function () {
+    district27A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+});
+district27B.on('click', function () {
+    district27A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+});
+district27C.on('click', function () {
+    district27A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district27C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+});
 district27A.on('mouseover', function () {
     district27A.setStyle({
         color: "#00FF00",
@@ -5719,16 +5938,16 @@ district27A.on('mouseover', function () {
 });
 district27A.on('mouseout', function () {
     district27A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
 
@@ -5748,16 +5967,16 @@ district27B.on('mouseover', function () {
 });
 district27B.on('mouseout', function () {
     district27A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
 
@@ -5777,19 +5996,25 @@ district27C.on('mouseover', function () {
 });
 district27C.on('mouseout', function () {
     district27A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district27C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district28.on('click', function () {
+    district28.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg');
+});
 district28.on('mouseover', function () {
     district28.setStyle({
         color: "#00FF00",
@@ -5798,11 +6023,17 @@ district28.on('mouseover', function () {
 });
 district28.on('mouseout', function () {
     district28.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district29.on('click', function () {
+    district29.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000587_200.jpg');
+});
 district29.on('mouseover', function () {
     district29.setStyle({
         color: "#00FF00",
@@ -5811,11 +6042,17 @@ district29.on('mouseover', function () {
 });
 district29.on('mouseout', function () {
     district29.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district30.on('click', function () {
+    district30.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_30_johnson_eddie_200.jpg');
+});
 district30.on('mouseover', function () {
     district30.setStyle({
         color: "#00FF00",
@@ -5824,11 +6061,17 @@ district30.on('mouseover', function () {
 });
 district30.on('mouseout', function () {
     district30.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district31.on('click', function () {
+    district31.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001051_200.jpg');
+});
 district31.on('mouseover', function () {
     district31.setStyle({
         color: "#00FF00",
@@ -5837,11 +6080,17 @@ district31.on('mouseover', function () {
 });
 district31.on('mouseout', function () {
     district31.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district32.on('click', function () {
+    district32.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.https://www.congress.gov/img/member/a000376_200.jpg');
+});
 district32.on('mouseover', function () {
     district32.setStyle({
         color: "#00FF00",
@@ -5850,11 +6099,17 @@ district32.on('mouseover', function () {
 });
 district32.on('mouseout', function () {
     district32.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district33.on('click', function () {
+    district33.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000131_200.jpg');
+});
 district33.on('mouseover', function () {
     district33.setStyle({
         color: "#00FF00",
@@ -5863,9 +6118,54 @@ district33.on('mouseover', function () {
 });
 district33.on('mouseout', function () {
     district33.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district34A.on('click', function () {
+    district34A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+});
+district34B.on('click', function () {
+    district34A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+});
+district34C.on('click', function () {
+    district34A.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34B.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    district34C.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
 });
 district34A.on('mouseover', function () {
     district34A.setStyle({
@@ -5883,16 +6183,16 @@ district34A.on('mouseover', function () {
 });
 district34A.on('mouseout', function () {
     district34A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
 
@@ -5912,16 +6212,16 @@ district34B.on('mouseover', function () {
 });
 district34B.on('mouseout', function () {
     district34A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
 
@@ -5941,17 +6241,24 @@ district34C.on('mouseover', function () {
 });
 district34C.on('mouseout', function () {
     district34A.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34B.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
     district34C.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
+});
+district35.on('click', function () {
+    district35.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/d000399_200.jpg');
 });
 district35.on('mouseover', function () {
     district35.setStyle({
@@ -5961,11 +6268,17 @@ district35.on('mouseover', function () {
 });
 district35.on('mouseout', function () {
     district35.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
-
+district36.on('click', function () {
+    district36.setStyle({
+        color: "#00FF00",
+        fillColor: "#00FF00"
+    });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001291_200.jpg');
+});
 district36.on('mouseover', function () {
     district36.setStyle({
         color: "#00FF00",
@@ -5974,7 +6287,7 @@ district36.on('mouseover', function () {
 });
 district36.on('mouseout', function () {
     district36.setStyle({
-        color: "#FF0000",
-        fillColor: "#FF0000"
+        color: "#0066FF",
+        fillColor: "#0000FF66"
     });
 });
