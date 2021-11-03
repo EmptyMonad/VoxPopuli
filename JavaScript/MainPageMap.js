@@ -5258,7 +5258,7 @@ district1.on('click', function () {
         fillColor: "#000000"
     });
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_1_gohmert_louie_200.jpg');
-    $('#textcontainer').html('Name </br> Lastname </br> Party</br> Test</br>');
+    $('#textcontainer').html('Representative Louie Gohmert<br/>Texas<br>District 1<br/> Republican<br/>@RepLouieGohmert<br/>');
 });
 district2.on('mouseover', function () {
     district2.setStyle({

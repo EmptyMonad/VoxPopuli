@@ -17,6 +17,14 @@ namespace MapProject.WebPages
         [WebMethod]
         protected void Page_Load(object sender, EventArgs e)
         {
+            /*
+            int district1score;
+            if (district1score >= 1 && <= 5)
+            {
+                level1();
+            }
+            */
+
         }
     }
 }
