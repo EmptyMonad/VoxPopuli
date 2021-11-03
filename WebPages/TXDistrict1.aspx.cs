@@ -12,9 +12,7 @@ namespace VoxPopuli.WebPages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Declare the State and District For This Webpage
-            string state = "TX";
-            int district = 1;
+          
             //Define the SQL Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
 
@@ -35,7 +33,7 @@ namespace VoxPopuli.WebPages
 
 
             //Define The Command For Grabbing the Reps Vote on Each Bill
-            SqlCommand getBill314VoteCMD = new SqlCommand("SELECT vote_position FROM Bill314 WHERE state=@state AND district =@district", db);
+            SqlCommand getBill314VoteCMD = new SqlCommand("SELECT vote_position FROM Bill314 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill315VoteCMD = new SqlCommand("SELECT vote_position FROM Bill315 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill316VoteCMD = new SqlCommand("SELECT vote_position FROM Bill316 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill317VoteCMD = new SqlCommand("SELECT vote_position FROM Bill317 WHERE state='TX' AND district ='1'", db);
@@ -56,144 +54,144 @@ namespace VoxPopuli.WebPages
             SqlCommand getBill332VoteCMD = new SqlCommand("SELECT vote_position FROM Bill332 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill333VoteCMD = new SqlCommand("SELECT vote_position FROM Bill333 WHERE state='TX' AND district ='1'", db);
 
-            getBill314VoteCMD.Parameters.AddWithValue("@state", state);
+            
 
             //Define the commands for pulling information on Bill 314, from the general bill info table. Bill Name, Bill ID, Bill Status, Bill Link
             SqlCommand getBill314Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='314'", db);
             SqlCommand getBill314ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='314'", db);
-            SqlCommand getBill314Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='314'", db);
-            SqlCommand getBill314Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='314'", db);
+            SqlCommand getBill314Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='314'", db);
+            SqlCommand getBill314Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='314'", db);
 
 
             //Bill315
             SqlCommand getBill315Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='315'", db);
             SqlCommand getBill315ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='315'", db);
-            SqlCommand getBill315Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='315'", db);
-            SqlCommand getBill315Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='314'", db);
+            SqlCommand getBill315Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='315'", db);
+            SqlCommand getBill315Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='315'", db);
 
             //Billl316
             SqlCommand getBill316Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='316'", db);
             SqlCommand getBill316ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='316'", db);
-            SqlCommand getBill316Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='316'", db);
-            SqlCommand getBill316Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='316'", db);
+            SqlCommand getBill316Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='316'", db);
+            SqlCommand getBill316Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='316'", db);
 
 
             //Bill317
             SqlCommand getBill317Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='317'", db);
             SqlCommand getBill317ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='317'", db);
-            SqlCommand getBill317Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='317'", db);
-            SqlCommand getBill317Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='317'", db);
+            SqlCommand getBill317Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='317'", db);
+            SqlCommand getBill317Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='317'", db);
 
 
             //Bill 318
             SqlCommand getBill318Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='318'", db);
             SqlCommand getBill318ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='318'", db);
-            SqlCommand getBill318Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='318'", db);
-            SqlCommand getBill318Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='318'", db);
+            SqlCommand getBill318Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='318'", db);
+            SqlCommand getBill318Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='318'", db);
 
             //Bill 319
 
             SqlCommand getBill319Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='319'", db);
             SqlCommand getBill319ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='319'", db);
-            SqlCommand getBill319Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='319'", db);
-            SqlCommand getBill319Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='319'", db);
+            SqlCommand getBill319Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='319'", db);
+            SqlCommand getBill319Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='319'", db);
 
 
             //Bill 320
             SqlCommand getBill320Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='320'", db);
             SqlCommand getBill320ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='320'", db);
-            SqlCommand getBill320Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='320'", db);
-            SqlCommand getBill320Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='320'", db);
+            SqlCommand getBill320Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='320'", db);
+            SqlCommand getBill320Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='320'", db);
 
 
             //Bill 321
             SqlCommand getBill321Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='321'", db);
             SqlCommand getBill321ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='321'", db);
-            SqlCommand getBill321Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='321'", db);
-            SqlCommand getBill321Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='321'", db);
+            SqlCommand getBill321Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='321'", db);
+            SqlCommand getBill321Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='321'", db);
 
 
             //Bill 322
             SqlCommand getBill322Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='322'", db);
             SqlCommand getBill322ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='322'", db);
-            SqlCommand getBill322Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='322'", db);
-            SqlCommand getBill322Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='322'", db);
+            SqlCommand getBill322Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='322'", db);
+            SqlCommand getBill322Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='322'", db);
 
 
             //Bill 323
             SqlCommand getBill323Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='323'", db);
             SqlCommand getBill323ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='323'", db);
-            SqlCommand getBill323Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='323'", db);
-            SqlCommand getBill323Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='323'", db);
+            SqlCommand getBill323Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='323'", db);
+            SqlCommand getBill323Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='323'", db);
 
 
             //Bill 324
             SqlCommand getBill324Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='324'", db);
             SqlCommand getBill324ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='324'", db);
-            SqlCommand getBill324Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='324'", db);
-            SqlCommand getBill324Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='324'", db);
+            SqlCommand getBill324Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='324'", db);
+            SqlCommand getBill324Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='324'", db);
 
             //Bill 325
             SqlCommand getBill325Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='325'", db);
             SqlCommand getBill325ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='325'", db);
-            SqlCommand getBill325Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='325'", db);
-            SqlCommand getBill325Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='325'", db);
+            SqlCommand getBill325Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='325'", db);
+            SqlCommand getBill325Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='325'", db);
 
 
             //Bill 326
             SqlCommand getBill326Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='326'", db);
             SqlCommand getBill326ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='326'", db);
-            SqlCommand getBill326Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='326'", db);
-            SqlCommand getBill326Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='326'", db);
+            SqlCommand getBill326Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='326'", db);
+            SqlCommand getBill326Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='326'", db);
 
 
             //Bill 327
             SqlCommand getBill327Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='327'", db);
             SqlCommand getBill327ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='327'", db);
-            SqlCommand getBill327Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='327'", db);
-            SqlCommand getBill327Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='327'", db);
+            SqlCommand getBill327Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='327'", db);
+            SqlCommand getBill327Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='327'", db);
 
 
             //Bill 328
             SqlCommand getBill328Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='328'", db);
             SqlCommand getBill328ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='328'", db);
-            SqlCommand getBill328Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='328'", db);
-            SqlCommand getBill328Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='328'", db);
+            SqlCommand getBill328Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='328'", db);
+            SqlCommand getBill328Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='328'", db);
 
 
             //Bill 329
             SqlCommand getBill329Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='329'", db);
             SqlCommand getBill329ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='329'", db);
-            SqlCommand getBill329Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='329'", db);
-            SqlCommand getBill329Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='329'", db);
+            SqlCommand getBill329Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='329'", db);
+            SqlCommand getBill329Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='329'", db);
 
 
             //Bill 330
             SqlCommand getBill330Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='330'", db);
             SqlCommand getBill330ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='330'", db);
-            SqlCommand getBill330Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='330'", db);
-            SqlCommand getBill330Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='330'", db);
+            SqlCommand getBill330Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='330'", db);
+            SqlCommand getBill330Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='330'", db);
 
 
             //Bill 331
             SqlCommand getBill331Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='331'", db);
             SqlCommand getBill331ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='331'", db);
-            SqlCommand getBill331Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='331'", db);
-            SqlCommand getBill331Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='331'", db);
+            SqlCommand getBill331Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='331'", db);
+            SqlCommand getBill331Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='331'", db);
 
 
             //Bill 332
             SqlCommand getBill332Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='332'", db);
             SqlCommand getBill332ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='332'", db);
-            SqlCommand getBill332Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='332'", db);
-            SqlCommand getBill332Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='332'", db);
+            SqlCommand getBill332Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='332'", db);
+            SqlCommand getBill332Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='332'", db);
 
 
             //Bill 333
             SqlCommand getBill333Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='333'", db);
             SqlCommand getBill333ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='333'", db);
-            SqlCommand getBill333Result = new SqlCommand("SELECT BillResult FROM BillInfo WHERE RollCallNumber='333'", db);
-            SqlCommand getBill333Link = new SqlCommand("SELECT BillResult FROM BillLink WHERE RollCallNumber='333'", db);
+            SqlCommand getBill333Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='333'", db);
+            SqlCommand getBill333Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='333'", db);
 
 
 
@@ -245,10 +243,10 @@ namespace VoxPopuli.WebPages
                 //Execute Commands for Bill Information
 
                 //Bill 314
-                string Bill314Name = (string)getBill314Name.ExecuteScalar();
-                string Bill314ID = (string)getBill314ID.ExecuteScalar();
-                string Bill314Link = (string)getBill314Link.ExecuteScalar();
-                string Bill314Result = (string)getBill314Result.ExecuteScalar();
+               // string Bill314Name = (string)getBill314Name.ExecuteScalar();
+                //string Bill314ID = (string)getBill314ID.ExecuteScalar();
+                //string Bill314Link = (string)getBill314Link.ExecuteScalar();
+                //string Bill314Result = (string)getBill314Result.ExecuteScalar();
 
                 //Bill 315
                 string Bill315Name = (string)getBill315Name.ExecuteScalar();
@@ -377,7 +375,10 @@ namespace VoxPopuli.WebPages
 
                 //Replace HTML Elements Based off Information Pulled From The Database
                 RepNameHolder.InnerHtml = repFirstName + " " + repLastName;
-                
+                twitterHandle.InnerHtml = "@" + repTwitter;
+                RepPicture.ImageUrl = repPicURL;
+
+
 
 
 

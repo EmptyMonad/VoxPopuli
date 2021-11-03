@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <h1 id="RepNameHolder" runat ="server">Rep Name</h1>
-        <h1>District Number</h1>
+        <asp:Image ID="RepPicture" runat="server" ImageUrl="example.com" />
         <div>
             <h2 id="twitterHandle" runat="server">Twitter Handle: </h2>
             <h2>Facebook Handle: </h2>
