@@ -45,6 +45,24 @@
             <div class="sidebar-pane" id="profile" runat="server">
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <div id ="repphoto"><img src="\Photos\30-307416_profile-icon-png-image-free-download-searchpng-employee.png" /></div>
+                <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button" onclick="openblock('About')">About</button>
+                    <button class="w3-bar-item w3-button" onclick="openblock('Bills')">Bills</button>
+                </div>
+           
+               <div id="About" class="Tabs">
+                   <span onclick="this.parentElement.style.display='none'"
+                    class="w3-button w3-display-topright"></span>
+                  <h2>About</h2>
+                <p id="polAbout"></p>
+                </div>
+
+                <div id="Bills" class="Tabs" style="display:none">
+                  <h2>Bills</h2>
+                  <p id="polBills"></p>
+                </div>
+           
+         
             </div>
 
             <div class="sidebar-pane" id="messages">

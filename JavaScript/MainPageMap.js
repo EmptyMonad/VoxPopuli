@@ -27,6 +27,16 @@ var sidebar = L.control.sidebar('sidebar').addTo(mymap); //Add side bar to map
 
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
+function openblock(Tabname) {
+    var i;
+    var x = document.getElementsByClassName("Tabs");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    document.getElementById(Tabname).style.display = "block";
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     var button = document.createElement('button');
     button.type = 'button';
@@ -37,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById(AboutButton).style.color = "red";
     };
 
-    var container = document.getElementById('About');
+    var container = document.getElementById('Bills');
     container.appendChild(button);
 }, false);
 
