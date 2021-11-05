@@ -6,33 +6,60 @@
 
 
 #form1 {
-     width: 30%;
-     margin: 60px auto;
-     background: #efefef;
-     padding: 60px 120px 80px 120px;
-     text-align: center;
-     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-     box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
     
+    width: 30%;
+    margin: 60px auto;
+    background: #efefef;
+    padding: 60px 120px 80px 120px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    display: grid;
+    position: relative
+    
+  
 }
 
 #userSec {
-    display: block;
+    display: inherit;
      position: relative;
-     margin: 40px 0px;
+     margin: 2em auto;
 }
 #passSec {
-    display: block;
+    display: inherit;
     position: relative;
-    margin: 40px 0px;
+    margin: 2em auto;
 }
 #emailSec {
-    display: block;
+    display: inherit;
     position: relative;
-    margin: 40px 0px;
+    margin: 2em auto;
 }
 #conPassSec {
-    display: block;
+    display: inherit;
     position: relative;
-    margin: 40px 0px;
+    margin: 2em auto;
+
 }
+
+.register {
+    display: grid;
+    text-align: right;
+}
+
+#btnRegister {
+    grid-row-start: 7;
+    margin: auto;
+}
+
+.txtbox {
+    grid-column-start:2
+}
+
+.label {
+    grid-column-start:1;
+}
+
+.register h1 {
+    text-align: center;
+}
+
