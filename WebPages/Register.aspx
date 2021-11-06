@@ -46,8 +46,8 @@
 
             </label>
             <div class="g-recaptcha" data-sitekey="6Lc-4xQdAAAAANtCCYS0lzDT3xZlFQv_1WyJdLWg"></div>
-            <asp:TextBox ID="txtCaptcha" runat="server" Style="display: none" />
-            <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="*Captcha is Required" Text="*Captcha is Required" Visible="False" ForeColor="Red"></asp:RequiredFieldValidator>
+            <asp:Label ID="lblCaptchaError" runat="server" Text="*Must Complete Captcha" ForeColor="Red" Visible="False"></asp:Label>
+           
             <br />
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
             <br />

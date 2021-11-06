@@ -243,7 +243,7 @@ namespace VoxPopuli.WebPages
                 //Execute Commands for Bill Information
 
                 //Bill 314
-               // string Bill314Name = (string)getBill314Name.ExecuteScalar();
+               //string Bill314Name = (string)getBill314Name.ExecuteScalar();
                 //string Bill314ID = (string)getBill314ID.ExecuteScalar();
                 //string Bill314Link = (string)getBill314Link.ExecuteScalar();
                 //string Bill314Result = (string)getBill314Result.ExecuteScalar();

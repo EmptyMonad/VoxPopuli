@@ -19,21 +19,35 @@ namespace VoxPopuli.WebPages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
 
-            string EncodedResponse = Request.Form["g-Recaptcha-Response"];
-            bool IsCaptchaValid = (ReCaptchaClass.Validate(EncodedResponse) == "true" ? true : false);
 
-            if (IsCaptchaValid)
+
+
+            //Validate Captcha Before Doing Anything Else
+            var encodedResponse = Request.Form["g-Recaptcha-Response"];
+            var isCaptchaValid = ReCaptcha.Validate(encodedResponse);
+
+            if (!isCaptchaValid)
             {
-                //Valid Request
-            
-            
+                //Makes the Captcha Error Appear
+                lblCaptchaError.Visible = true;
 
+                //Make All Other Error Labels Invisible
+                lblEmailExist.Visible = false;
+                lblUsernameExist.Visible = false;
+                lblEmailReq.Visible = false;
+                lblPasswordReq.Visible = false;
+                lblUserReq.Visible = false;
+            }
+            else
+            {
+                //
+                lblCaptchaError.Visible = false;
                 //Check Username Requirements
                 //Must not contain any spaces must be longer than 5 characters, and no more than 20 characters
                 string uservalue = txtboxUsername.Text;
@@ -181,23 +195,12 @@ namespace VoxPopuli.WebPages
                         db.Close();
                     }
                 }
-
-            }
-            else
-            {
-                rfvCaptcha.Visible = true;
             }
 
 
+
         }
-        protected static string ReCaptcha_Key = "6Lc-4xQdAAAAANtCCYS0lzDT3xZlFQv_1WyJdLWg";
-        protected static string ReCaptcha_Secret = "6Lc-4xQdAAAAADYb61HRSmFwU-XEnoHwxQoNWdtt";
-        [WebMethod]
-        public static string VerifyCaptcha(string response)
-        {
-            string url = "https://www.google.com/recaptcha/api/siteverify?secret=" + ReCaptcha_Secret + "&response=" + response;
-            return (new WebClient()).DownloadString(url);
-        }
+   
 
         //Encrypt Function. Used for password encrypiton.
         public static string Encrypt(string encryptString)
