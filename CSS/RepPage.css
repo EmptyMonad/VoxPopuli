@@ -1,4 +1,5 @@
 ﻿body {
+    background: #C5E1A5;
 }
 
 img#RepPicture {
@@ -44,16 +45,46 @@ img#RepPicture {
     border-radius: 50%;
     display:block;
     text-decoration: none;
-    padding: 3em;
+    padding: 4em;
     margin:1em 1em 1em 1em;
 }
 
-.Scroll p {
-    position: inherit;
-    display: inline;
-    text-align: end;
-    top: -4em;
-    left: 7em;
-    text-wrap: normal;
-    line-break:loose;
+
+.bname {
+    position: relative;
+    top: -6em;
+    left: 6em;
 }
+
+.bID {
+    position: relative;
+    display:block;
+    top: -10em;
+    right: -9em;
+    margin:auto;
+}
+
+.blink {
+    position: relative;
+    top:-10em;
+    right:-9em;
+    margin:auto;
+    display:block;
+}
+
+.bresult {
+    position: relative;
+    margin:auto;
+    top:-9em;
+    left:9em;
+    display:block;
+}
+
+.bvote {
+    position: relative;
+    display: block;
+    top: -9em;
+    right: -9em;
+    margin: auto;
+}
+ 

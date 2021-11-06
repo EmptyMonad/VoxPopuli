@@ -111,6 +111,7 @@
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
     <Content Include="Photos\default_picture.png" />
+    <Content Include="Photos\green_upvote.png" />
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
