@@ -41,6 +41,31 @@ document.addEventListener('DOMContentLoaded', function () {
     container.appendChild(button);
 }, false);
 
+//Function for Page Load Map Coloring
+//Call Function Here in C# for SQL
+{
+    if (affinity >= -100 || affinity <= 100)
+    {
+        if (affinity >= -100 && affinity <= -50)
+            district{ $ }.setStyle color = "#6D5D25";
+        else if (affinity >= -49 && affinity <= -11)
+            district{ $ }.setStyle color = "#9C883F";
+        else if (affinity >= -10 && affinity <= -5)
+            district{ $ }.setStyle color = "#6D5D25";
+        else if (affinity >= -4 && affinity <= -1)
+            district{ $ }.setStyle color = "#BDAB6C";
+        else if (affinity >= 1 && affinity <= 4)
+            district{ $ }.setStyle color = "#84BD6C";
+        else if (affinity >= 5 && affinity <= 10)
+            district{ $ }.setStyle color = "#48892D";
+        else if (affinity >= 11 && affinity <= 49)
+            district{ $ }.setStyle color = "#5C9C40";
+        else if (affinity >= 50 && affinity <= 100)
+            district{ $ }.setStyle color = "#48892D";
+        else if (affinity == 0)
+            district{ $ }.setStyle color = "#FFFFFF";
+    }
+}
 
 var district1 = L.polygon([
 
@@ -5247,24 +5272,15 @@ var district36 = L.polygon([
 
 ]).addTo(mymap);
 
-
-
-
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-district1.on('click', function () {
+district1.on('mouseover', function () {
     district1.setStyle({
-        color: "#FFFFFF",
-        fillColor: "#000000"
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_1_gohmert_louie_200.jpg');
     $('#textcontainer').html('Representative Louie Gohmert<br/>Texas<br>District 1<br/> Republican<br/>@RepLouieGohmert<br/>');
-});
-district2.on('mouseover', function () {
-    district2.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
-    });
 });
 district1.on('mouseout', function () {
     district1.setStyle({
