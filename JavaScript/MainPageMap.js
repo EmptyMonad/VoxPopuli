@@ -44,26 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
 //Function for Page Load Map Coloring
 //Call Function Here in C# for SQL
 {
-    if (affinity >= -100 || affinity <= 100)
-    {
-        if (affinity >= -100 && affinity <= -50)
-            district{ $ }.setStyle color = "#6D5D25";
+    function mapColor(int affinity, int $num) {
+        if (affinity >= -100 || affinity <= 100) {
+            if (affinity >= -100 && affinity <= -50)
+                district{ $ }.setStyle color = "#6D5D25";
         else if (affinity >= -49 && affinity <= -11)
-            district{ $ }.setStyle color = "#9C883F";
+                district{ $ }.setStyle color = "#9C883F";
         else if (affinity >= -10 && affinity <= -5)
-            district{ $ }.setStyle color = "#6D5D25";
+                district{ $ }.setStyle color = "#6D5D25";
         else if (affinity >= -4 && affinity <= -1)
-            district{ $ }.setStyle color = "#BDAB6C";
+                district{ $ }.setStyle color = "#BDAB6C";
         else if (affinity >= 1 && affinity <= 4)
-            district{ $ }.setStyle color = "#84BD6C";
+                district{ $ }.setStyle color = "#84BD6C";
         else if (affinity >= 5 && affinity <= 10)
-            district{ $ }.setStyle color = "#48892D";
+                district{ $ }.setStyle color = "#48892D";
         else if (affinity >= 11 && affinity <= 49)
-            district{ $ }.setStyle color = "#5C9C40";
+                district{ $ }.setStyle color = "#5C9C40";
         else if (affinity >= 50 && affinity <= 100)
-            district{ $ }.setStyle color = "#48892D";
+                district{ $ }.setStyle color = "#48892D";
         else if (affinity == 0)
-            district{ $ }.setStyle color = "#FFFFFF";
+                district{ $ }.setStyle color = "#FFFFFF";
+        }
     }
 }
 
