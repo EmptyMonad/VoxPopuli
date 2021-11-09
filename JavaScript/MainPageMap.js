@@ -27,7 +27,9 @@ var sidebar = L.control.sidebar('sidebar').addTo(mymap); //Add side bar to map
 
 //Texas Congressional Distrcits. Note that Districts 14, 27, and 34 are separated into A B and C shapes.
 
-document.addEventListener('DOMContentLoaded', function () {
+
+document.addEventListener('DOMContentLoaded', function ()
+{
     var button = document.createElement('button');
     button.type = 'button';
     button.innerHTML = 'www.google.com';
@@ -40,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var container = document.getElementById('About');
     container.appendChild(button);
 }, false);
+
 
 //Function for Page Load Map Coloring
 //Call Function Here in C# for SQL
@@ -68,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 }
+
 
 var district1 = L.polygon([
 
@@ -5276,13 +5280,21 @@ var district36 = L.polygon([
 
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
-district1.on('mouseover', function () {
+district1.on('click', function () {
+
+})
+
+district1.on('click', function () {
     district1.setStyle({
         color: "#000000",
         fillColor: "#FFFFFF"
     });
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_1_gohmert_louie_200.jpg');
     $('#textcontainer').html('Representative Louie Gohmert<br/>Texas<br>District 1<br/> Republican<br/>@RepLouieGohmert<br/>');
+});
+district1.on('click', function () {
+
+    window.location.replace("../WebPages/TXDistrict1.aspx");
 });
 district1.on('mouseout', function () {
     district1.setStyle({

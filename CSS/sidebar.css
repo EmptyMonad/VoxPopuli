@@ -6,6 +6,16 @@
     overflow: hidden;
     z-index: 2000;
 }
+#repphoto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+}
+
+
+
 
     .sidebar.collapsed {
         width: 40px;
@@ -125,6 +135,8 @@
         bottom: 0;
     }
 
+ 
+
 .sidebar-content {
     position: absolute;
     top: 0;
@@ -132,6 +144,7 @@
     background-color: rgba(255, 255, 255, 0.95);
     overflow-x: hidden;
     overflow-y: auto;
+    
 }
 
 .sidebar-left .sidebar-content {
@@ -155,10 +168,26 @@
     box-sizing: border-box;
     padding: 10px 20px;
 }
+img#RepPic
+{
+    float: left;
+    height:10em;
+    padding-right:2em;
+    padding-top:0.5em;
+}
 
-    .sidebar-pane.active {
-        display: block;
-    }
+.RepName
+{
+    align-content:end;
+    text-align-last:auto;
+    position:relative;
+
+}
+
+
+ .sidebar-pane.active {
+    display: block;
+ }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .sidebar-pane {

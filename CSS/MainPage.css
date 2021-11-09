@@ -1,12 +1,13 @@
 ﻿#mapid {
-    height: 1500px;
-    width: 1900px;
+    height: 1077px;
+    width: 1885px;
 }
 
 #body {
     padding: 0;
     margin: 0;
 }
+
 
 button#Button1 {
     position: relative;

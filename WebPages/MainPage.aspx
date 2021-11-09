@@ -8,25 +8,29 @@
 
     <!-- This is the space used for api access and the hosted version
         of leaflet -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font for the Sidebar -->
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/css/leaflet-sidebar.css">
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-          crossorigin="" />
-
+          crossorigin="" /> <!-- Leaflet CSS CDN -->
+    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
             integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-            crossorigin=""></script>
+            crossorigin=""></script>  <!-- CDN for Leaflet Javascript Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script> <!-- CDN for JQuery -->
+
     <!-- End api section -->
 
-    <!-- Link to the stylesheet for the MainPage-->
-    <link rel="stylesheet" href="../CSS/MainPage.css" />
+    
+    <link rel="stylesheet" href="../CSS/MainPage.css" /> <!-- Link to the stylesheet for the MainPage-->
+    <link rel="stylesheet" href="../CSS/sidebar.css" />
     <title></title>
 </head>
     <body>
-        <form id="form1" runat="server">
+
+    <form id="form1" runat="server">
+
     <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
@@ -41,15 +45,17 @@
 
         <!-- Tab panes -->
         <div class="sidebar-content">
+
             
             <div class="sidebar-pane" id="profile" runat="server">
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <div id ="repphoto"><img src="\Photos\30-307416_profile-icon-png-image-free-download-searchpng-employee.png" id ="picture"/></div>
+                <div id ="repphoto"><img src="\Photos\default_picture.png" id ="picture"/></div>
                 <div id ="textcontainer" ></div>
                  <div> 
     <object type="text/html" data="https://justfacts.votesmart.org/candidate/key-votes/50029/louie-gohmert" width="800" height="600" style="overflow:auto;border:5px ridge blue"></object>
             </div>
                 <!-- <div id ="billcontainer" ><br />Bill1<br />Bill2<br />Bill3<br />Bill4<br />Bill5<br />Bill6<br />Bill7<br />Bill8<br />Bill9<br />Bill10<br /></div>-->
+
             </div>
 
             <div class="sidebar-pane" id="messages">
@@ -60,14 +66,22 @@
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
         </div>
-    </div>
         <div id="mapid" class="sidebar-map"></div>
+        <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
+
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString2 %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
             <asp:Button ID="btn" runat="server" style="display:none;" autopostback="false" />
+
+
+        
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuliConnectionString2 %>" SelectCommand="SELECT * FROM [VotingInformation]"></asp:SqlDataSource>
+            <asp:Button ID="btn" runat="server" style="display:none;" OnClick="btn_Click" autopostback="false" />
+
         </form>
         
     </body>

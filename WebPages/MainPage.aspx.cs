@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Web;
 using System.Web.UI;
 using System.Web.Services;
 using System.Web.Http.Cors;
 using System.Web.UI.WebControls;
-using System.Data;
-using System.Data.SqlClient;
+
 namespace MapProject.WebPages
 {
     public partial class MainPage : System.Web.UI.Page
@@ -131,5 +132,15 @@ namespace MapProject.WebPages
              mapColor{Rep35Affinity, "district35");
              mapColor(Rep36Affinity, "district36");*/
         }
+
+        
+
+        protected void btn_Click(object sender, EventArgs e)
+        {
+           
+
+        }
+            
+ 
     }
 }
