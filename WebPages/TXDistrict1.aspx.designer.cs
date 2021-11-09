@@ -7,60 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MapProject.WebPages
+namespace VoxPopuli.WebPages
 {
 
 
-    public partial class MainPage
+    public partial class TXDistrict1
     {
 
         /// <summary>
-
         /// form1 control.
-
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// profile control.
+        /// RepNameHolder control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl profile;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl RepNameHolder;
 
         /// <summary>
-        /// RepTitle control.
+        /// RepPicture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl RepTitle;
+        protected global::System.Web.UI.WebControls.Image RepPicture;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// twitterHandle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl twitterHandle;
 
         /// <summary>
-        /// btn control.
+        /// VoxPopuliDB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn;
-
+        protected global::System.Web.UI.WebControls.SqlDataSource VoxPopuliDB;
     }
 }

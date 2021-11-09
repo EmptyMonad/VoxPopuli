@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MainPage.aspx.cs" Inherits="MapProject.WebPages.MainPage" %>
 
+
 <!DOCTYPE html>
 
 <html>
@@ -27,12 +28,11 @@
     <title></title>
 </head>
     <body>
-        <!-- Side bar Div Start -->
-    <div id="sidebar" class="sidebar collapsed"> 
+    <form id="form1" runat="server">
+    <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
             <ul role="tablist">
-                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
                 <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
             </ul>
 
@@ -43,21 +43,11 @@
 
         <!-- Tab panes -->
         <div class="sidebar-content">
-            <div class="sidebar-pane" id="home">
-                <h1 class="sidebar-header">
-                    sidebar-v2
-                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
-                </h1>
-                <p>A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
-            </div>
 
-            <div class="sidebar-pane" id="profile">
-                <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <img src="https://picsum.photos/id/1/200/300" alt="Computer Stock Image" id="RepPic" /> <!-- The reps picture-->
-              
-                 <p class="RepName">Name: Billy Bob</p>
-                <p class="call"></p>
-                
+            
+            <div class="sidebar-pane" id="profile" runat="server">
+                <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+                <div id ="repphoto"><img src="\Photos\30-307416_profile-icon-png-image-free-download-searchpng-employee.png" /></div>
             </div>
 
             <div class="sidebar-pane" id="messages">
@@ -74,7 +64,11 @@
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <asp:SqlDataSource runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
+
+        
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuliConnectionString2 %>" SelectCommand="SELECT * FROM [VotingInformation]"></asp:SqlDataSource>
+            <asp:Button ID="btn" runat="server" style="display:none;" OnClick="btn_Click" autopostback="false" />
+        </form>
+        
     </body>
 </html>

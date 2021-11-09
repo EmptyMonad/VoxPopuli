@@ -5263,6 +5263,10 @@ district1.on('click', function () {
         fillColor: "#00FF00"
     });
 });
+district1.on('click', function () {
+
+    window.location.replace("../WebPages/TXDistrict1.aspx");
+});
 district1.on('mouseout', function () {
     district1.setStyle({
         color: "#FF0000",
@@ -5959,3 +5963,10 @@ district36.on('mouseover', function () {
             fillColor: "#FF0000"
         });
     });
+
+function paintDistrictBlack(district) {
+    district.setStyle({
+        color: "#000000",
+        fillColor: "#000000"
+    });
+}
