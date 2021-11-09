@@ -44,26 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
 //Function for Page Load Map Coloring
 //Call Function Here in C# for SQL
 {
-    function mapColor(int affinity, int $num) {
-        if (affinity >= -100 || affinity <= 100) {
+    function mapColor(popularity, element) {
+        if (affinity >= -100 || affinity <= 100)
+        {
             if (affinity >= -100 && affinity <= -50)
-                district{ $ }.setStyle color = "#6D5D25";
+                document.getElementByID(element).style.color = "#6D5D25";
         else if (affinity >= -49 && affinity <= -11)
-                district{ $ }.setStyle color = "#9C883F";
+                document.getElementByID(element).style.color = "#9C883F";
         else if (affinity >= -10 && affinity <= -5)
-                district{ $ }.setStyle color = "#6D5D25";
+                document.getElementByID(element).style.color = "#6D5D25";
         else if (affinity >= -4 && affinity <= -1)
-                district{ $ }.setStyle color = "#BDAB6C";
+                document.getElementByID(element).style.color = "#BDAB6C";
         else if (affinity >= 1 && affinity <= 4)
-                district{ $ }.setStyle color = "#84BD6C";
+                document.getElementByID(element).style.color = "#84BD6C";
         else if (affinity >= 5 && affinity <= 10)
-                district{ $ }.setStyle color = "#48892D";
+                document.getElementByID(element).style.color = "#48892D";
         else if (affinity >= 11 && affinity <= 49)
-                district{ $ }.setStyle color = "#5C9C40";
+                document.getElementByID(element).style.color = "#5C9C40";
         else if (affinity >= 50 && affinity <= 100)
-                district{ $ }.setStyle color = "#48892D";
+                document.getElementByID(element).style.color = "#48892D";
         else if (affinity == 0)
-                district{ $ }.setStyle color = "#FFFFFF";
+                document.getElementByID(element).style.color = "#FFFFFF";
         }
     }
 }
@@ -5297,10 +5298,12 @@ district2.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/c001120_200.jpg');
 });
 district2.on('mouseover', function () {
-    district2.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001120_200.jpg');
+    $('#textcontainer').html('Representative Dan Crenshaw<br/>Texas<br>District 2<br/> Republican<br/>@RepDanCrenshaw<br/>');
 });
 district2.on('mouseout', function () {
     district2.setStyle({
@@ -5316,10 +5319,12 @@ district3.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/t000479_200.jpg');
 });
 district3.on('mouseover', function () {
-    district3.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/t000479_200.jpg');
+    $('#textcontainer').html('Representative Van Taylor<br/>Texas<br>District 3<br/> Republican<br/>@RepVanTaylor<br/>');
 });
 district3.on('mouseout', function () {
     district3.setStyle({
@@ -5327,12 +5332,13 @@ district3.on('mouseout', function () {
         fillColor: "#0000FF66"
     });
 });
-district4.on('click', function () {
-    district3.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+district4.on('mouseover', function () {
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
     $('#picture').attr('src', 'https://www.congress.gov/img/member/f000246_200.jpg');
+    $('#textcontainer').html('Representative Pat Fallon<br/>Texas<br>District 4<br/> Republican<br/>@RepPatFallon<br/>');
 });
 district4.on('mouseover', function () {
     district4.setStyle({
@@ -5354,10 +5360,12 @@ district5.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/g000589_200.jpg');
 });
 district5.on('mouseover', function () {
-    district5.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000589_200.jpg');
+    $('#textcontainer').html('Representative Lance Gooden<br/>Texas<br>District 5<br/> Republican<br/>@RepLanceGooden<br/>');
 });
 district5.on('mouseout', function () {
     district5.setStyle({
@@ -5373,10 +5381,12 @@ district6.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/w000827_200.jpg');
 });
 district6.on('mouseover', function () {
-    district6.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000827_200.jpg');
+    $('#textcontainer').html('Representative Jake Ellzey<br/>Texas<br>District 6<br/> Republican<br/><br/>');
 });
 district6.on('mouseout', function () {
     district6.setStyle({
@@ -5392,10 +5402,12 @@ district7.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/f000468_200.jpg');
 });
 district7.on('mouseover', function () {
-    district7.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/f000468_200.jpg');
+    $('#textcontainer').html('Representative Lizzie Fletcher<br/>Texas<br>District 7<br/> Democratic<br/>@RepFletcher<br/>');
 });
 district7.on('mouseout', function () {
     district7.setStyle({
@@ -5411,10 +5423,12 @@ district8.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/b000755_200.jpg');
 });
 district8.on('mouseover', function () {
-    district8.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b000755_200.jpg');
+    $('#textcontainer').html('Representative Kevin Brady<br/>Texas<br>District 8<br/> Republican<br/>@RepKevinBrady<br/>');
 });
 district8.on('mouseout', function () {
     district8.setStyle({
@@ -5430,10 +5444,12 @@ district9.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg');
 });
 district9.on('mouseover', function () {
-    district9.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg');
+    $('#textcontainer').html('Representative Al Green<br/>Texas<br>District 9<br/> Democratic<br/>@RepAlGreen<br/>');
 });
 district9.on('mouseout', function () {
     district9.setStyle({
@@ -5449,10 +5465,12 @@ district10.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_10_mccaul_michael_200.jpg');
 });
 district10.on('mouseover', function () {
-    district10.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_10_mccaul_michael_200.jpg');
+    $('#textcontainer').html('Representative Michael McCaul<br/>Texas<br>District 10<br/> Republican<br/>@RepMcCaul<br/>');
 });
 district10.on('mouseout', function () {
     district10.setStyle({
@@ -5468,10 +5486,12 @@ district11.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/p000048_200.jpg');
 });
 district11.on('mouseover', function () {
-    district11.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/p000048_200.jpg');
+    $('#textcontainer').html('Representative August Pfluger<br/>Texas<br>District 11<br/> Republican<br/>@RepPfluger<br/>');
 });
 district11.on('mouseout', function () {
     district11.setStyle({
@@ -5487,10 +5507,12 @@ district12.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/g000377_200.jpg');
 });
 district12.on('mouseover', function () {
-    district12.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000377_200.jpg');
+    $('#textcontainer').html('Representative  Kay Granger<br/>Texas<br>District 12<br/> Republican<br/>@RepKayGranger<br/>');
 });
 district12.on('mouseout', function () {
     district12.setStyle({
@@ -5506,10 +5528,12 @@ district13.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/j000304_200.jpg');
 });
 district13.on('mouseover', function () {
-    district13.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000304_200.jpg');
+    $('#textcontainer').html('Representative Ronny Jackson<br/>Texas<br>District 13<br/> Republican<br/>@RepRonnyJackson<br/>');
 });
 district13.on('mouseout', function () {
     district13.setStyle({
@@ -5577,7 +5601,8 @@ district14A.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
-
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    $('#textcontainer').html('Representative Randy Weber<br/>Texas<br>District 14<br/> Republican<br/>@TXRandy14<br/>');
 });
 district14A.on('mouseout', function () {
     district14A.setStyle({
@@ -5612,7 +5637,8 @@ district14B.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
-
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    $('#textcontainer').html('Representative Randy Weber<br/>Texas<br>District 14<br/> Republican<br/>@TXRandy14<br/>');
 });
 district14B.on('mouseout', function () {
     district14A.setStyle({
@@ -5647,7 +5673,8 @@ district14C.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
-
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    $('#textcontainer').html('Representative Randy Weber<br/>Texas<br>District 14<br/> Republican<br/>@TXRandy14<br/>');
 });
 district14C.on('mouseout', function () {
     district14A.setStyle({
@@ -5674,10 +5701,12 @@ district15.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg');
 });
 district15.on('mouseover', function () {
-    district15.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg');
+    $('#textcontainer').html('Representative Vicente Gonzales<br/>Texas<br>District 15<br/> Democratic<br/>@RepGonzalez<br/>');
 });
 district15.on('mouseout', function () {
     district15.setStyle({
@@ -5693,10 +5722,12 @@ district16.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/e000299_200.jpg');
 });
 district16.on('mouseover', function () {
-    district16.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/e000299_200.jpg');
+    $('#textcontainer').html('Representative Veronica Escobar<br/>Texas<br>District 16<br/> Democratic<br/>@RepEscobar<br/>');
 });
 district16.on('mouseout', function () {
     district16.setStyle({
@@ -5712,10 +5743,12 @@ district17.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_32_sessions_pete_200.jpg');
 });
 district17.on('mouseover', function () {
-    district17.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_32_sessions_pete_200.jpg');
+    $('#textcontainer').html('Representative Pete Sessions<br/>Texas<br>District 17<br/> Republican<br/>@PeteSessions<br/>');
 });
 district17.on('mouseout', function () {
     district17.setStyle({
@@ -5731,10 +5764,12 @@ district18.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/j000032_200.jpg');
 });
 district18.on('mouseover', function () {
-    district18.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000032_200.jpg');
+    $('#textcontainer').html('Representative Sheila Jackson Lee<br/>Texas<br>District 18<br/> Democratic<br/>@JacksonLeeTX18<br/>');
 });
 district18.on('mouseout', function () {
     district18.setStyle({
@@ -5750,10 +5785,12 @@ district19.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_19_arrington_jodey_200.jpg');
 });
 district19.on('mouseover', function () {
-    district19.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_19_arrington_jodey_200.jpg');
+    $('#textcontainer').html('Representative Jodey Arrington<br/>Texas<br>District 19<br/> Republican<br/>@RepArrington<br/>');
 });
 district19.on('mouseout', function () {
     district19.setStyle({
@@ -5769,10 +5806,12 @@ district20.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/c001091_200.jpg');
 });
 district20.on('mouseover', function () {
-    district20.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001091_200.jpg');
+    $('#textcontainer').html('Representative Joaquin Castro<br/>Texas<br>District 30<br/> Democratic<br/>@JoaquinCastrotx<br/>');
 });
 district20.on('mouseout', function () {
     district20.setStyle({
@@ -5788,10 +5827,12 @@ district21.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/r000614_200.jpg');
 });
 district21.on('mouseover', function () {
-    district21.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/r000614_200.jpg');
+    $('#textcontainer').html('Representative Roy Chip<br/>Texas<br>District 21<br/> Republican<br/>@RepChipRoy<br/>');
 });
 district21.on('mouseout', function () {
     district21.setStyle({
@@ -5807,10 +5848,12 @@ district22.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/n000026_200.jpg');
 });
 district22.on('mouseover', function () {
-    district22.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/n000026_200.jpg');
+    $('#textcontainer').html('Representative Troy Nehls<br/>Texas<br>District 22<br/> Republican<br/>@RepTroyNehls<br/>');
 });
 district22.on('mouseout', function () {
     district22.setStyle({
@@ -5826,10 +5869,12 @@ district23.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/g000594_200.jpg');
 });
 district23.on('mouseover', function () {
-    district23.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000594_200.jpg');
+    $('#textcontainer').html('Representative Tony Gonzales<br/>Texas<br>District 23<br/> Republican<br/>@RepTonyGonzales<br/>');
 });
 district23.on('mouseout', function () {
     district23.setStyle({
@@ -5845,10 +5890,12 @@ district24.on('click', function () {
     $('#picture').attr('src', 'https://www.');
 });
 district24.on('mouseover', function () {
-    district24.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://vanduyne.house.gov/sites/evo-subsites/vanduyne.house.gov/files/styles/evo_image_medium_portrait/public/evo-media-image/IMG_0728.JPG?h=0e4e36f5&itok=0YH7zfsI');
+    $('#textcontainer').html('Representative Beth Van Duyne<br/>Texas<br>District 24<br/> Republican<br/>@RepBethVanDuyne<br/>');
 });
 district24.on('mouseout', function () {
     district24.setStyle({
@@ -5864,10 +5911,12 @@ district25.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/w000816_200.jpg');
 });
 district25.on('mouseover', function () {
-    district25.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000816_200.jpg');
+    $('#textcontainer').html('Representative Roger Williams<br/>Texas<br>District 25<br/> Republican<br/>@RepRWilliams<br/>');
 });
 district25.on('mouseout', function () {
     district25.setStyle({
@@ -5883,10 +5932,12 @@ district26.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/b001248_200.jpg');
 });
 district26.on('mouseover', function () {
-    district26.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001248_200.jpg');
+    $('#textcontainer').html('Representative Michael Burgess<br/>Texas<br>District 26<br/> Republican<br/>@MichaelCBurgess<br/>');
 });
 district26.on('mouseout', function () {
     district26.setStyle({
@@ -5952,6 +6003,8 @@ district27A.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    $('#textcontainer').html('Representative Michael Cloud<br/>Texas<br>District 27<br/> Republican<br/>@RepCloudTX<br/>');
 });
 district27A.on('mouseout', function () {
     district27A.setStyle({
@@ -5981,6 +6034,8 @@ district27B.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    $('#textcontainer').html('Representative Michael Cloud<br/>Texas<br>District 27<br/> Republican<br/>@RepCloudTX<br/>');
 });
 district27B.on('mouseout', function () {
     district27A.setStyle({
@@ -6010,6 +6065,8 @@ district27C.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    $('#textcontainer').html('Representative Michael Cloud<br/>Texas<br>District 27<br/> Republican<br/>@RepCloudTX<br/>');
 });
 district27C.on('mouseout', function () {
     district27A.setStyle({
@@ -6033,10 +6090,12 @@ district28.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg');
 });
 district28.on('mouseover', function () {
-    district28.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg');
+    $('#textcontainer').html('Representative Henry Cuellar<br/>Texas<br>District 28<br/> Democratic<br/>@RepCuellar<br/>');
 });
 district28.on('mouseout', function () {
     district28.setStyle({
@@ -6052,10 +6111,12 @@ district29.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/g000587_200.jpg');
 });
 district29.on('mouseover', function () {
-    district29.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000587_200.jpg');
+    $('#textcontainer').html('Representative Sylvia Garcia<br/>Texas<br>District 29<br/> Democratic<br/>@RepSylviaGarcia<br/>');
 });
 district29.on('mouseout', function () {
     district29.setStyle({
@@ -6071,10 +6132,12 @@ district30.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_30_johnson_eddie_200.jpg');
 });
 district30.on('mouseover', function () {
-    district30.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_30_johnson_eddie_200.jpg');
+    $('#textcontainer').html('Representative Eddie Johnson<br/>Texas<br>District 30<br/> Democratic<br/>@RepEBJ<br/>');
 });
 district30.on('mouseout', function () {
     district30.setStyle({
@@ -6090,10 +6153,12 @@ district31.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/c001051_200.jpg');
 });
 district31.on('mouseover', function () {
-    district31.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001051_200.jpg');
+    $('#textcontainer').html('Representative John Carter<br/>Texas<br>District 31<br/> Republican<br/>@JudgeCarter<br/>');
 });
 district31.on('mouseout', function () {
     district31.setStyle({
@@ -6109,10 +6174,12 @@ district32.on('click', function () {
     $('#picture').attr('src', 'https://www.https://www.congress.gov/img/member/a000376_200.jpg');
 });
 district32.on('mouseover', function () {
-    district32.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/a000376_200.jpg');
+    $('#textcontainer').html('Representative Colin Allred<br/>Texas<br>District 32<br/> Democratic<br/>@RepColinAllred<br/>');
 });
 district32.on('mouseout', function () {
     district32.setStyle({
@@ -6128,10 +6195,12 @@ district33.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/v000131_200.jpg');
 });
 district33.on('mouseover', function () {
-    district33.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000131_200.jpg');
+    $('#textcontainer').html('Representative Marc Veasey<br/>Texas<br>District 33<br/> Democratic<br/>@RepVeasey<br/>');
 });
 district33.on('mouseout', function () {
     district33.setStyle({
@@ -6197,6 +6266,8 @@ district34A.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    $('#textcontainer').html('Representative Filemon Vela<br/>Texas<br>District 34<br/> Democratic<br/>@RepFilemonVela<br/>');
 });
 district34A.on('mouseout', function () {
     district34A.setStyle({
@@ -6226,6 +6297,8 @@ district34B.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    $('#textcontainer').html('Representative Filemon Vela<br/>Texas<br>District 34<br/> Democratic<br/>@RepFilemonVela<br/>');
 });
 district34B.on('mouseout', function () {
     district34A.setStyle({
@@ -6255,6 +6328,8 @@ district34C.on('mouseover', function () {
         color: "#00FF00",
         fillColor: "#00FF00"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    $('#textcontainer').html('Representative Filemon Vela<br/>Texas<br>District 34<br/> Democratic<br/>@RepFilemonVela<br/>');
 });
 district34C.on('mouseout', function () {
     district34A.setStyle({
@@ -6278,10 +6353,12 @@ district35.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/d000399_200.jpg');
 });
 district35.on('mouseover', function () {
-    district35.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/d000399_200.jpg');
+    $('#textcontainer').html('Representative Lloyd Doggett<br/>Texas<br>District 35<br/> Democratic<br/>@RepLloydDoggett<br/>');
 });
 district35.on('mouseout', function () {
     district35.setStyle({
@@ -6297,10 +6374,12 @@ district36.on('click', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/b001291_200.jpg');
 });
 district36.on('mouseover', function () {
-    district36.setStyle({
-        color: "#00FF00",
-        fillColor: "#00FF00"
+    district1.setStyle({
+        color: "#000000",
+        fillColor: "#FFFFFF"
     });
+    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001291_200.jpg');
+    $('#textcontainer').html('Representative Brian Babin<br/>Texas<br>District 36<br/> Republican<br/>@RepBrianBabin<br/>');
 });
 district36.on('mouseout', function () {
     district36.setStyle({
