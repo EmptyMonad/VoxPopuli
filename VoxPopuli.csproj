@@ -122,6 +122,7 @@
     <Content Include="DB\ScriptofVoxPopuliv2.sql" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
+    <Content Include="Recaptcha.dll" />
     <Content Include="WebPages\getBill.php" />
     <Content Include="WebPages\getPic.php" />
     <Content Include="WebPages\getCongress.php" />
@@ -129,22 +130,17 @@
     <Content Include="JavaScript\jquery-3.6.0.min.js" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
-
     <Content Include="Pictures\example-Image.png" />
     <Content Include="VoxPopuliMap_Version1.0.html" />
     <Content Include="Photos\default_picture.png" />
     <Content Include="Photos\green_upvote.png" />
-    
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
-
     <Content Include="WebPages\mouseroverfunctions.cpp" />
-
     <Content Include="WebPages\Register.aspx" />
     <Content Include="WebPages\RepPage.aspx" />
     <Content Include="WebPages\TXDistrict1.aspx" />
-
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

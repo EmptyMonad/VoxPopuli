@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:TextBox ID="txtUsername" runat="server" placeholder="Username or Password"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" placeholder="Username or Email"></asp:TextBox>
             <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="*Required" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
             <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>

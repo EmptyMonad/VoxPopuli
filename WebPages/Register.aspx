@@ -6,6 +6,7 @@
 <head runat="server">
     <title></title>
    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <link rel="stylesheet" href="../CSS/Register.css" />
 </head>
 <body>
     <div>
