@@ -1,11 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" UnobtrusiveValidationMode="None" Inherits="VoxPopuli.WebPages.Register" %>
-
+<%@ Register TagPrefix="recaptcha" Namespace="Recaptcha" Assembly="Recaptcha" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <link rel="stylesheet" href="../CSS/Register.css"/>
+   <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <div>
@@ -37,6 +37,7 @@
             </label>
 
             <label id="conPassSec">
+
                 <asp:Label ID="lblConfirmPassword" runat="server" CssClass="label" Text="Confirm Password: "></asp:Label>
                 <asp:TextBox ID="txtboxConfirmPassword" runat="server" TextMode="Password" CssClass="txtbox" placeholder="Confirm Password"></asp:TextBox>
                 <asp:CompareValidator ID="cvPassword" runat="server" ControlToCompare="txtboxPassword" ControlToValidate="txtboxConfirmPassword" ErrorMessage="*Passwords Do Not Match!" ForeColor="Red"></asp:CompareValidator>
@@ -44,6 +45,11 @@
                 <br />
             </label>
 
+
+            </label>
+            <div class="g-recaptcha" data-sitekey="6Lc-4xQdAAAAANtCCYS0lzDT3xZlFQv_1WyJdLWg"></div>
+            <asp:Label ID="lblCaptchaError" runat="server" Text="*Must Complete Captcha" ForeColor="Red" Visible="False"></asp:Label>
+           
             <br />
             <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
             <asp:Label ID="lblPasswordReq" runat="server" ForeColor="Red" Text="*Password does not meet requirements. Password must be at least 8 characters, contain an uppercase letter, a lowercase letter, and a digit." Visible="False"></asp:Label>
