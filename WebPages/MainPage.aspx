@@ -66,6 +66,7 @@
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
         </div>
+       </div>
         <div id="mapid" class="sidebar-map"></div>
         <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
 
@@ -79,8 +80,7 @@
 
 
         
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuliConnectionString2 %>" SelectCommand="SELECT * FROM [VotingInformation]"></asp:SqlDataSource>
-            <asp:Button ID="btn" runat="server" style="display:none;" OnClick="btn_Click" autopostback="false" />
+           
 
         </form>
         
