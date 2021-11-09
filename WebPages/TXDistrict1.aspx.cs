@@ -378,6 +378,19 @@ namespace VoxPopuli.WebPages
                 twitterHandle.InnerHtml = "@" + repTwitter;
                 RepPicture.ImageUrl = repPicURL;
 
+                billname2.InnerHtml = Bill315Name;
+                BillID2.InnerHtml = "Bill ID" + Bill315ID;
+                Link2.InnerHtml = "Bill Link: " + Bill315Link;
+                result2.InnerHtml = "Bill Result: " + Bill315Result;
+                repvote2.InnerHtml = "Representaive Voted:" + Bill315Vote;
+
+
+                billname2.InnerHtml = Bill315Name;
+                BillID2.InnerHtml = "Bill ID" + Bill315ID;
+                Link2.InnerHtml = "Bill Link: " + Bill315Link;
+                result2.InnerHtml = "Bill Result: " + Bill315Result;
+                repvote2.InnerHtml = "Representaive Voted:" + Bill315Vote;
+
 
 
 
