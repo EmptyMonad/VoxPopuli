@@ -47,7 +47,7 @@
             
             <div class="sidebar-pane" id="profile" runat="server">
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <div id ="repphoto"><img src="\Photos\30-307416_profile-icon-png-image-free-download-searchpng-employee.png" /></div>
+                <div id ="repphoto"><img src="\Photos\default_picture.png" /></div>
             </div>
 
             <div class="sidebar-pane" id="messages">

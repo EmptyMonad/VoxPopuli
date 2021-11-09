@@ -1,0 +1,90 @@
+﻿body {
+    background: #C5E1A5;
+}
+
+img#RepPicture {
+    position: relative;
+    height: auto;
+    margin: auto;
+    display: block;
+    width: 17em;
+}
+
+.Rep-Top {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: fit-content; 
+    box-shadow: 0 4px 8px 0 grey;
+    text-align:center;
+}
+
+.Rep-Top p {
+    position: inherit;
+    margin: inherit;
+    text-align: center;
+    
+   
+}
+
+.Scroll {
+    width: 51em;
+    height: 25em;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+    scrollbar-3dlight-color: cornflowerblue;
+    align-content: center;
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 4em;
+    box-shadow: 0 4px 8px 0 grey;
+}
+
+.Scroll button {
+    border-radius: 50%;
+    display:block;
+    text-decoration: none;
+    padding: 4em;
+    margin:1em 1em 1em 1em;
+}
+
+
+.bname {
+    position: relative;
+    top: -6em;
+    left: 6em;
+}
+
+.bID {
+    position: relative;
+    display:block;
+    top: -10em;
+    right: -9em;
+    margin:auto;
+}
+
+.blink {
+    position: relative;
+    top:-10em;
+    right:-9em;
+    margin:auto;
+    display:block;
+}
+
+.bresult {
+    position: relative;
+    margin:auto;
+    top:-9em;
+    left:9em;
+    display:block;
+}
+
+.bvote {
+    position: relative;
+    display: block;
+    top: -9em;
+    right: -9em;
+    margin: auto;
+}
+ 
