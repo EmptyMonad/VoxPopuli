@@ -28,7 +28,9 @@
     <title></title>
 </head>
     <body>
+
     <form id="form1" runat="server">
+
     <div id="sidebar" class="sidebar collapsed">
         <!-- Nav tabs -->
         <div class="sidebar-tabs">
@@ -47,7 +49,13 @@
             
             <div class="sidebar-pane" id="profile" runat="server">
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <div id ="repphoto"><img src="\Photos\default_picture.png" /></div>
+                <div id ="repphoto"><img src="\Photos\default_picture.png" id ="picture"/></div>
+                <div id ="textcontainer" ></div>
+                 <div> 
+    <object type="text/html" data="https://justfacts.votesmart.org/candidate/key-votes/50029/louie-gohmert" width="800" height="600" style="overflow:auto;border:5px ridge blue"></object>
+            </div>
+                <!-- <div id ="billcontainer" ><br />Bill1<br />Bill2<br />Bill3<br />Bill4<br />Bill5<br />Bill6<br />Bill7<br />Bill8<br />Bill9<br />Bill10<br /></div>-->
+
             </div>
 
             <div class="sidebar-pane" id="messages">
@@ -65,9 +73,15 @@
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:masterConnectionString2 %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
+            <asp:Button ID="btn" runat="server" style="display:none;" autopostback="false" />
+
+
         
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuliConnectionString2 %>" SelectCommand="SELECT * FROM [VotingInformation]"></asp:SqlDataSource>
             <asp:Button ID="btn" runat="server" style="display:none;" OnClick="btn_Click" autopostback="false" />
+
         </form>
         
     </body>

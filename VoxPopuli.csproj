@@ -48,6 +48,9 @@
       <HintPath>..\..\..\Downloads\recaptcha-dotnet-1.0.5.0-binary\Recaptcha.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,6 +60,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -104,6 +110,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\ScriptofVoxPopuli.sql" />
     <Content Include="CSS\MainPage.css" />
     <Content Include="CSS\RepPage.css" />
     <Content Include="CSS\sidebar.css" />
@@ -111,16 +122,29 @@
     <Content Include="DB\ScriptofVoxPopuliv2.sql" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
+    <Content Include="WebPages\getBill.php" />
+    <Content Include="WebPages\getPic.php" />
+    <Content Include="WebPages\getCongress.php" />
+    <Content Include="WebPages\ajax.php" />
+    <Content Include="JavaScript\jquery-3.6.0.min.js" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
+
+    <Content Include="Pictures\example-Image.png" />
+    <Content Include="VoxPopuliMap_Version1.0.html" />
     <Content Include="Photos\default_picture.png" />
     <Content Include="Photos\green_upvote.png" />
+    
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
+
+    <Content Include="WebPages\mouseroverfunctions.cpp" />
+
     <Content Include="WebPages\Register.aspx" />
     <Content Include="WebPages\RepPage.aspx" />
     <Content Include="WebPages\TXDistrict1.aspx" />
+
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -179,7 +203,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
     <Folder Include="Images\" />
     <Folder Include="Models\" />
