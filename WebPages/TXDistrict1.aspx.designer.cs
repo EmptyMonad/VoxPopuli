@@ -51,33 +51,6 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl twitterHandle;
 
         /// <summary>
-        /// Office control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Office;
-
-        /// <summary>
-        /// uvb1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton uvb1;
-
-        /// <summary>
-        /// dvb1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton dvb1;
-
-        /// <summary>
         /// Bill1 control.
         /// </summary>
         /// <remarks>
@@ -159,6 +132,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlButton Bill2;
 
         /// <summary>
+        /// billname2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl billname2;
+
+        /// <summary>
         /// Label6 control.
         /// </summary>
         /// <remarks>
@@ -166,6 +148,15 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label6;
+
+        /// <summary>
+        /// BillID2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BillID2;
 
         /// <summary>
         /// Label7 control.
@@ -177,6 +168,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
+        /// Link2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Link2;
+
+        /// <summary>
         /// Label8 control.
         /// </summary>
         /// <remarks>
@@ -186,6 +186,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
+        /// result2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl result2;
+
+        /// <summary>
         /// Label9 control.
         /// </summary>
         /// <remarks>
@@ -193,6 +202,15 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label9;
+
+        /// <summary>
+        /// repvote2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl repvote2;
 
         /// <summary>
         /// Label10 control.
@@ -213,6 +231,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlButton Bill3;
 
         /// <summary>
+        /// billname3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl billname3;
+
+        /// <summary>
         /// Label11 control.
         /// </summary>
         /// <remarks>
@@ -220,6 +247,15 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label11;
+
+        /// <summary>
+        /// BillID3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl BillID3;
 
         /// <summary>
         /// Label12 control.
@@ -231,6 +267,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
+        /// Link3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Link3;
+
+        /// <summary>
         /// Label13 control.
         /// </summary>
         /// <remarks>
@@ -240,6 +285,15 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
+        /// result3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl result3;
+
+        /// <summary>
         /// Label14 control.
         /// </summary>
         /// <remarks>
@@ -247,6 +301,15 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label14;
+
+        /// <summary>
+        /// repvote3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl repvote3;
 
         /// <summary>
         /// Label15 control.

@@ -20,7 +20,6 @@
             <asp:Image ID="RepPicture" ImageUrl="~/Photos/default_picture.png" runat="server" />
             <p id="RepNameHolder" runat="server">John Doe</p>
             <h2 id="twitterHandle" runat="server"></h2>
-            <h3 runat="server" id="Office"></h3>
         </div>
         <div id="Bills" class="Scroll">
             <button id="upvote" runat="server" class="upvotebutton"></button>
@@ -33,21 +32,21 @@
               
 
 
-            <button id="Bill2" runat="server" class="billbutton"></button>
-                <h2 id="bill-name2" class="bname"><asp:Label ID="Label6" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID2" class="bID"><asp:Label ID="Label7" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link2" class="blink"><asp:Label ID="Label8" runat="server" Text="Link: "></asp:Label>link<a></a></p>
-                <p id="result2" class="bresult"><asp:Label ID="Label9" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote2" class="bvote"><asp:Label ID="Label10" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+            <button id="Bill2" runat="server"></button>
+                <h2 id="billname2" class="bname" runat="server"><asp:Label ID="Label6" runat="server" Text="Name: "></asp:Label>name</h2>
+                <p id="BillID2" class="bID" runat="server"><asp:Label ID="Label7" runat="server" Text="ID: "></asp:Label>ID</p>
+                <p id="Link2" class="blink" runat="server"><asp:Label ID="Label8" runat="server" Text="Link: "></asp:Label>link<a></a></p>
+                <p id="result2" class="bresult" runat="server"><asp:Label ID="Label9" runat="server" Text="Result: "></asp:Label>result</p>
+                <p id="repvote2" class="bvote" runat="server"><asp:Label ID="Label10" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="Bill3" runat="server" class="billbutton"></button>
-                <h2 id="bill-name3" class="bname"><asp:Label ID="Label11" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID3" class="bID"><asp:Label ID="Label12" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link3" class="blink"><asp:Label ID="Label13" runat="server" Text="link: "></asp:Label>link<a></a></p>
-                <p id="result3" class="bresult"><asp:Label ID="Label14" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote3" class="bvote"><asp:Label ID="Label15" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+            <button id="Bill3" runat="server"></button>
+                <h2 id="billname3" class="bname" runat="server" ><asp:Label ID="Label11" runat="server" Text="Name: "></asp:Label>name</h2>
+                <p id="BillID3" class="bID" runat="server"><asp:Label ID="Label12" runat="server" Text="ID: "></asp:Label>ID</p>
+                <p id="Link3" class="blink" runat="server"><asp:Label ID="Label13" runat="server" Text="link: "></asp:Label>link<a></a></p>
+                <p id="result3" class="bresult" runat="server"><asp:Label ID="Label14" runat="server" Text="Result: "></asp:Label>result</p>
+                <p id="repvote3" class="bvote" runat="server"><asp:Label ID="Label15" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="Bill4" runat="server" class="billbutton"></button>
+            <button id="Bill4" runat="server"></button>
                 <h2 id="bill-name4" class="bname"><asp:Label ID="Label16" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID4" class="bID"><asp:Label ID="Label17" runat="server" Text="ID: "></asp:Label>ID</p>
                 <p id="Link4" class="blink"><asp:Label ID="Label18" runat="server" Text="link: "></asp:Label>link<a></a></p>
