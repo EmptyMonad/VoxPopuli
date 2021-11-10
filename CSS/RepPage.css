@@ -28,7 +28,7 @@ img#RepPicture {
 }
 
 .Scroll {
-    width: 51em;
+    width: 65em;
     height: 25em;
     overflow-y: scroll;
     overflow-wrap: break-word;
@@ -41,7 +41,9 @@ img#RepPicture {
     box-shadow: 0 4px 8px 0 grey;
 }
 
-.Scroll button {
+
+
+.billbutton {
     border-radius: 50%;
     display:block;
     text-decoration: none;

@@ -60,6 +60,24 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Office;
 
         /// <summary>
+        /// uvb1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton uvb1;
+
+        /// <summary>
+        /// dvb1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton dvb1;
+
+        /// <summary>
         /// Bill1 control.
         /// </summary>
         /// <remarks>
@@ -112,6 +130,24 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// uvb2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton uvb2;
+
+        /// <summary>
+        /// dvb2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton dvb2;
 
         /// <summary>
         /// Bill2 control.
