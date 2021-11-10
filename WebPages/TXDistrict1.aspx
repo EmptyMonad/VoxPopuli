@@ -22,7 +22,7 @@
             <h2 id="twitterHandle" runat="server"></h2>
         </div>
         <div id="Bills" class="Scroll">
-            <button id="upvote1" runat="server" class="upvotebutton" type="button"></button>
+            <button id="upvote1" runat="server" class="upvotebutton" type="button" draggable="false" onclick=""></button>
             <button id="downvote1" runat="server" class="downvotebutton" type="button"></button>
             <button id="Bill1" runat="server" class="billbutton" type="button"></button>
                 <h2 id="bill-name1" class="bname"><asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>&nbsp;John</h2>
