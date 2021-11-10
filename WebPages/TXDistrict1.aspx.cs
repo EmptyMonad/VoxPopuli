@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -10,10 +12,11 @@ namespace VoxPopuli.WebPages
 {
     public partial class TXDistrict1 : System.Web.UI.Page
     {
-        /*
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             
+            /*
           
             //Define the SQL Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
@@ -409,6 +412,148 @@ namespace VoxPopuli.WebPages
             {
                 db.Close();
             }
-       } **/
+            */
+       }
+
+        //isolates the number from the string
+        //Allowing the code to know what bill and bill items will be effected dynamically.
+        protected int buttonconvert(string buttonID)
+        {
+            int buttonnum = 0;
+            string tmp = buttonID;
+            try
+            {
+                tmp = Regex.Replace(tmp, "[^0-20]+", string.Empty);
+                buttonnum = Int32.Parse(tmp);
+
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error: String cannot be converted to Int");
+            } 
+            
+
+            return buttonnum;
+        }
+
+        protected void button_clicked(object sender, EventArgs e)
+        {
+
+            int idnum; //holds button number
+            bool containsnum = false; //bool to check if the statement contains a number
+            Button button = (Button)sender; //Make the sender a button first
+            string buttonId = button.ID; //holds full name of button
+            if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
+            {
+                setcolor(sender);
+                //pass the string of the button to get the number.
+                idnum = buttonconvert(buttonId);
+                //use the number to indivigually sql the elements into the correct 
+                // objects
+                switch (idnum)
+                {
+                    case 1:
+                        //sql database thingy
+
+                        break;
+                    case 2:
+                        //sql database thingy
+                        break;
+                    case 3:
+                        //sql database thingy
+                        break;
+                    case 4:
+                        //sql database thingy
+                        break;
+                    case 5:
+                        //sql database thingy
+                        break;
+                    case 6:
+                        //sql database thingy
+                        break;
+                    case 7:
+                        //sql database thingy
+                        break;
+                    case 8:
+                        //sql database thingy
+                        break;
+                    case 9:
+                        //sql database thingy
+                        break;
+                    case 10:
+                        //sql database thingy
+                        break;
+                    case 11:
+                        //sql database thingy
+                        break;
+                    case 12:
+                        //sql database thingy
+                        break;
+                    case 13:
+                        //sql database thingy
+                        break;
+                    case 14:
+                        //sql database thingy
+                        break;
+                    case 15:
+                        //sql database thingy
+                        break;
+                    case 16:
+                        //sql database thingy
+                        break;
+                    case 17:
+                        //sql database thingy
+                        break;
+                    case 18:
+                        //sql database thingy
+                        break;
+                    case 19:
+                        //sql database thingy
+                        break;
+                    case 20:
+                        //sql database thingy
+                        break;
+                    default:
+                        Console.WriteLine("Error: No valid bill number.");
+                        break;
+                }
+            }
+
+            else
+                Console.WriteLine("No button found");
+        }
+
+
+        protected void setcolor(object sender)
+        {
+            //Define strings of upvote and downvote
+            string up = "upvote";
+            string down = "downvote";
+
+            //Get button
+            Button button = (Button)sender;
+            //Get button ID
+            string buttonid = button.ID;
+
+            //check if upvote/downvote
+            if(buttonid.Contains(up) == true)
+            {
+                button.BorderColor = Color.Green;
+            }
+            else
+            {
+                button.BorderColor = Color.Red;
+            }
+
+
+            
+        }
+
+        //was thingking of passing the bill data to a function to make it all dynamic like
+        //that way the workload is easier.
+        protected void setbilldata()
+        {
+           
+        }
     }
 }

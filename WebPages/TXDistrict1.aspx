@@ -22,8 +22,9 @@
             <h2 id="twitterHandle" runat="server"></h2>
         </div>
         <div id="Bills" class="Scroll">
-            <button id="upvote1" runat="server" class="upvotebutton" type="button" draggable="false" onclick=""></button>
-            <button id="downvote1" runat="server" class="downvotebutton" type="button"></button>
+            
+            <asp:button ID="upvote1" runat="server" cssclass="upvotebutton"  onclick="button_clicked"/>
+            <asp:button id="downvote1" runat="server" class="downvotebutton" onclick="button_clicked"></asp:button>
             <button id="Bill1" runat="server" class="billbutton" type="button"></button>
                 <h2 id="bill-name1" class="bname"><asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>&nbsp;John</h2>
                 <p id="BillID1" class="bID"><asp:Label ID="Label2" runat="server" Text="ID: "></asp:Label> 12726</p>
@@ -32,8 +33,8 @@
                 <p id="repvote1" class="bvote"><asp:Label ID="Label5" runat="server" Text="Rep. Vote: "></asp:Label></p>
               
 
-            <button id="upvote2" runat="server" class="upvotebutton" type="button"></button>
-            <button id="downvote2" runat="server" class="downvotebutton" type="button"></button>
+            <asp:button id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked"></asp:button>
+            <asp:button id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked"></asp:button>
             <button id="Bill2" runat="server" class="billbutton" type="button"></button>
                 <h2 id="billname2" class="bname" runat="server"><asp:Label ID="Label6" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID2" class="bID" runat="server"><asp:Label ID="Label7" runat="server" Text="ID: "></asp:Label>ID</p>
@@ -41,8 +42,8 @@
                 <p id="result2" class="bresult" runat="server"><asp:Label ID="Label9" runat="server" Text="Result: "></asp:Label>result</p>
                 <p id="repvote2" class="bvote" runat="server"><asp:Label ID="Label10" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="upvote3" runat="server" class="upvotebutton" type="button"></button>
-            <button id="downvote3" runat="server" class="downvotebutton" type="button"></button>
+            <asp:button id="upvote3" runat="server" class="upvotebutton" type="button" OnClick="button_clicked"></asp:button>
+            <asp:button id="downvote3" runat="server" class="downvotebutton" type="button" OnClick="button_clicked"></asp:button>
             <button id="Bill3" runat="server" class="billbutton" type="button"></button>
                 <h2 id="billname3" class="bname" runat="server" ><asp:Label ID="Label11" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID3" class="bID" runat="server"><asp:Label ID="Label12" runat="server" Text="ID: "></asp:Label>ID</p>
@@ -50,8 +51,8 @@
                 <p id="result3" class="bresult" runat="server"><asp:Label ID="Label14" runat="server" Text="Result: "></asp:Label>result</p>
                 <p id="repvote3" class="bvote" runat="server"><asp:Label ID="Label15" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="upvote4" runat="server" class="upvotebutton" type="button"></button>
-            <button id="downvote4" runat="server" class="downvotebutton" type="button"></button>
+            <asp:button id="upvote4" runat="server" class="upvotebutton" type="button" OnClick="button_clicked"></asp:button>
+            <asp:button id="downvote4" runat="server" class="downvotebutton" type="button" OnClick="button_clicked"></asp:button>
             <button id="Bill4" runat="server" class="billbutton" type="button"></button>
                 <h2 id="billname4" class="bname"><asp:Label ID="Label16" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID4" class="bID"><asp:Label ID="Label17" runat="server" Text="ID: "></asp:Label>ID</p>
@@ -59,8 +60,8 @@
                 <p id="result4" class="bresult"><asp:Label ID="Label19" runat="server" Text="Result: "></asp:Label>result</p>
                 <p id="repvote4" class="bvote"><asp:Label ID="Label20" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="upvote5" runat="server" class="upvotebutton" type="button"></button>
-            <button id="downvote5" runat="server" class="downvotebutton" type="button"></button>
+            <asp:button id="upvote5" runat="server" class="upvotebutton" type="button" OnClick="button_clicked"></asp:button>
+            <asp:button id="downvote5" runat="server" class="downvotebutton" type="button" OnClick="button_clicked"></asp:button>
             <button id="Bill5" runat="server" class="billbutton" ></button>
                 <h2 id="billname5" class="bname"><asp:Label ID="Label21" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID5" class="bID"><asp:Label ID="Label22" runat="server" Text="ID: "></asp:Label>ID</p>
@@ -68,8 +69,8 @@
                 <p id="result5" class="bresult"><asp:Label ID="Label24" runat="server" Text="Result: "></asp:Label>result</p>
                 <p id="repvote5" class="bvote"><asp:Label ID="Label25" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 
-            <button id="upvote6" runat="server" class="upvotebutton" type="button" ></button>
-            <button id="downvote6" runat="server" class="downvotebutton"></button>
+            <asp:button id="upvote6" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ></asp:button>
+            <asp:button id="downvote6" runat="server" class="downvotebutton" OnClick="button_clicked"></asp:button>
             <button id="Bill6" runat="server" class="billbutton"></button>
                 <h2 id="billname6" class="bname"><asp:Label ID="Label26" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID6" class="bID"><asp:Label ID="Label27" runat="server" Text="ID: "></asp:Label>ID</p>
