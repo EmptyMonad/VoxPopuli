@@ -523,13 +523,15 @@ namespace VoxPopuli.WebPages
                 Console.WriteLine("No button found");
         }
 
-
+        /**
+         * SetColor function
+         * Returns: N/A
+         * Purpose: Takes the sender button object and colors the button in the correct color based on the sender.
+         **/
         protected void setcolor(object sender)
         {
-            //Define strings of upvote and downvote
+            //Define strings of upvote
             string up = "upvote";
-            string down = "downvote";
-
             //Get button
             Button button = (Button)sender;
             //Get button ID
@@ -542,6 +544,7 @@ namespace VoxPopuli.WebPages
             }
             else
             {
+                //If upvote is not found, assume downvote.
                 button.BorderColor = Color.Red;
             }
 
