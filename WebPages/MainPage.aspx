@@ -24,7 +24,7 @@
 
     
     <link rel="stylesheet" href="../CSS/MainPage.css" /> <!-- Link to the stylesheet for the MainPage-->
-    <link rel="stylesheet" href="../CSS/sidebar.css" />
+    <link rel="stylesheet" href="../CSS/sidebar.css" /> <!-- Sidebar css -->
     <title></title>
 </head>
     <body>
@@ -49,7 +49,7 @@
             
             <div class="sidebar-pane" id="profile" runat="server">
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-                <div id ="repphoto"><img src="\Photos\default_picture.png" id ="picture"/></div>
+                <div id ="repphoto"><img src="\Images\default_picture.png" id ="picture" class="RepImage"/></div>
                 <div id ="textcontainer" ></div>
                  <div> 
     <object type="text/html" data="https://justfacts.votesmart.org/candidate/key-votes/50029/louie-gohmert" width="800" height="600" style="overflow:auto;border:5px ridge blue"></object>
