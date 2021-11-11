@@ -30,7 +30,7 @@ div.items p {
         display: block
     }
 
-img#RepImage {
+.RepImage {
     height: 10em;
     width: auto;
     position: relative;

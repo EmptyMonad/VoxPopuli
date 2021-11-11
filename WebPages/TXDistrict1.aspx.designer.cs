@@ -51,6 +51,24 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl twitterHandle;
 
         /// <summary>
+        /// upvote1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote1;
+
+        /// <summary>
+        /// downvote1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote1;
+
+        /// <summary>
         /// Bill1 control.
         /// </summary>
         /// <remarks>
@@ -103,6 +121,24 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
+        /// upvote2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote2;
+
+        /// <summary>
+        /// downvote2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote2;
 
         /// <summary>
         /// Bill2 control.
@@ -204,6 +240,24 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
+        /// upvote3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote3;
+
+        /// <summary>
+        /// downvote3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote3;
+
+        /// <summary>
         /// Bill3 control.
         /// </summary>
         /// <remarks>
@@ -303,6 +357,24 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
+        /// upvote4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote4;
+
+        /// <summary>
+        /// downvote4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote4;
+
+        /// <summary>
         /// Bill4 control.
         /// </summary>
         /// <remarks>
@@ -357,6 +429,24 @@ namespace VoxPopuli.WebPages
         protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
+        /// upvote5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote5;
+
+        /// <summary>
+        /// downvote5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote5;
+
+        /// <summary>
         /// Bill5 control.
         /// </summary>
         /// <remarks>
@@ -409,6 +499,24 @@ namespace VoxPopuli.WebPages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label25;
+
+        /// <summary>
+        /// upvote6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton upvote6;
+
+        /// <summary>
+        /// downvote6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlButton downvote6;
 
         /// <summary>
         /// Bill6 control.

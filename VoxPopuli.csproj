@@ -115,6 +115,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\ScriptofVoxPopuli.sql" />
+    <Content Include="CSS\Login.css" />
     <Content Include="CSS\MainPage.css" />
     <Content Include="CSS\RepPage.css" />
     <Content Include="CSS\sidebar.css" />
@@ -130,10 +131,8 @@
     <Content Include="JavaScript\jquery-3.6.0.min.js" />
     <Content Include="JavaScript\leaflet-sidebar.js" />
     <Content Include="JavaScript\MainPageMap.js" />
-    <Content Include="Pictures\example-Image.png" />
-    <Content Include="VoxPopuliMap_Version1.0.html" />
-    <Content Include="Photos\default_picture.png" />
-    <Content Include="Photos\green_upvote.png" />
+    <Content Include="Images\default_picture.png" />
+    <Content Include="Images\green_upvote.png" />
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
@@ -200,7 +199,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="Images\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
