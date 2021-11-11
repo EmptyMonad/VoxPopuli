@@ -97,7 +97,7 @@ img#RepPicture {
     display: block;
     border-radius: 50%;
     padding: 1.5em;
-    top: 8em;
+    top: 9em;
     right: -0.5em;
     
 
@@ -108,10 +108,14 @@ img#RepPicture {
     display: block;
     border-radius: 50%;
     right:-0.5em;
-    top: 9em;
+    top: 10em;
     padding: 1.5em;
 }
  
-.upvotebutton:active {
+.upvotebutton:hover {
     background-color: green;
+}
+
+.downvotebutton:hover {
+    background-color: red;
 }
