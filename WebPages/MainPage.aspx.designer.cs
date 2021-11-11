@@ -42,6 +42,15 @@ namespace MapProject.WebPages
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl RepTitle;
 
         /// <summary>
+        /// repphoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl repphoto;
+
+        /// <summary>
         /// hbtn control.
         /// </summary>
         /// <remarks>
@@ -51,13 +60,13 @@ namespace MapProject.WebPages
         protected global::System.Web.UI.WebControls.Button hbtn;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// VoxPopuliDB control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.SqlDataSource VoxPopuliDB;
 
         /// <summary>
         /// btn control.
