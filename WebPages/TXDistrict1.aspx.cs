@@ -16,7 +16,7 @@ namespace VoxPopuli.WebPages
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            /*
+            
           
             //Define the SQL Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
@@ -412,7 +412,7 @@ namespace VoxPopuli.WebPages
             {
                 db.Close();
             }
-            */
+            
        }
 
         //isolates the number from the string
