@@ -44,13 +44,13 @@ img#RepPicture {
 
 
 .billbutton {
-    border-radius: 50%;
     display:block;
     text-decoration: none;
-    padding: 4em;
     margin:1em 1em 1em 1em;
     position: relative;
-    right: -3em;
+    right: -3.5em;
+    width: 8em;
+    height: 8em;
 }
 
 
@@ -96,11 +96,11 @@ img#RepPicture {
     position: relative;
     display: block;
     border-radius: 50%;
-    padding: 1.5em;
     top: 9em;
     right: -0.5em;
-    
-
+    width: 5%;
+    height: 15%;
+        
 }
 
 .downvotebutton {
@@ -109,7 +109,8 @@ img#RepPicture {
     border-radius: 50%;
     right:-0.5em;
     top: 10em;
-    padding: 1.5em;
+    height:15%;
+    width:5%;
 }
  
 .upvotebutton:hover {
