@@ -1,6 +1,8 @@
 ﻿body {
-     background: #C5E1A5;
-    
+    margin: 0;
+    padding: 0;
+    background-color: #6abadeba;
+    font-family: 'Arial';
 }
 
 
@@ -21,29 +23,33 @@
 
 #userSec {
     display: inherit;
-     position: relative;
-     margin: 2em auto;
+    position: relative;
+    margin: 2em auto;
+    border-radius: 1em;
 }
 #passSec {
     display: inherit;
     position: relative;
     margin: 2em auto;
+    border-radius: 1em;
 }
 #emailSec {
     display: inherit;
     position: relative;
     margin: 2em auto;
+    border-radius: 1em;
 }
 #conPassSec {
     display: inherit;
     position: relative;
     margin: 2em auto;
-
+    border-radius: 1em;
 }
 
 .register {
     display: grid;
     text-align: right;
+    border-radius: 1em;
 }
 
 #btnRegister {
@@ -52,7 +58,7 @@
 }
 
 .txtbox {
-    grid-column-start:2
+    grid-column-start: 2 
 }
 
 .label {
@@ -63,3 +69,10 @@
     text-align: center;
 }
 
+.g-recaptcha {
+    position:relative;
+    margin:auto;
+    color:green;
+    display:inherit;
+    padding:1em;
+}
