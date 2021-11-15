@@ -57,7 +57,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote1;
+        protected global::System.Web.UI.WebControls.ImageButton upvote1;
 
         /// <summary>
         /// downvote1 control.
@@ -66,7 +66,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote1;
+        protected global::System.Web.UI.WebControls.ImageButton downvote1;
 
         /// <summary>
         /// Bill1 control.
@@ -75,7 +75,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill1;
+        protected global::System.Web.UI.WebControls.ImageButton Bill1;
 
         /// <summary>
         /// Label1 control.
@@ -129,7 +129,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote2;
+        protected global::System.Web.UI.WebControls.ImageButton upvote2;
 
         /// <summary>
         /// downvote2 control.
@@ -138,7 +138,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote2;
+        protected global::System.Web.UI.WebControls.ImageButton downvote2;
 
         /// <summary>
         /// Bill2 control.
@@ -147,7 +147,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill2;
+        protected global::System.Web.UI.WebControls.ImageButton Bill2;
 
         /// <summary>
         /// billname2 control.
@@ -246,7 +246,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote3;
+        protected global::System.Web.UI.WebControls.ImageButton upvote3;
 
         /// <summary>
         /// downvote3 control.
@@ -255,7 +255,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote3;
+        protected global::System.Web.UI.WebControls.ImageButton downvote3;
 
         /// <summary>
         /// Bill3 control.
@@ -264,7 +264,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill3;
+        protected global::System.Web.UI.WebControls.ImageButton Bill3;
 
         /// <summary>
         /// billname3 control.
@@ -363,7 +363,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote4;
+        protected global::System.Web.UI.WebControls.ImageButton upvote4;
 
         /// <summary>
         /// downvote4 control.
@@ -372,7 +372,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote4;
+        protected global::System.Web.UI.WebControls.ImageButton downvote4;
 
         /// <summary>
         /// Bill4 control.
@@ -381,7 +381,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill4;
+        protected global::System.Web.UI.WebControls.ImageButton Bill4;
 
         /// <summary>
         /// Label16 control.
@@ -435,7 +435,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote5;
+        protected global::System.Web.UI.WebControls.ImageButton upvote5;
 
         /// <summary>
         /// downvote5 control.
@@ -444,7 +444,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote5;
+        protected global::System.Web.UI.WebControls.ImageButton downvote5;
 
         /// <summary>
         /// Bill5 control.
@@ -453,7 +453,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill5;
+        protected global::System.Web.UI.WebControls.ImageButton Bill5;
 
         /// <summary>
         /// Label21 control.
@@ -507,7 +507,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button upvote6;
+        protected global::System.Web.UI.WebControls.ImageButton upvote6;
 
         /// <summary>
         /// downvote6 control.
@@ -516,7 +516,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button downvote6;
+        protected global::System.Web.UI.WebControls.ImageButton downvote6;
 
         /// <summary>
         /// Bill6 control.
@@ -525,7 +525,7 @@ namespace VoxPopuli.WebPages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton Bill6;
+        protected global::System.Web.UI.WebControls.ImageButton Bill6;
 
         /// <summary>
         /// Label26 control.

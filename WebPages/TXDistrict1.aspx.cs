@@ -441,7 +441,7 @@ namespace VoxPopuli.WebPages
 
             int idnum; //holds button number
             bool containsnum = false; //bool to check if the statement contains a number
-            Button button = (Button)sender; //Make the sender a button first
+            ImageButton button = (ImageButton)sender; //Make the sender a button first
             string buttonId = button.ID; //holds full name of button
             if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
             {
@@ -530,23 +530,38 @@ namespace VoxPopuli.WebPages
          **/
         protected void setcolor(object sender)
         {
+           
             //Define strings of upvote
             string up = "upvote";
+            string g = "green";
             //Get button
-            Button button = (Button)sender;
+            ImageButton button = (ImageButton)sender;
             //Get button ID
             string buttonid = button.ID;
 
+            string path = button.ImageUrl;
+
             //check if upvote/downvote
-            if(buttonid.Contains(up) == true)
+            if(buttonid.Contains(up) && path.Contains(g))
             {
-                button.BorderColor = Color.Green;
+                
+                button.ImageUrl = "~/Images/upvote-png-clear.png";
+            }
+            else if(buttonid.Contains(up))
+            {
+                button.ImageUrl = "~/Images/upvote-png-green.png";
+            }
+            else if (buttonid.Contains("down") && path.Contains("clear"))
+            {
+                //If upvote is not found, assume downvote.
+                button.ImageUrl = "~/Images/downvote-clicked.png";
             }
             else
             {
-                //If upvote is not found, assume downvote.
-                button.BorderColor = Color.Red;
-            }
+                button.ImageUrl = "~/Images/downvote-clear.png";
+            }    
+
+            
 
 
             
