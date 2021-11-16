@@ -405,7 +405,7 @@ namespace VoxPopuli.WebPages
             }
             catch
             {
-
+              
             }
 
             finally
@@ -415,8 +415,10 @@ namespace VoxPopuli.WebPages
             
        }
 
+
         //isolates the number from the string
         //Allowing the code to know what bill and bill items will be effected dynamically.
+        
         protected int buttonconvert(string buttonID)
         {
             int buttonnum = 0;
@@ -436,9 +438,20 @@ namespace VoxPopuli.WebPages
             return buttonnum;
         }
 
+        /*
+         * The point of this function is not validation for the upvotes but a way to dynamically push the status of the buttons to a sql statement.
+         * The button call this function whitch gets the buttonid and puts it in a string.  Afterwhich the bitton is checked if it has a a number in its id, which all of them should. 
+         * Its more of a sanity check.
+         * From there the button sender (the actual button that called the function) is passed to the setcolor function to...set the color.
+         * the function buttonconvert is called to get the value of the id (a number at the end) to determine what group of upvote/downvote the button is apart of. 
+         * From there the function upordown determines if a button is a upvote or downvote. Which goes into a if else statement to a switch for the sql data to be pushed.
+         * 
+         * 
+         * From the string it
+         * **/
         protected void button_clicked(object sender, EventArgs e)
         {
-
+            bool upvoteordownvote;
             int idnum; //holds button number
             bool containsnum = false; //bool to check if the statement contains a number
             ImageButton button = (ImageButton)sender; //Make the sender a button first
@@ -450,72 +463,147 @@ namespace VoxPopuli.WebPages
                 idnum = buttonconvert(buttonId);
                 //use the number to indivigually sql the elements into the correct 
                 // objects
-                switch (idnum)
+               upvoteordownvote= upordown(buttonId);
+                if (upvoteordownvote = 0)
                 {
-                    case 1:
-                        //sql database thingy
+                    switch (idnum)
+                    {
+                        case 1:
+                            //sql database thingy
 
-                        break;
-                    case 2:
-                        //sql database thingy
-                        break;
-                    case 3:
-                        //sql database thingy
-                        break;
-                    case 4:
-                        //sql database thingy
-                        break;
-                    case 5:
-                        //sql database thingy
-                        break;
-                    case 6:
-                        //sql database thingy
-                        break;
-                    case 7:
-                        //sql database thingy
-                        break;
-                    case 8:
-                        //sql database thingy
-                        break;
-                    case 9:
-                        //sql database thingy
-                        break;
-                    case 10:
-                        //sql database thingy
-                        break;
-                    case 11:
-                        //sql database thingy
-                        break;
-                    case 12:
-                        //sql database thingy
-                        break;
-                    case 13:
-                        //sql database thingy
-                        break;
-                    case 14:
-                        //sql database thingy
-                        break;
-                    case 15:
-                        //sql database thingy
-                        break;
-                    case 16:
-                        //sql database thingy
-                        break;
-                    case 17:
-                        //sql database thingy
-                        break;
-                    case 18:
-                        //sql database thingy
-                        break;
-                    case 19:
-                        //sql database thingy
-                        break;
-                    case 20:
-                        //sql database thingy
-                        break;
-                    default:
-                        Console.WriteLine("Error: No valid bill number.");
-                        break;
+                            break;
+                        case 2:
+                            //sql database thingy
+                            break;
+                        case 3:
+                            //sql database thingy
+                            break;
+                        case 4:
+                            //sql database thingy
+                            break;
+                        case 5:
+                            //sql database thingy
+                            break;
+                        case 6:
+                            //sql database thingy
+                            break;
+                        case 7:
+                            //sql database thingy
+                            break;
+                        case 8:
+                            //sql database thingy
+                            break;
+                        case 9:
+                            //sql database thingy
+                            break;
+                        case 10:
+                            //sql database thingy
+                            break;
+                        case 11:
+                            //sql database thingy
+                            break;
+                        case 12:
+                            //sql database thingy
+                            break;
+                        case 13:
+                            //sql database thingy
+                            break;
+                        case 14:
+                            //sql database thingy
+                            break;
+                        case 15:
+                            //sql database thingy
+                            break;
+                        case 16:
+                            //sql database thingy
+                            break;
+                        case 17:
+                            //sql database thingy
+                            break;
+                        case 18:
+                            //sql database thingy
+                            break;
+                        case 19:
+                            //sql database thingy
+                            break;
+                        case 20:
+                            //sql database thingy
+                            break;
+                        default:
+                            Console.WriteLine("Error: No valid bill number.");
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (idnum)
+                    {
+                        case 1:
+                            //sql database thingy
+
+                            break;
+                        case 2:
+                            //sql database thingy
+                            break;
+                        case 3:
+                            //sql database thingy
+                            break;
+                        case 4:
+                            //sql database thingy
+                            break;
+                        case 5:
+                            //sql database thingy
+                            break;
+                        case 6:
+                            //sql database thingy
+                            break;
+                        case 7:
+                            //sql database thingy
+                            break;
+                        case 8:
+                            //sql database thingy
+                            break;
+                        case 9:
+                            //sql database thingy
+                            break;
+                        case 10:
+                            //sql database thingy
+                            break;
+                        case 11:
+                            //sql database thingy
+                            break;
+                        case 12:
+                            //sql database thingy
+                            break;
+                        case 13:
+                            //sql database thingy
+                            break;
+                        case 14:
+                            //sql database thingy
+                            break;
+                        case 15:
+                            //sql database thingy
+                            break;
+                        case 16:
+                            //sql database thingy
+                            break;
+                        case 17:
+                            //sql database thingy
+                            break;
+                        case 18:
+                            //sql database thingy
+                            break;
+                        case 19:
+                            //sql database thingy
+                            break;
+                        case 20:
+                            //sql database thingy
+                            break;
+                        default:
+                            Console.WriteLine("Error: No valid bill number.");
+                            break;
+                    }
+
                 }
             }
 
@@ -559,13 +647,31 @@ namespace VoxPopuli.WebPages
             else
             {
                 button.ImageUrl = "~/Images/downvote-clear.png";
-            }    
-
-            
-
-
-            
+            }      
         }
+
+        protected bool upordown(string id)
+        {
+            bool updown;
+            //Define strings of upvote
+            string up = "upvote";           
+            //Get button ID
+
+            //check if upvote/downvote
+            if (id.Contains(up))
+            {
+                updown = 1;
+                
+            }
+            else
+            {
+                updown = 0;
+            }
+
+            return updown;
+        }
+            
+        
 
         //was thingking of passing the bill data to a function to make it all dynamic like
         //that way the workload is easier.
