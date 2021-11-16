@@ -16,7 +16,7 @@ namespace VoxPopuli.WebPages
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            
+            /*
           
             //Define the SQL Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
@@ -412,14 +412,15 @@ namespace VoxPopuli.WebPages
             {
                 db.Close();
             }
+            */
+        }
             
-       }
 
 
         //isolates the number from the string
         //Allowing the code to know what bill and bill items will be effected dynamically.
         
-        protected int buttonconvert(string buttonID)
+        private int buttonconvert(string buttonID)
         {
             int buttonnum = 0;
             string tmp = buttonID;
@@ -464,7 +465,7 @@ namespace VoxPopuli.WebPages
                 //use the number to indivigually sql the elements into the correct 
                 // objects
                upvoteordownvote= upordown(buttonId);
-                if (upvoteordownvote = 0)
+                if (upvoteordownvote == false)
                 {
                     switch (idnum)
                     {
@@ -660,12 +661,12 @@ namespace VoxPopuli.WebPages
             //check if upvote/downvote
             if (id.Contains(up))
             {
-                updown = 1;
+                updown = true;
                 
             }
             else
             {
-                updown = 0;
+                updown = false;
             }
 
             return updown;

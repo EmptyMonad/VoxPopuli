@@ -12,8 +12,7 @@
     <div>
     <form id="form1" runat="server">
         <div id="register-box" class="register">
-            <div class="left"></div>
-            <h1>Register for Vox Populi</h1>
+            <h1>Register:</h1>
             <label id="userSec">
                 <asp:Label ID="lblUsername" runat="server" CssClass="label" Text="Username: "></asp:Label>
                 <asp:TextBox ID="txtboxUsername" runat="server" CssClass="txtbox" placeholder="Username"></asp:TextBox>

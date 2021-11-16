@@ -1,25 +1,21 @@
 ﻿body {
-    margin: 0;
-    padding: 0;
+    
     background-color: #6abadeba;
     font-family: 'Arial';
+    background-image: url(../Images/background-reg.jpeg);
+    opacity: 1.5;
 }
 
 
 
 #form1 {
     
-    width: 30%;
-    margin: 60px auto;
-    background: #efefef;
-    padding: 60px 120px 80px 120px;
-    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    display: grid;
-    position: relative
+    
     
   
 }
+
+
 
 #userSec {
     display: inherit;
@@ -49,7 +45,14 @@
 .register {
     display: grid;
     text-align: right;
-    border-radius: 1em;
+    width: 30%;
+    margin: 60px auto;
+    background: #efefef;
+    padding: 60px 120px 80px 120px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    display: grid;
+    position: relative
 }
 
 #btnRegister {
