@@ -22,9 +22,11 @@
             <h2 id="twitterHandle" runat="server"></h2>
         </div>
         <div id="Bills" class="Scroll">
-            
-            <asp:Imagebutton ID="upvote1" runat="server" cssclass="upvotebutton"  onclick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"/>
-            <asp:Imagebutton id="downvote1" runat="server" class="downvotebutton" onclick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                <ContentTemplate>
+            <asp:Imagebutton ID="upvote1" runat="server" cssclass="upvotebutton"  onclick="button_clicked"  ImageUrl= "~/Images/upvote-png-clear.png"/>
+            <asp:Imagebutton id="downvote1" runat="server" class="downvotebutton" onclick="button_clicked"  ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:imagebutton id="Bill1" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:imagebutton>
                 <h2 id="bill-name1" class="bname"><asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>&nbsp;John</h2>
                 <p id="BillID1" class="bID"><asp:Label ID="Label2" runat="server" Text="ID: "></asp:Label> 12726</p>
@@ -33,8 +35,8 @@
                 <p id="repvote1" class="bvote"><asp:Label ID="Label5" runat="server" Text="Rep. Vote: "></asp:Label></p>
               
 
-            <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
-            <asp:Imagebutton id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
+            <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
+            <asp:Imagebutton id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill2" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
                 <h2 id="billname2" class="bname" runat="server"><asp:Label ID="Label6" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID2" class="bID" runat="server"><asp:Label ID="Label7" runat="server" Text="ID: "></asp:Label>ID</p>
@@ -79,8 +81,8 @@
                 <p id="repvote" class="bvote"><asp:Label ID="Label30" runat="server" Text="RepVote: "></asp:Label>vote</p>
 
 
-
-
+        </ContentTemplate>
+        </asp:UpdatePanel>
         </div>
     </form>
     <script src="../JavaScript/leaflet-sidebar.js"></script>

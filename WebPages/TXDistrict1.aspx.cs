@@ -385,16 +385,11 @@ namespace VoxPopuli.WebPages
 
                 billname2.InnerHtml = Bill315Name;
                 BillID2.InnerHtml = "Bill ID" + Bill315ID;
-                Link2.InnerHtml = "Bill Link: " + Bill315Link;
                 result2.InnerHtml = "Bill Result: " + Bill315Result;
                 repvote2.InnerHtml = "Representaive Voted:" + Bill315Vote;
 
 
-                billname2.InnerHtml = Bill315Name;
-                BillID2.InnerHtml = "Bill ID" + Bill315ID;
-                Link2.InnerHtml = "Bill Link: " + Bill315Link;
-                result2.InnerHtml = "Bill Result: " + Bill315Result;
-                repvote2.InnerHtml = "Representaive Voted:" + Bill315Vote;
+
 
 
 
@@ -538,6 +533,8 @@ namespace VoxPopuli.WebPages
             ImageButton button = (ImageButton)sender;
             //Get button ID
             string buttonid = button.ID;
+            //Call function to get the opposite of this button
+            ImageButton Opposite = getOppositeButton(buttonid);
 
             string path = button.ImageUrl;
 
@@ -546,25 +543,214 @@ namespace VoxPopuli.WebPages
             {
                 
                 button.ImageUrl = "~/Images/upvote-png-clear.png";
+                Opposite.ImageUrl = "~/Images/downvote-clear.png";
             }
             else if(buttonid.Contains(up))
             {
                 button.ImageUrl = "~/Images/upvote-png-green.png";
+                Opposite.ImageUrl = "~/Images/downvote-clear.png";
             }
             else if (buttonid.Contains("down") && path.Contains("clear"))
             {
                 //If upvote is not found, assume downvote.
                 button.ImageUrl = "~/Images/downvote-clicked.png";
+                Opposite.ImageUrl = "~/Images/upvote-png-clear.png";
             }
             else
             {
                 button.ImageUrl = "~/Images/downvote-clear.png";
+                Opposite.ImageUrl = "~/Images/upvote-png-clear.png";
             }    
 
             
 
 
             
+        }
+
+        protected ImageButton getOppositeButton(string btn)
+        {
+            string[] split = btn.Split('e');
+            if(btn.Contains("up") && split[1] == "1")
+            {
+                return downvote1;
+            }
+            else if(btn.Contains("down") && split[1] == "1")
+            {
+                return upvote1;
+            }
+
+            if (btn.Contains("up") && split[1] == "2")
+            {
+                return downvote2;
+            }
+            else if (btn.Contains("down") && split[1] == "2")
+            {
+                return upvote2;
+            }
+
+            if (btn.Contains("up") && split[1] == "3")
+            {
+                return downvote3;
+            }
+            else if (btn.Contains("down") && split[1] == "3")
+            {
+                return upvote3;
+            }
+
+            if (btn.Contains("up") && split[1] == "4")
+            {
+                return downvote4;
+            }
+            else if (btn.Contains("down") && split[1] == "4")
+            {
+                return upvote4;
+            }
+
+            if (btn.Contains("up") && split[1] == "5")
+            {
+                return downvote5;
+            }
+            else if (btn.Contains("down") && split[1] == "5")
+            {
+                return upvote5;
+            }
+
+            if (btn.Contains("up") && split[1] == "6")
+            {
+                return downvote6;
+            }
+            else if (btn.Contains("down") && split[1] == "6")
+            {
+                return upvote6;
+            }
+
+           //*/ if (btn.Contains("up") && split[1] == "7")
+           // {
+           //     return downvote7;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // }
+
+           // if (btn.Contains("up") && split[1] == "1")
+           // {
+           //     return downvote1;
+           // }
+           // else if (btn.Contains("down") && split[1] == "1")
+           // {
+           //     return upvote1;
+           // } 
+            return null;
         }
 
         //was thingking of passing the bill data to a function to make it all dynamic like
