@@ -12,8 +12,7 @@
     <div>
     <form id="form1" runat="server">
         <div id="register-box" class="register">
-            <div class="left"></div>
-            <h1>Register for Vox Populi</h1>
+            <h1>Register:</h1>
             <label id="userSec">
                 <asp:Label ID="lblUsername" runat="server" CssClass="label" Text="Username: "></asp:Label>
                 <asp:TextBox ID="txtboxUsername" runat="server" CssClass="txtbox" placeholder="Username"></asp:TextBox>
@@ -47,12 +46,12 @@
             </label>
 
 
-            </label>
+            
             <div class="g-recaptcha" data-sitekey="6Lc-4xQdAAAAANtCCYS0lzDT3xZlFQv_1WyJdLWg"></div>
             <asp:Label ID="lblCaptchaError" runat="server" Text="*Must Complete Captcha" ForeColor="Red" Visible="False"></asp:Label>
            
             <br />
-            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />
+            <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" CssClass="submitreg" />
             <asp:Label ID="lblPasswordReq" runat="server" ForeColor="Red" Text="*Password does not meet requirements. Password must be at least 8 characters, contain an uppercase letter, a lowercase letter, and a digit." Visible="False"></asp:Label>
 
             <asp:Label ID="lblUserReq" runat="server" ForeColor="Red" Text="*Username does not meet requirements. Username must be longer than 5 characters, must not exceed 20 characters, and must not contain any spaces. " Visible="False"></asp:Label>
