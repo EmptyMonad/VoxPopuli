@@ -126,6 +126,7 @@
     <Content Include="Images\bill-default.png" />
     <Content Include="Images\downvote-clear.png" />
     <Content Include="Images\downvote-clicked.png" />
+    <Content Include="Images\louieg.jpg" />
     <Content Include="Images\upvote-png-clear.png" />
     <Content Include="Images\upvote-png-green.png" />
     <Content Include="Recaptcha.dll" />

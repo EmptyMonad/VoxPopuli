@@ -13,11 +13,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <h1 runat="server">Representative of </h1>
 
         <div id="RepInfo" class="Rep-Top">
             <!-- Image of the representative, default image used in case of error -->
-            <asp:Image ID="RepPicture" ImageUrl="~/Images/default_picture.png" runat="server" />
+            <asp:Image ID="RepPicture" ImageUrl="~/Images/louieg.jpg" runat="server" />
             <p id="RepNameHolder" runat="server">John Doe</p>
             <h2 id="twitterHandle" runat="server"></h2>
         </div>
@@ -27,12 +26,11 @@
                 <ContentTemplate>
             <asp:Imagebutton ID="upvote1" runat="server" cssclass="upvotebutton"  onclick="button_clicked"  ImageUrl= "~/Images/upvote-png-clear.png"/>
             <asp:Imagebutton id="downvote1" runat="server" class="downvotebutton" onclick="button_clicked"  ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
-            <asp:imagebutton id="Bill1" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:imagebutton>
-                <h2 id="bill-name1" class="bname"><asp:Label ID="Label1" runat="server" Text="Name:"></asp:Label>&nbsp;John</h2>
-                <p id="BillID1" class="bID"><asp:Label ID="Label2" runat="server" Text="ID: "></asp:Label> 12726</p>
-                <p id="Link1" class="blink"><asp:Label ID="Label3" runat="server" Text="Link: "></asp:Label></p>
-                <p id="result1" class="bresult"><asp:Label ID="Label4" runat="server" Text="Result: "></asp:Label></p>
-                <p id="repvote1" class="bvote"><asp:Label ID="Label5" runat="server" Text="Rep. Vote: "></asp:Label></p>
+            <asp:imagebutton id="Bill1" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png" PostBackUrl="google.com"></asp:imagebutton>
+                <h2 id="billname1" class="bname" runat="server"></h2>
+                <p id="BillID1" class="bID" runat="server"></p>
+                <p id="result1" class="bresult" runat="server"></p>
+                <p id="repvote1" class="bvote" runat="server"></p>
               
 
             <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
@@ -49,7 +47,6 @@
             <asp:Imagebutton id="Bill3" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
                 <h2 id="billname3" class="bname" runat="server" ><asp:Label ID="Label11" runat="server" Text="Name: "></asp:Label>name</h2>
                 <p id="BillID3" class="bID" runat="server"><asp:Label ID="Label12" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link3" class="blink" runat="server"><asp:Label ID="Label13" runat="server" Text="link: "></asp:Label>link<a></a></p>
                 <p id="result3" class="bresult" runat="server"><asp:Label ID="Label14" runat="server" Text="Result: "></asp:Label>result</p>
                 <p id="repvote3" class="bvote" runat="server"><asp:Label ID="Label15" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
 

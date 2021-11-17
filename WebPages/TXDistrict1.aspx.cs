@@ -58,14 +58,9 @@ namespace VoxPopuli.WebPages
             SqlCommand getBill331VoteCMD = new SqlCommand("SELECT vote_position FROM Bill331 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill332VoteCMD = new SqlCommand("SELECT vote_position FROM Bill332 WHERE state='TX' AND district ='1'", db);
             SqlCommand getBill333VoteCMD = new SqlCommand("SELECT vote_position FROM Bill333 WHERE state='TX' AND district ='1'", db);
+            SqlCommand getBill334VoteCMD = new SqlCommand("SELECT vote_position FROM Bill334 WHERE state='TX' AND district ='1'", db);
 
-            
 
-            //Define the commands for pulling information on Bill 314, from the general bill info table. Bill Name, Bill ID, Bill Status, Bill Link
-            SqlCommand getBill314Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='314'", db);
-            SqlCommand getBill314ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='314'", db);
-            SqlCommand getBill314Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='314'", db);
-            SqlCommand getBill314Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='314'", db);
 
 
             //Bill315
@@ -198,6 +193,11 @@ namespace VoxPopuli.WebPages
             SqlCommand getBill333Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='333'", db);
             SqlCommand getBill333Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='333'", db);
 
+            SqlCommand getBill334Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='334'", db);
+            SqlCommand getBill334ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='334'", db);
+            SqlCommand getBill334Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='334'", db);
+            SqlCommand getBill334Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='334'", db);
+
 
 
 
@@ -224,7 +224,6 @@ namespace VoxPopuli.WebPages
 
 
                 //Execute Commands For Votes on Bills
-                string Bill314Vote = (string)getBill314VoteCMD.ExecuteScalar();
                 string Bill315Vote = (string)getBill315VoteCMD.ExecuteScalar();
                 string Bill316Vote = (string)getBill316VoteCMD.ExecuteScalar();
                 string Bill317Vote = (string)getBill317VoteCMD.ExecuteScalar();
@@ -244,14 +243,10 @@ namespace VoxPopuli.WebPages
                 string Bill331Vote = (string)getBill331VoteCMD.ExecuteScalar();
                 string Bill332Vote = (string)getBill332VoteCMD.ExecuteScalar();
                 string Bill333Vote = (string)getBill333VoteCMD.ExecuteScalar();
+                string Bill334Vote = (string)getBill334VoteCMD.ExecuteScalar();
 
                 //Execute Commands for Bill Information
 
-                //Bill 314
-               //string Bill314Name = (string)getBill314Name.ExecuteScalar();
-                //string Bill314ID = (string)getBill314ID.ExecuteScalar();
-                //string Bill314Link = (string)getBill314Link.ExecuteScalar();
-                //string Bill314Result = (string)getBill314Result.ExecuteScalar();
 
                 //Bill 315
                 string Bill315Name = (string)getBill315Name.ExecuteScalar();
@@ -368,6 +363,10 @@ namespace VoxPopuli.WebPages
                 string Bill333Link = (string)getBill333Link.ExecuteScalar();
                 string Bill333Result = (string)getBill333Result.ExecuteScalar();
 
+                string Bill334Name = (string)getBill334Name.ExecuteScalar();
+                string Bill334ID = (string)getBill334ID.ExecuteScalar();
+                string Bill334Link = (string)getBill334Link.ExecuteScalar();
+                string Bill334Result = (string)getBill334Result.ExecuteScalar();
 
 
 
@@ -381,12 +380,14 @@ namespace VoxPopuli.WebPages
                 //Replace HTML Elements Based off Information Pulled From The Database
                 RepNameHolder.InnerHtml = repFirstName + " " + repLastName;
                 twitterHandle.InnerHtml = "@" + repTwitter;
-                RepPicture.ImageUrl = repPicURL;
 
-                billname2.InnerHtml = Bill315Name;
-                BillID2.InnerHtml = "Bill ID" + Bill315ID;
-                result2.InnerHtml = "Bill Result: " + Bill315Result;
-                repvote2.InnerHtml = "Representaive Voted:" + Bill315Vote;
+                Bill1.PostBackUrl = Bill334Link;
+                billname1.InnerHtml = Bill334Name;
+                BillID1.InnerHtml = "Bill ID: " + Bill334ID;
+                result1.InnerHtml = "Bill Result: " + Bill334Result;
+                repvote1.InnerHtml = repFirstName + " " + repLastName + " Voted: " + Bill334Vote;
+
+                
 
 
 
@@ -407,6 +408,12 @@ namespace VoxPopuli.WebPages
             {
                 db.Close();
             }
+
+
+
+
+            //Now, We Will Need to Populate Prior Votes From The User. Implementing LoadVotes function
+
             
        }
 
@@ -759,5 +766,49 @@ namespace VoxPopuli.WebPages
         {
            
         }
+
+        //Loads Prior Votes of a User
+        protected void LoadVotes(string user, string state, string district, string Bill, ImageButton UpButton, ImageButton DownButton)
+        {
+            //Define the DB Connection
+            SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
+
+            //Define the Command to Grab the Prior Votes
+            SqlCommand getPriorVote = new SqlCommand("SELECT " + state + "District" + district + "Bill" + Bill + " FROM VP_Users WHERE Username OR Email = " + user + "", db);
+
+            db.Open();
+            try
+            {
+                int priorVoteValue = (int)getPriorVote.ExecuteScalar();
+
+                if(priorVoteValue == -1)
+                {
+                    DownButton.ImageUrl = "";
+                    UpButton.ImageUrl = "";
+
+
+                }
+                else if (priorVoteValue ==1)
+                {
+                    DownButton.ImageUrl = "";
+                    UpButton.ImageUrl = "";
+                }
+                else
+                {
+                    DownButton.ImageUrl = "";
+                    UpButton.ImageUrl = "";
+                }
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
+            }
+
+        }
+
     }
 }
