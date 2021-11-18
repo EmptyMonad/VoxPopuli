@@ -36,46 +36,66 @@
             <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill2" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
-                <h2 id="billname2" class="bname" runat="server"><asp:Label ID="Label6" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID2" class="bID" runat="server"><asp:Label ID="Label7" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link2" class="blink" runat="server"><asp:Label ID="Label8" runat="server" Text="Link: "></asp:Label>link<a></a></p>
-                <p id="result2" class="bresult" runat="server"><asp:Label ID="Label9" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote2" class="bvote" runat="server"><asp:Label ID="Label10" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+                <h2 id="billname2" class="bname" runat="server"></h2>
+                <p id="BillID2" class="bID" runat="server"></p>
+                <p id="result2" class="bresult" runat="server"></p>
+                <p id="repvote2" class="bvote" runat="server"></p>
 
             <asp:Imagebutton id="upvote3" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="downvote3" runat="server" class="downvotebutton" type="button" OnClick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill3" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
-                <h2 id="billname3" class="bname" runat="server" ><asp:Label ID="Label11" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID3" class="bID" runat="server"><asp:Label ID="Label12" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="result3" class="bresult" runat="server"><asp:Label ID="Label14" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote3" class="bvote" runat="server"><asp:Label ID="Label15" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+            <h2 id="billname3" class="bname" runat="server"></h2>
+                <p id="BillID3" class="bID" runat="server"></p>
+                <p id="result3" class="bresult" runat="server"></p>
+                <p id="repvote3" class="bvote" runat="server"></p>
 
             <asp:Imagebutton id="upvote4" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="downvote4" runat="server" class="downvotebutton" type="button" OnClick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill4" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
-                <h2 id="billname4" class="bname"><asp:Label ID="Label16" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID4" class="bID"><asp:Label ID="Label17" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link4" class="blink"><asp:Label ID="Label18" runat="server" Text="link: "></asp:Label>link<a></a></p>
-                <p id="result4" class="bresult"><asp:Label ID="Label19" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote4" class="bvote"><asp:Label ID="Label20" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+             <h2 id="billname4" class="bname" runat="server"></h2>
+                <p id="BillID4" class="bID" runat="server"></p>
+                <p id="result4" class="bresult" runat="server"></p>
+                <p id="repvote4" class="bvote" runat="server"></p>
 
             <asp:Imagebutton id="upvote5" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="downvote5" runat="server" class="downvotebutton" type="button" OnClick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill5" runat="server" class="billbutton" ImageUrl="~/Images/bill-default.png" ></asp:Imagebutton>
-                <h2 id="billname5" class="bname"><asp:Label ID="Label21" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID5" class="bID"><asp:Label ID="Label22" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link5" class="blink"><asp:Label ID="Label23" runat="server" Text="Link: "></asp:Label>link<a></a></p>
-                <p id="result5" class="bresult"><asp:Label ID="Label24" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote5" class="bvote"><asp:Label ID="Label25" runat="server" Text="Rep. Vote: "></asp:Label>vote</p>
+               <h2 id="billname5" class="bname" runat="server"></h2>
+                <p id="BillID5" class="bID" runat="server"></p>
+                <p id="result5" class="bresult" runat="server"></p>
+                <p id="repvote5" class="bvote" runat="server"></p>
 
             <asp:Imagebutton id="upvote6" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png" ></asp:Imagebutton>
             <asp:Imagebutton id="downvote6" runat="server" class="downvotebutton" OnClick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill6" runat="server" class="billbutton" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
-                <h2 id="billname6" class="bname"><asp:Label ID="Label26" runat="server" Text="Name: "></asp:Label>name</h2>
-                <p id="BillID6" class="bID"><asp:Label ID="Label27" runat="server" Text="ID: "></asp:Label>ID</p>
-                <p id="Link6" class="blink"><asp:Label ID="Label28" runat="server" Text="Link: "></asp:Label>link<a></a></p>
-                <p id="result6" class="bresult"><asp:Label ID="Label29" runat="server" Text="Result: "></asp:Label>result</p>
-                <p id="repvote" class="bvote"><asp:Label ID="Label30" runat="server" Text="RepVote: "></asp:Label>vote</p>
+           <h2 id="billname6" class="bname" runat="server"></h2>
+                <p id="BillID6" class="bID" runat="server"></p>
+                <p id="result6" class="bresult" runat="server"></p>
+                <p id="repvote6" class="bvote" runat="server"></p>
+
+              <asp:Imagebutton id="upvote7" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png" ></asp:Imagebutton>
+            <asp:Imagebutton id="downvote7" runat="server" class="downvotebutton" OnClick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
+            <asp:Imagebutton id="Bill7" runat="server" class="billbutton" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
+           <h2 id="billname7" class="bname" runat="server"></h2>
+                <p id="BillID7" class="bID" runat="server"></p>
+                <p id="result7" class="bresult" runat="server"></p>
+                <p id="repvote7" class="bvote" runat="server"></p>
+
+       <asp:Imagebutton id='upvote8' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> 
+       <asp:Imagebutton id='downvote8' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton>
+       <asp:Imagebutton id='Bill8' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname8' class='bname' runat='server'></h2> <p id='BillID8' class='bID' runat='server'></p> <p id='result8' class='bresult' runat='server'></p> <p id='repvote8' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote9' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote9' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill9' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname9' class='bname' runat='server'></h2> <p id='BillID9' class='bID' runat='server'></p> <p id='result9' class='bresult' runat='server'></p> <p id='repvote9' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote10' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote10' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill10' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname10' class='bname' runat='server'></h2> <p id='BillID10' class='bID' runat='server'></p> <p id='result10' class='bresult' runat='server'></p> <p id='repvote10' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote11' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote11' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill11' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname11' class='bname' runat='server'></h2> <p id='BillID11' class='bID' runat='server'></p> <p id='result11' class='bresult' runat='server'></p> <p id='repvote11' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote12' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote12' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill12' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname12' class='bname' runat='server'></h2> <p id='BillID12' class='bID' runat='server'></p> <p id='result12' class='bresult' runat='server'></p> <p id='repvote12' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote13' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote13' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill13' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname13' class='bname' runat='server'></h2> <p id='BillID13' class='bID' runat='server'></p> <p id='result13' class='bresult' runat='server'></p> <p id='repvote13' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote14' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote14' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill14' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname14' class='bname' runat='server'></h2> <p id='BillID14' class='bID' runat='server'></p> <p id='result14' class='bresult' runat='server'></p> <p id='repvote14' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote15' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote15' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill15' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname15' class='bname' runat='server'></h2> <p id='BillID15' class='bID' runat='server'></p> <p id='result15' class='bresult' runat='server'></p> <p id='repvote15' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote16' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote16' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill16' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname16' class='bname' runat='server'></h2> <p id='BillID16' class='bID' runat='server'></p> <p id='result16' class='bresult' runat='server'></p> <p id='repvote16' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote17' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote17' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill17' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname17' class='bname' runat='server'></h2> <p id='BillID17' class='bID' runat='server'></p> <p id='result17' class='bresult' runat='server'></p> <p id='repvote17' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote18' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote18' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill18' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname18' class='bname' runat='server'></h2> <p id='BillID18' class='bID' runat='server'></p> <p id='result18' class='bresult' runat='server'></p> <p id='repvote18' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote19' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote19' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill19' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname19' class='bname' runat='server'></h2> <p id='BillID19' class='bID' runat='server'></p> <p id='result19' class='bresult' runat='server'></p> <p id='repvote19' class='bvote' runat='server'></p>
+<asp:Imagebutton id='upvote20' runat='server' class='upvotebutton' type='button' OnClick='button_clicked' ImageUrl= '~/Images/upvote-png-clear.png' ></asp:Imagebutton> <asp:Imagebutton id='downvote20' runat='server' class='downvotebutton' OnClick='button_clicked' ImageUrl='~/Images/downvote-clear.png'></asp:Imagebutton> <asp:Imagebutton id='Bill20' runat='server' class='billbutton' ImageUrl='~/Images/bill-default.png'></asp:Imagebutton> <h2 id='billname20' class='bname' runat='server'></h2> <p id='BillID20' class='bID' runat='server'></p> <p id='result20' class='bresult' runat='server'></p> <p id='repvote20' class='bvote' runat='server'></p>
 
 
         </ContentTemplate>
@@ -83,6 +103,6 @@
         </div>
     </form>
     <script src="../JavaScript/leaflet-sidebar.js"></script>
-    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
     </body>
 </html>
