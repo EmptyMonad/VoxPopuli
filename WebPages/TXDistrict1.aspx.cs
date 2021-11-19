@@ -12,19 +12,16 @@ namespace VoxPopuli.WebPages
 {
     public partial class TXDistrict1 : System.Web.UI.Page
     {
+        //These global variables are set uniquely to the webpage.
+        //They are used in the SQL statements
         private string congress = "117";
         private string state = "TX";
         private string district = "1";
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            
-          
             //Define the SQL Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
-
-
-
 
             //Define the Command for grabbing the First Name of The Representative
             SqlCommand getRepFirstNameCMD = new SqlCommand("SELECT results_members_first_name FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district =@district", db);
@@ -32,13 +29,11 @@ namespace VoxPopuli.WebPages
             getRepFirstNameCMD.Parameters.AddWithValue("@state", state);
             getRepFirstNameCMD.Parameters.AddWithValue("@district", district);
 
-
             //Define the Command for grabbing the Last Name of The Representative
             SqlCommand getRepLastNameCMD = new SqlCommand("SELECT results_members_last_name FROM congress2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
             getRepLastNameCMD.Parameters.AddWithValue("@congress", congress);
             getRepLastNameCMD.Parameters.AddWithValue("@state", state);
             getRepLastNameCMD.Parameters.AddWithValue("@district", district);
-
 
             //Define the Command for grabbing the twitter Handle of the Rep
             SqlCommand getRepTwitterCMD = new SqlCommand("SELECT results_members_twitter_account FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district = @district", db);
@@ -46,15 +41,13 @@ namespace VoxPopuli.WebPages
             getRepTwitterCMD.Parameters.AddWithValue("@state", state);
             getRepTwitterCMD.Parameters.AddWithValue("@district", district);
 
-
-
             //Define the Command for grabbing the image URL of the representative
             SqlCommand getRepPicURLCMD = new SqlCommand("SELECT picurl FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district = @district", db);
             getRepPicURLCMD.Parameters.AddWithValue("@congress", congress);
             getRepPicURLCMD.Parameters.AddWithValue("@state", state);
             getRepPicURLCMD.Parameters.AddWithValue("@district", district);
 
-            //Define The Command For Grabbing the Reps Vote on Each Bill
+            //Define The Command For Grabbing the Reps Vote on Each Bill 1-20
             SqlCommand getBill20VoteCMD = new SqlCommand("SELECT vote_position FROM Bill20 WHERE state= @state AND district = @district", db);
             getBill20VoteCMD.Parameters.AddWithValue("@state", state);
             getBill20VoteCMD.Parameters.AddWithValue("@district", district);
@@ -137,15 +130,13 @@ namespace VoxPopuli.WebPages
             getBill1VoteCMD.Parameters.AddWithValue("@district", district);
 
 
-
-
             //Bill20
             SqlCommand getBill20Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='20'", db);
             SqlCommand getBill20ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='20'", db);
             SqlCommand getBill20Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='20'", db);
             SqlCommand getBill20Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='20'", db);
 
-            //Billl316
+            //Billl19
             SqlCommand getBill19Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='19'", db);
             SqlCommand getBill19ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='19'", db);
             SqlCommand getBill19Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='19'", db);
@@ -159,13 +150,13 @@ namespace VoxPopuli.WebPages
             SqlCommand getBill18Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='18'", db);
 
 
-            //Bill 318
+            //Bill17
             SqlCommand getBill17Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='17'", db);
             SqlCommand getBill17ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='17'", db);
             SqlCommand getBill17Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='17'", db);
             SqlCommand getBill17Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='17'", db);
 
-            //Bill 319
+            //Bill16
 
             SqlCommand getBill16Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='16'", db);
             SqlCommand getBill16ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='16'", db);
@@ -173,117 +164,107 @@ namespace VoxPopuli.WebPages
             SqlCommand getBill16Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='16'", db);
 
 
-            //Bill 320
+            //Bill 15
             SqlCommand getBill15Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='15'", db);
             SqlCommand getBill15ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='15'", db);
             SqlCommand getBill15Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='15'", db);
             SqlCommand getBill15Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='15'", db);
 
 
-            //Bill 321
+            //Bill 14
             SqlCommand getBill14Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='14'", db);
             SqlCommand getBill14ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='14'", db);
             SqlCommand getBill14Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='14'", db);
             SqlCommand getBill14Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='14'", db);
 
 
-            //Bill 322
+            //Bill 13
             SqlCommand getBill13Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='13'", db);
             SqlCommand getBill13ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='13'", db);
             SqlCommand getBill13Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='13'", db);
             SqlCommand getBill13Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='13'", db);
 
 
-            //Bill 323
+            //Bill 12
             SqlCommand getBill12Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='12'", db);
             SqlCommand getBill12ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='12'", db);
             SqlCommand getBill12Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='12'", db);
             SqlCommand getBill12Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='12'", db);
 
 
-            //Bill 324
+            //Bill 11
             SqlCommand getBill11Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='11'", db);
             SqlCommand getBill11ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='11'", db);
             SqlCommand getBill11Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='11'", db);
             SqlCommand getBill11Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='11'", db);
 
-            //Bill 325
+            //Bill 10
             SqlCommand getBill10Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='10'", db);
             SqlCommand getBill10ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='10'", db);
             SqlCommand getBill10Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='10'", db);
             SqlCommand getBill10Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='10'", db);
 
 
-            //Bill 326
+            //Bill 9
             SqlCommand getBill9Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='9'", db);
             SqlCommand getBill9ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='9'", db);
             SqlCommand getBill9Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='9'", db);
             SqlCommand getBill9Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='9'", db);
 
 
-            //Bill 327
+            //Bill 8
             SqlCommand getBill8Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='8'", db);
             SqlCommand getBill8ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='8'", db);
             SqlCommand getBill8Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='8'", db);
             SqlCommand getBill8Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='8'", db);
 
 
-            //Bill 328
+            //Bill 7
             SqlCommand getBill7Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='7'", db);
             SqlCommand getBill7ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='7'", db);
             SqlCommand getBill7Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='7'", db);
             SqlCommand getBill7Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='7'", db);
 
 
-            //Bill 329
+            //Bill 6
             SqlCommand getBill6Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='6'", db);
             SqlCommand getBill6ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='6'", db);
             SqlCommand getBill6Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='6'", db);
             SqlCommand getBill6Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='6'", db);
 
 
-            //Bill 330
+            //Bill 5
             SqlCommand getBill5Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='5'", db);
             SqlCommand getBill5ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='5'", db);
             SqlCommand getBill5Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='5'", db);
             SqlCommand getBill5Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='5'", db);
 
 
-            //Bill 331
+            //Bill 4
             SqlCommand getBill4Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='4'", db);
             SqlCommand getBill4ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='4'", db);
             SqlCommand getBill4Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='4'", db);
             SqlCommand getBill4Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='4'", db);
 
 
-            //Bill 332
+            //Bill 3
             SqlCommand getBill3Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='3'", db);
             SqlCommand getBill3ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='3'", db);
             SqlCommand getBill3Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='3'", db);
             SqlCommand getBill3Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='3'", db);
 
 
-            //Bill 333
+            //Bill 2
             SqlCommand getBill2Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='2'", db);
             SqlCommand getBill2ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='2'", db);
             SqlCommand getBill2Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='2'", db);
             SqlCommand getBill2Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='2'", db);
 
+            //Bill 1
             SqlCommand getBill1Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='1'", db);
             SqlCommand getBill1ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='1'", db);
             SqlCommand getBill1Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='1'", db);
             SqlCommand getBill1Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='1'", db);
-
-
-
-
-
-
-
-
-
-
-
 
 
             //Open the DB try/catch to execute the commands, then replace the html elements appropriatley
@@ -324,7 +305,7 @@ namespace VoxPopuli.WebPages
                 //Execute Commands for Bill Information
 
 
-                //Bill 315
+                //Bill20
                 string Bill20Name = (string)getBill20Name.ExecuteScalar();
                 string Bill20ID = (string)getBill20ID.ExecuteScalar();
                 string Bill20Link = (string)getBill20Link.ExecuteScalar();
@@ -372,80 +353,78 @@ namespace VoxPopuli.WebPages
                 string Bill13Link = (string)getBill13Link.ExecuteScalar();
                 string Bill13Result = (string)getBill13Result.ExecuteScalar();
 
-                //Bill 323
+                //Bill12
                 string Bill12Name = (string)getBill12Name.ExecuteScalar();
                 string Bill12ID = (string)getBill12ID.ExecuteScalar();
                 string Bill12Link = (string)getBill12Link.ExecuteScalar();
                 string Bill12Result = (string)getBill12Result.ExecuteScalar();
 
-                //Bill 324
+                //Bill11
                 string Bill11Name = (string)getBill11Name.ExecuteScalar();
                 string Bill11ID = (string)getBill11ID.ExecuteScalar();
                 string Bill11Link = (string)getBill11Link.ExecuteScalar();
                 string Bill11Result = (string)getBill11Result.ExecuteScalar();
 
-                //Bill 325
+                //Bill10
 
                 string Bill10Name = (string)getBill10Name.ExecuteScalar();
                 string Bill10ID = (string)getBill10ID.ExecuteScalar();
                 string Bill10Link = (string)getBill10Link.ExecuteScalar();
                 string Bill10Result = (string)getBill10Result.ExecuteScalar();
 
-                //Bill 326
+                //Bill9
                 string Bill9Name = (string)getBill9Name.ExecuteScalar();
                 string Bill9ID = (string)getBill9ID.ExecuteScalar();
                 string Bill9Link = (string)getBill9Link.ExecuteScalar();
                 string Bill9Result = (string)getBill9Result.ExecuteScalar();
 
-                //Bill 327
+                //Bill8
                 string Bill8Name = (string)getBill8Name.ExecuteScalar();
                 string Bill8ID = (string)getBill8ID.ExecuteScalar();
                 string Bill8Link = (string)getBill8Link.ExecuteScalar();
                 string Bill8Result = (string)getBill8Result.ExecuteScalar();
 
-                //Bill 328
+                //Bill7
                 string Bill7Name = (string)getBill7Name.ExecuteScalar();
                 string Bill7ID = (string)getBill7ID.ExecuteScalar();
                 string Bill7Link = (string)getBill7Link.ExecuteScalar();
                 string Bill7Result = (string)getBill7Result.ExecuteScalar();
 
-                //Bill 329
+                //Bill6
                 string Bill6Name = (string)getBill6Name.ExecuteScalar();
                 string Bill6ID = (string)getBill6ID.ExecuteScalar();
                 string Bill6Link = (string)getBill6Link.ExecuteScalar();
                 string Bill6Result = (string)getBill6Result.ExecuteScalar();
 
-                //Bill 330
+                //Bill5
                 string Bill5Name = (string)getBill5Name.ExecuteScalar();
                 string Bill5ID = (string)getBill5ID.ExecuteScalar();
                 string Bill5Link = (string)getBill5Link.ExecuteScalar();
                 string Bill5Result = (string)getBill5Result.ExecuteScalar();
 
-                //Bill 331
+                //Bill4
                 string Bill4Name = (string)getBill4Name.ExecuteScalar();
                 string Bill4ID = (string)getBill4ID.ExecuteScalar();
                 string Bill4Link = (string)getBill4Link.ExecuteScalar();
                 string Bill4Result = (string)getBill4Result.ExecuteScalar();
 
-                //Bill 332
+                //Bill3
                 string Bill3Name = (string)getBill3Name.ExecuteScalar();
                 string Bill3ID = (string)getBill3ID.ExecuteScalar();
                 string Bill3Link = (string)getBill3Link.ExecuteScalar();
                 string Bill3Result = (string)getBill3Result.ExecuteScalar();
 
-                //Bill 333
+                //Bill2
                 string Bill2Name = (string)getBill2Name.ExecuteScalar();
                 string Bill2ID = (string)getBill2ID.ExecuteScalar();
                 string Bill2Link = (string)getBill2Link.ExecuteScalar();
                 string Bill2Result = (string)getBill2Result.ExecuteScalar();
 
+                //Bill1
                 string Bill1Name = (string)getBill1Name.ExecuteScalar();
                 string Bill1ID = (string)getBill1ID.ExecuteScalar();
                 string Bill1Link = (string)getBill1Link.ExecuteScalar();
                 string Bill1Result = (string)getBill1Result.ExecuteScalar();
-
-
-
 
 
                 //Replace HTML Elements Based off Information Pulled From The Database
@@ -611,16 +590,6 @@ namespace VoxPopuli.WebPages
                 result20.InnerHtml = "Bill Result: " + Bill20Result;
                 repvote20.InnerHtml = repFirstName + " " + repLastName + " Voted: " + Bill20Vote;
 
-
-
-
-
-
-
-
-
-
-
             }
             catch
             {
@@ -668,22 +637,9 @@ namespace VoxPopuli.WebPages
             string[] split = buttonID.Split('e');
             int ID = Int32.Parse(split[1]);
             return ID;
-            //int buttonnum = 0;
-            //string tmp = buttonID;
-            //try
-            //{
-            //    tmp = Regex.Replace(tmp, "[^0-20]+", string.Empty);
-            //    buttonnum = Int32.Parse(tmp);
-
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("Error: String cannot be converted to Int");
-            //} 
-            
-
         }
 
+        //This function executes when one of the upvote or downvote buttons are clicked
         protected void button_clicked(object sender, EventArgs e)
         {
             //Please delete me
@@ -695,13 +651,17 @@ namespace VoxPopuli.WebPages
             string buttonId = button.ID; //holds full name of button
             if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
             {
-               
-                setcolor(sender);
+
+                // Changes the color of the upvote and downvote button
+                setcolor(sender); 
+
                 //pass the string of the button to get the number.
                 idnum = buttonconvert(buttonId);
+
+                //Calls the execute vote function. User vote is recorded
+                //and RepAffinity is updated accordingly
                 executeVote(idnum, user, buttonId);
-                //use the number to indivigually sql the elements into the correct 
-                // objects
+                
 
             }
 
@@ -999,6 +959,8 @@ namespace VoxPopuli.WebPages
 
         }
 
+        //Execute Vote Function records the vote for the user and updates
+        //the RepAffinity score accordingly
         protected void executeVote(int idnum, string user, string buttonID)
         {
             //Define the DB Connection
