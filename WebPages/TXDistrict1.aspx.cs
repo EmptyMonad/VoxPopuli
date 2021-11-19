@@ -603,30 +603,45 @@ namespace VoxPopuli.WebPages
             }
 
 
-            //Setting Username for testing purposes -- delete me
-            string username = "AdminTesting1";
+           
 
-            //Now, We Will Need to Populate Prior Votes From The User. Implementing LoadVotes function
-            LoadVotes(username, "Bill1", upvote1, downvote1);
-            LoadVotes(username, "Bill2", upvote2, downvote2);
-            LoadVotes(username, "Bill3", upvote3, downvote3);
-            LoadVotes(username, "Bill4", upvote4, downvote4);
-            LoadVotes(username, "Bill5", upvote5, downvote5);
-            LoadVotes(username, "Bill6", upvote6, downvote6);
-            LoadVotes(username, "Bill7", upvote7, downvote7);
-            LoadVotes(username, "Bill8", upvote8, downvote8);
-            LoadVotes(username, "Bill9", upvote9, downvote9);
-            LoadVotes(username, "Bill10", upvote10, downvote10);
-            LoadVotes(username, "Bill11", upvote11, downvote11);
-            LoadVotes(username, "Bill12", upvote12, downvote12);
-            LoadVotes(username, "Bill13", upvote13, downvote13);
-            LoadVotes(username, "Bill14", upvote14, downvote14);
-            LoadVotes(username, "Bill15", upvote15, downvote15);
-            LoadVotes(username, "Bill16", upvote16, downvote16);
-            LoadVotes(username, "Bill17", upvote17, downvote17);
-            LoadVotes(username, "Bill18", upvote18, downvote18);
-            LoadVotes(username, "Bill19", upvote19, downvote19);
-            LoadVotes(username, "Bill20", upvote20, downvote20);
+            //Grab The Users Info If Logged IN
+            // Get Cookie to check for username
+            HttpCookie cookie = Request.Cookies["Userinfo"];
+            string username = null;
+            if (cookie != null)
+            {
+                username = cookie["Name"];
+            }
+            else
+            {
+                username = null;
+            }
+            //Now, We Will Need to Populate Prior Votes From The User, if user exists. Implementing LoadVotes function
+            if(username != null)
+            {
+                LoadVotes(username, "Bill1", upvote1, downvote1);
+                LoadVotes(username, "Bill2", upvote2, downvote2);
+                LoadVotes(username, "Bill3", upvote3, downvote3);
+                LoadVotes(username, "Bill4", upvote4, downvote4);
+                LoadVotes(username, "Bill5", upvote5, downvote5);
+                LoadVotes(username, "Bill6", upvote6, downvote6);
+                LoadVotes(username, "Bill7", upvote7, downvote7);
+                LoadVotes(username, "Bill8", upvote8, downvote8);
+                LoadVotes(username, "Bill9", upvote9, downvote9);
+                LoadVotes(username, "Bill10", upvote10, downvote10);
+                LoadVotes(username, "Bill11", upvote11, downvote11);
+                LoadVotes(username, "Bill12", upvote12, downvote12);
+                LoadVotes(username, "Bill13", upvote13, downvote13);
+                LoadVotes(username, "Bill14", upvote14, downvote14);
+                LoadVotes(username, "Bill15", upvote15, downvote15);
+                LoadVotes(username, "Bill16", upvote16, downvote16);
+                LoadVotes(username, "Bill17", upvote17, downvote17);
+                LoadVotes(username, "Bill18", upvote18, downvote18);
+                LoadVotes(username, "Bill19", upvote19, downvote19);
+                LoadVotes(username, "Bill20", upvote20, downvote20);
+
+            }
 
 
         }
@@ -643,31 +658,48 @@ namespace VoxPopuli.WebPages
         //This function executes when one of the upvote or downvote buttons are clicked
         protected void button_clicked(object sender, EventArgs e)
         {
-            //Please delete me
-            string user = "AdminTesting1";
-
-            int idnum; //holds button number
-            bool containsnum = false; //bool to check if the statement contains a number
-            ImageButton button = (ImageButton)sender; //Make the sender a button first
-            string buttonId = button.ID; //holds full name of button
-            if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
+            //Grab The User Information
+            HttpCookie cookie = Request.Cookies["Userinfo"];
+            string user = null;
+            if (cookie != null)
             {
+                user = cookie["Name"];
+                int idnum; //holds button number
+                bool containsnum = false; //bool to check if the statement contains a number
+                ImageButton button = (ImageButton)sender; //Make the sender a button first
+                string buttonId = button.ID; //holds full name of button
+                if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
+                {
 
-                // Changes the color of the upvote and downvote button
-                setcolor(sender);
+                    // Changes the color of the upvote and downvote button
+                    setcolor(sender);
 
-                //pass the string of the button to get the number.
-                idnum = buttonconvert(buttonId);
+                    //pass the string of the button to get the number.
+                    idnum = buttonconvert(buttonId);
 
-                //Calls the execute vote function. User vote is recorded
-                //and RepAffinity is updated accordingly
-                executeVote(idnum, user, buttonId);
+                    //Calls the execute vote function. User vote is recorded
+                    //and RepAffinity is updated accordingly
+                    executeVote(idnum, user, buttonId);
+
+
+                }
+
+                else
+                {
+                    Console.WriteLine("No button found");
+                }
+                 
 
 
             }
-
             else
-                Console.WriteLine("No button found");
+            {
+                //Display Error Message That The User Must Login
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "printError();", true);
+                user = null;
+            }
+
+         
         }
 
         /**

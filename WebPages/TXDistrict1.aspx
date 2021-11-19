@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../CSS/RepPage.css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Turbo87/sidebar-v2@v0.4.0/css/leaflet-sidebar.css"/>
+    <script src="../JavaScript/RepPage.js" ></script>
     <title></title>
    
 </head>

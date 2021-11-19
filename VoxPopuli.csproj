@@ -129,6 +129,7 @@
     <Content Include="Images\downvote-clicked.png" />
     <Content Include="Images\upvote-png-clear.png" />
     <Content Include="Images\upvote-png-green.png" />
+    <Content Include="JavaScript\RepPage.js" />
     <Content Include="Recaptcha.dll" />
     <Content Include="WebPages\getBill.php" />
     <Content Include="WebPages\getPic.php" />

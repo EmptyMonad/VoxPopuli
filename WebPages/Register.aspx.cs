@@ -162,11 +162,12 @@ namespace VoxPopuli.WebPages
                                     try
                                     {
                                         createUser_cmd.ExecuteNonQuery();
-                                        //  HttpCookie cookie = new HttpCookie("Userinfo");
-                                        // cookie["Name"] = uservalue;
+                                        HttpCookie cookie = new HttpCookie("Userinfo");
+                                        cookie["Name"] = uservalue;
 
-                                        // Response.Cookies.Add(cookie);
-                                        Response.Redirect("../MainPage.aspx");
+                                        Response.Cookies.Add(cookie);
+
+                                        Response.Redirect("~/WebPages/MainPage.aspx");
                                     }
                                     catch
                                     {

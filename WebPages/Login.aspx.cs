@@ -42,10 +42,10 @@ namespace VoxPopuli.WebPages
                 {
 
                     lblInvalid.Visible = false;
-                    //HttpCookie cookie = new HttpCookie("Userinfo");
-                    //cookie["Name"] = txtUsername.Text;
+                    HttpCookie cookie = new HttpCookie("Userinfo");
+                    cookie["Name"] = uservalue;
 
-                    //Response.Cookies.Add(cookie);
+                    Response.Cookies.Add(cookie);
 
                     Response.Redirect("~/WebPages/MainPage.aspx");
                 }
