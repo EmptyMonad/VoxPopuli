@@ -12,13 +12,12 @@ namespace VoxPopuli.WebPages
 {
     public partial class TXDistrict1 : System.Web.UI.Page
     {
-
+        private string congress = "117";
         private string state = "TX";
         private string district = "1";
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Define the state for this page
-           
+            
             
           
             //Define the SQL Connection
@@ -28,177 +27,252 @@ namespace VoxPopuli.WebPages
 
 
             //Define the Command for grabbing the First Name of The Representative
-            SqlCommand getRepFirstNameCMD = new SqlCommand("SELECT results_members_first_name FROM congress2 WHERE results_congress= '117' AND results_members_state='TX' AND results_members_district ='1'", db);
+            SqlCommand getRepFirstNameCMD = new SqlCommand("SELECT results_members_first_name FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district =@district", db);
+            getRepFirstNameCMD.Parameters.AddWithValue("@congress", congress);
+            getRepFirstNameCMD.Parameters.AddWithValue("@state", state);
+            getRepFirstNameCMD.Parameters.AddWithValue("@district", district);
+
 
             //Define the Command for grabbing the Last Name of The Representative
-            SqlCommand getRepLastNameCMD = new SqlCommand("SELECT results_members_last_name FROM congress2 WHERE results_congress= '117' AND results_members_state='TX' AND results_members_district ='1'", db);
+            SqlCommand getRepLastNameCMD = new SqlCommand("SELECT results_members_last_name FROM congress2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+            getRepLastNameCMD.Parameters.AddWithValue("@congress", congress);
+            getRepLastNameCMD.Parameters.AddWithValue("@state", state);
+            getRepLastNameCMD.Parameters.AddWithValue("@district", district);
+
 
             //Define the Command for grabbing the twitter Handle of the Rep
-            SqlCommand getRepTwitterCMD = new SqlCommand("SELECT results_members_twitter_account FROM congress2 WHERE results_congress= '117' AND results_members_state='TX' AND results_members_district ='1'", db);
+            SqlCommand getRepTwitterCMD = new SqlCommand("SELECT results_members_twitter_account FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district = @district", db);
+            getRepTwitterCMD.Parameters.AddWithValue("@congress", congress);
+            getRepTwitterCMD.Parameters.AddWithValue("@state", state);
+            getRepTwitterCMD.Parameters.AddWithValue("@district", district);
+
+
 
             //Define the Command for grabbing the image URL of the representative
-            SqlCommand getRepPicURLCMD = new SqlCommand("SELECT picurl FROM congress2 WHERE results_congress= '117' AND results_members_state='TX' AND results_members_district ='1'", db);
-
+            SqlCommand getRepPicURLCMD = new SqlCommand("SELECT picurl FROM congress2 WHERE results_congress= @congress AND results_members_state= @state AND results_members_district = @district", db);
+            getRepPicURLCMD.Parameters.AddWithValue("@congress", congress);
+            getRepPicURLCMD.Parameters.AddWithValue("@state", state);
+            getRepPicURLCMD.Parameters.AddWithValue("@district", district);
 
             //Define The Command For Grabbing the Reps Vote on Each Bill
-            SqlCommand getBill20VoteCMD = new SqlCommand("SELECT vote_position FROM Bill20 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill19VoteCMD = new SqlCommand("SELECT vote_position FROM Bill19 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill18VoteCMD = new SqlCommand("SELECT vote_position FROM Bill18 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill17VoteCMD = new SqlCommand("SELECT vote_position FROM Bill17 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill16VoteCMD = new SqlCommand("SELECT vote_position FROM Bill16 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill15VoteCMD = new SqlCommand("SELECT vote_position FROM Bill15 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill14VoteCMD = new SqlCommand("SELECT vote_position FROM Bill14 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill13VoteCMD = new SqlCommand("SELECT vote_position FROM Bill13 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill12VoteCMD = new SqlCommand("SELECT vote_position FROM Bill12 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill11VoteCMD = new SqlCommand("SELECT vote_position FROM Bill11 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill10VoteCMD = new SqlCommand("SELECT vote_position FROM Bill10 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill9VoteCMD = new SqlCommand("SELECT vote_position FROM Bill9 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill8VoteCMD = new SqlCommand("SELECT vote_position FROM Bill8 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill7VoteCMD = new SqlCommand("SELECT vote_position FROM Bill7 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill6VoteCMD = new SqlCommand("SELECT vote_position FROM Bill6 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill5VoteCMD = new SqlCommand("SELECT vote_position FROM Bill5 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill4VoteCMD = new SqlCommand("SELECT vote_position FROM Bill4 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill3VoteCMD = new SqlCommand("SELECT vote_position FROM Bill3 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill2VoteCMD = new SqlCommand("SELECT vote_position FROM Bill2 WHERE state='TX' AND district ='1'", db);
-            SqlCommand getBill1VoteCMD = new SqlCommand("SELECT vote_position FROM Bill1 WHERE state='TX' AND district ='1'", db);
+            SqlCommand getBill20VoteCMD = new SqlCommand("SELECT vote_position FROM Bill20 WHERE state= @state AND district = @district", db);
+            getBill20VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill20VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill19VoteCMD = new SqlCommand("SELECT vote_position FROM Bill19 WHERE state= @state AND district = @district", db);
+            getBill19VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill19VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill18VoteCMD = new SqlCommand("SELECT vote_position FROM Bill18 WHERE state= @state AND district = @district", db);
+            getBill18VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill18VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill17VoteCMD = new SqlCommand("SELECT vote_position FROM Bill17 WHERE state= @state AND district = @district", db);
+            getBill17VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill17VoteCMD.Parameters.AddWithValue("@district", district);
+
+
+            SqlCommand getBill16VoteCMD = new SqlCommand("SELECT vote_position FROM Bill16 WHERE state= @state AND district = @district", db);
+            getBill16VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill16VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill15VoteCMD = new SqlCommand("SELECT vote_position FROM Bill15 WHERE state= @state AND district = @district", db);
+            getBill15VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill15VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill14VoteCMD = new SqlCommand("SELECT vote_position FROM Bill14 WHERE state= @state AND district = @district", db);
+            getBill14VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill14VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill13VoteCMD = new SqlCommand("SELECT vote_position FROM Bill13 WHERE state= @state AND district = @district", db);
+            getBill13VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill13VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill12VoteCMD = new SqlCommand("SELECT vote_position FROM Bill12 WHERE state= @state AND district = @district", db);
+            getBill12VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill12VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill11VoteCMD = new SqlCommand("SELECT vote_position FROM Bill11 WHERE state= @state AND district = @district", db);
+            getBill11VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill11VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill10VoteCMD = new SqlCommand("SELECT vote_position FROM Bill10 WHERE state= @state AND district = @district", db);
+            getBill10VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill10VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill9VoteCMD = new SqlCommand("SELECT vote_position FROM Bill9 WHERE state= @state AND district = @district", db);
+            getBill9VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill9VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill8VoteCMD = new SqlCommand("SELECT vote_position FROM Bill8 WHERE state= @state AND district = @district", db);
+            getBill8VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill8VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill7VoteCMD = new SqlCommand("SELECT vote_position FROM Bill7 WHERE state= @state AND district = @district", db);
+            getBill7VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill7VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill6VoteCMD = new SqlCommand("SELECT vote_position FROM Bill6 WHERE state= @state AND district = @district", db);
+            getBill6VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill6VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill5VoteCMD = new SqlCommand("SELECT vote_position FROM Bill5 WHERE state= @state AND district = @district", db);
+            getBill5VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill5VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill4VoteCMD = new SqlCommand("SELECT vote_position FROM Bill4 WHERE state= @state AND district = @district", db);
+            getBill4VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill4VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill3VoteCMD = new SqlCommand("SELECT vote_position FROM Bill3 WHERE state= @state AND district = @district", db);
+            getBill3VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill3VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill2VoteCMD = new SqlCommand("SELECT vote_position FROM Bill2 WHERE state= @state AND district = @district", db);
+            getBill2VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill2VoteCMD.Parameters.AddWithValue("@district", district);
+
+            SqlCommand getBill1VoteCMD = new SqlCommand("SELECT vote_position FROM Bill1 WHERE state= @state AND district = @district", db);
+            getBill1VoteCMD.Parameters.AddWithValue("@state", state);
+            getBill1VoteCMD.Parameters.AddWithValue("@district", district);
 
 
 
 
             //Bill20
-            SqlCommand getBill20Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='315'", db);
-            SqlCommand getBill20ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='315'", db);
-            SqlCommand getBill20Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='315'", db);
-            SqlCommand getBill20Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='315'", db);
+            SqlCommand getBill20Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='20'", db);
+            SqlCommand getBill20ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='20'", db);
+            SqlCommand getBill20Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='20'", db);
+            SqlCommand getBill20Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='20'", db);
 
             //Billl316
-            SqlCommand getBill19Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='316'", db);
-            SqlCommand getBill19ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='316'", db);
-            SqlCommand getBill19Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='316'", db);
-            SqlCommand getBill19Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='316'", db);
+            SqlCommand getBill19Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='19'", db);
+            SqlCommand getBill19ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='19'", db);
+            SqlCommand getBill19Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='19'", db);
+            SqlCommand getBill19Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='19'", db);
 
 
             //Bill18
-            SqlCommand getBill18Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='317'", db);
-            SqlCommand getBill18ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='317'", db);
-            SqlCommand getBill18Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='317'", db);
-            SqlCommand getBill18Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='317'", db);
+            SqlCommand getBill18Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='18'", db);
+            SqlCommand getBill18ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='18'", db);
+            SqlCommand getBill18Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='18'", db);
+            SqlCommand getBill18Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='18'", db);
 
 
             //Bill 318
-            SqlCommand getBill17Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='318'", db);
-            SqlCommand getBill17ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='318'", db);
-            SqlCommand getBill17Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='318'", db);
-            SqlCommand getBill17Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='318'", db);
+            SqlCommand getBill17Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='17'", db);
+            SqlCommand getBill17ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='17'", db);
+            SqlCommand getBill17Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='17'", db);
+            SqlCommand getBill17Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='17'", db);
 
             //Bill 319
 
-            SqlCommand getBill16Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='319'", db);
-            SqlCommand getBill16ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='319'", db);
-            SqlCommand getBill16Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='319'", db);
-            SqlCommand getBill16Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='319'", db);
+            SqlCommand getBill16Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='16'", db);
+            SqlCommand getBill16ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='16'", db);
+            SqlCommand getBill16Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='16'", db);
+            SqlCommand getBill16Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='16'", db);
 
 
             //Bill 320
-            SqlCommand getBill15Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='320'", db);
-            SqlCommand getBill15ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='320'", db);
-            SqlCommand getBill15Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='320'", db);
-            SqlCommand getBill15Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='320'", db);
+            SqlCommand getBill15Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='15'", db);
+            SqlCommand getBill15ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='15'", db);
+            SqlCommand getBill15Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='15'", db);
+            SqlCommand getBill15Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='15'", db);
 
 
             //Bill 321
-            SqlCommand getBill14Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='321'", db);
-            SqlCommand getBill14ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='321'", db);
-            SqlCommand getBill14Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='321'", db);
-            SqlCommand getBill14Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='321'", db);
+            SqlCommand getBill14Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='14'", db);
+            SqlCommand getBill14ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='14'", db);
+            SqlCommand getBill14Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='14'", db);
+            SqlCommand getBill14Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='14'", db);
 
 
             //Bill 322
-            SqlCommand getBill13Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='322'", db);
-            SqlCommand getBill13ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='322'", db);
-            SqlCommand getBill13Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='322'", db);
-            SqlCommand getBill13Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='322'", db);
+            SqlCommand getBill13Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='13'", db);
+            SqlCommand getBill13ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='13'", db);
+            SqlCommand getBill13Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='13'", db);
+            SqlCommand getBill13Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='13'", db);
 
 
             //Bill 323
-            SqlCommand getBill12Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='323'", db);
-            SqlCommand getBill12ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='323'", db);
-            SqlCommand getBill12Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='323'", db);
-            SqlCommand getBill12Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='323'", db);
+            SqlCommand getBill12Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='12'", db);
+            SqlCommand getBill12ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='12'", db);
+            SqlCommand getBill12Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='12'", db);
+            SqlCommand getBill12Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='12'", db);
 
 
             //Bill 324
-            SqlCommand getBill11Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='324'", db);
-            SqlCommand getBill11ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='324'", db);
-            SqlCommand getBill11Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='324'", db);
-            SqlCommand getBill11Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='324'", db);
+            SqlCommand getBill11Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='11'", db);
+            SqlCommand getBill11ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='11'", db);
+            SqlCommand getBill11Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='11'", db);
+            SqlCommand getBill11Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='11'", db);
 
             //Bill 325
-            SqlCommand getBill10Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='325'", db);
-            SqlCommand getBill10ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='325'", db);
-            SqlCommand getBill10Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='325'", db);
-            SqlCommand getBill10Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='325'", db);
+            SqlCommand getBill10Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='10'", db);
+            SqlCommand getBill10ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='10'", db);
+            SqlCommand getBill10Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='10'", db);
+            SqlCommand getBill10Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='10'", db);
 
 
             //Bill 326
-            SqlCommand getBill9Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='326'", db);
-            SqlCommand getBill9ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='326'", db);
-            SqlCommand getBill9Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='326'", db);
-            SqlCommand getBill9Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='326'", db);
+            SqlCommand getBill9Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='9'", db);
+            SqlCommand getBill9ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='9'", db);
+            SqlCommand getBill9Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='9'", db);
+            SqlCommand getBill9Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='9'", db);
 
 
             //Bill 327
-            SqlCommand getBill8Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='327'", db);
-            SqlCommand getBill8ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='327'", db);
-            SqlCommand getBill8Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='327'", db);
-            SqlCommand getBill8Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='327'", db);
+            SqlCommand getBill8Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='8'", db);
+            SqlCommand getBill8ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='8'", db);
+            SqlCommand getBill8Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='8'", db);
+            SqlCommand getBill8Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='8'", db);
 
 
             //Bill 328
-            SqlCommand getBill7Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='328'", db);
-            SqlCommand getBill7ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='328'", db);
-            SqlCommand getBill7Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='328'", db);
-            SqlCommand getBill7Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='328'", db);
+            SqlCommand getBill7Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='7'", db);
+            SqlCommand getBill7ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='7'", db);
+            SqlCommand getBill7Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='7'", db);
+            SqlCommand getBill7Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='7'", db);
 
 
             //Bill 329
-            SqlCommand getBill6Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='329'", db);
-            SqlCommand getBill6ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='329'", db);
-            SqlCommand getBill6Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='329'", db);
-            SqlCommand getBill6Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='329'", db);
+            SqlCommand getBill6Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='6'", db);
+            SqlCommand getBill6ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='6'", db);
+            SqlCommand getBill6Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='6'", db);
+            SqlCommand getBill6Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='6'", db);
 
 
             //Bill 330
-            SqlCommand getBill5Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='330'", db);
-            SqlCommand getBill5ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='330'", db);
-            SqlCommand getBill5Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='330'", db);
-            SqlCommand getBill5Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='330'", db);
+            SqlCommand getBill5Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='5'", db);
+            SqlCommand getBill5ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='5'", db);
+            SqlCommand getBill5Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='5'", db);
+            SqlCommand getBill5Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='5'", db);
 
 
             //Bill 331
-            SqlCommand getBill4Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='331'", db);
-            SqlCommand getBill4ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='331'", db);
-            SqlCommand getBill4Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='331'", db);
-            SqlCommand getBill4Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='331'", db);
+            SqlCommand getBill4Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='4'", db);
+            SqlCommand getBill4ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='4'", db);
+            SqlCommand getBill4Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='4'", db);
+            SqlCommand getBill4Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='4'", db);
 
 
             //Bill 332
-            SqlCommand getBill3Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='332'", db);
-            SqlCommand getBill3ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='332'", db);
-            SqlCommand getBill3Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='332'", db);
-            SqlCommand getBill3Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='332'", db);
+            SqlCommand getBill3Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='3'", db);
+            SqlCommand getBill3ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='3'", db);
+            SqlCommand getBill3Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='3'", db);
+            SqlCommand getBill3Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='3'", db);
 
 
             //Bill 333
-            SqlCommand getBill2Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='333'", db);
-            SqlCommand getBill2ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='333'", db);
-            SqlCommand getBill2Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='333'", db);
-            SqlCommand getBill2Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='333'", db);
+            SqlCommand getBill2Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='2'", db);
+            SqlCommand getBill2ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='2'", db);
+            SqlCommand getBill2Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='2'", db);
+            SqlCommand getBill2Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='2'", db);
 
-            SqlCommand getBill1Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE RollCallNumber='334'", db);
-            SqlCommand getBill1ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE RollCallNumber='334'", db);
-            SqlCommand getBill1Result = new SqlCommand("SELECT Result FROM BillInfo WHERE RollCallNumber='334'", db);
-            SqlCommand getBill1Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE RollCallNumber='334'", db);
+            SqlCommand getBill1Name = new SqlCommand("SELECT BillTitle FROM BillInfo WHERE TableNumber='1'", db);
+            SqlCommand getBill1ID = new SqlCommand("SELECT BillID FROM BillInfo WHERE TableNumber='1'", db);
+            SqlCommand getBill1Result = new SqlCommand("SELECT Result FROM BillInfo WHERE TableNumber='1'", db);
+            SqlCommand getBill1Link = new SqlCommand("SELECT BillLink FROM BillInfo WHERE TableNumber='1'", db);
 
 
 
@@ -563,26 +637,26 @@ namespace VoxPopuli.WebPages
             string username = "AdminTesting1";
 
             //Now, We Will Need to Populate Prior Votes From The User. Implementing LoadVotes function
-            LoadVotes(username, state, district, "Bill1", upvote1, downvote1);
-            LoadVotes(username, state, district, "Bill2", upvote2, downvote2);
-            LoadVotes(username, state, district, "Bill3", upvote3, downvote3);
-            LoadVotes(username, state, district, "Bill4", upvote4, downvote4);
-            LoadVotes(username, state, district, "Bill5", upvote5, downvote5);
-            LoadVotes(username, state, district, "Bill6", upvote6, downvote6);
-            LoadVotes(username, state, district, "Bill7", upvote7, downvote7);
-            LoadVotes(username, state, district, "Bill8", upvote8, downvote8);
-            LoadVotes(username, state, district, "Bill9", upvote9, downvote9);
-            LoadVotes(username, state, district, "Bill10", upvote10, downvote10);
-            LoadVotes(username, state, district, "Bill11", upvote11, downvote11);
-            LoadVotes(username, state, district, "Bill12", upvote12, downvote12);
-            LoadVotes(username, state, district, "Bill13", upvote13, downvote13);
-            LoadVotes(username, state, district, "Bill14", upvote14, downvote14);
-            LoadVotes(username, state, district, "Bill15", upvote15, downvote15);
-            LoadVotes(username, state, district, "Bill16", upvote16, downvote16);
-            LoadVotes(username, state, district, "Bill17", upvote17, downvote17);
-            LoadVotes(username, state, district, "Bill18", upvote18, downvote18);
-            LoadVotes(username, state, district, "Bill19", upvote19, downvote19);
-            LoadVotes(username, state, district, "Bill20", upvote20, downvote20);
+            LoadVotes(username, "Bill1", upvote1, downvote1);
+            LoadVotes(username,"Bill2", upvote2, downvote2);
+            LoadVotes(username,"Bill3", upvote3, downvote3);
+            LoadVotes(username,"Bill4", upvote4, downvote4);
+            LoadVotes(username,"Bill5", upvote5, downvote5);
+            LoadVotes(username,"Bill6", upvote6, downvote6);
+            LoadVotes(username,"Bill7", upvote7, downvote7);
+            LoadVotes(username,"Bill8", upvote8, downvote8);
+            LoadVotes(username,"Bill9", upvote9, downvote9);
+            LoadVotes(username, "Bill10", upvote10, downvote10);
+            LoadVotes(username, "Bill11", upvote11, downvote11);
+            LoadVotes(username, "Bill12", upvote12, downvote12);
+            LoadVotes(username,  "Bill13", upvote13, downvote13);
+            LoadVotes(username, "Bill14", upvote14, downvote14);
+            LoadVotes(username, "Bill15", upvote15, downvote15);
+            LoadVotes(username,  "Bill16", upvote16, downvote16);
+            LoadVotes(username, "Bill17", upvote17, downvote17);
+            LoadVotes(username, "Bill18", upvote18, downvote18);
+            LoadVotes(username,  "Bill19", upvote19, downvote19);
+            LoadVotes(username, "Bill20", upvote20, downvote20);
 
 
         }
@@ -610,6 +684,8 @@ namespace VoxPopuli.WebPages
 
         protected void button_clicked(object sender, EventArgs e)
         {
+            //Please delete me
+            string user = "AdminTesting1";
 
             int idnum; //holds button number
             bool containsnum = false; //bool to check if the statement contains a number
@@ -617,78 +693,14 @@ namespace VoxPopuli.WebPages
             string buttonId = button.ID; //holds full name of button
             if (containsnum = buttonId.Any(char.IsDigit) == true) //if the original button id has a number, continue
             {
+               
                 setcolor(sender);
                 //pass the string of the button to get the number.
                 idnum = buttonconvert(buttonId);
+                executeVote(idnum, user, buttonId);
                 //use the number to indivigually sql the elements into the correct 
                 // objects
-                switch (idnum)
-                {
-                    case 1:
-                        //sql database thingy
 
-                        break;
-                    case 2:
-                        //sql database thingy
-                        break;
-                    case 3:
-                        //sql database thingy
-                        break;
-                    case 4:
-                        //sql database thingy
-                        break;
-                    case 5:
-                        //sql database thingy
-                        break;
-                    case 6:
-                        //sql database thingy
-                        break;
-                    case 7:
-                        //sql database thingy
-                        break;
-                    case 8:
-                        //sql database thingy
-                        break;
-                    case 9:
-                        //sql database thingy
-                        break;
-                    case 10:
-                        //sql database thingy
-                        break;
-                    case 11:
-                        //sql database thingy
-                        break;
-                    case 12:
-                        //sql database thingy
-                        break;
-                    case 13:
-                        //sql database thingy
-                        break;
-                    case 14:
-                        //sql database thingy
-                        break;
-                    case 15:
-                        //sql database thingy
-                        break;
-                    case 16:
-                        //sql database thingy
-                        break;
-                    case 17:
-                        //sql database thingy
-                        break;
-                    case 18:
-                        //sql database thingy
-                        break;
-                    case 19:
-                        //sql database thingy
-                        break;
-                    case 20:
-                        //sql database thingy
-                        break;
-                    default:
-                        Console.WriteLine("Error: No valid bill number.");
-                        break;
-                }
             }
 
             else
@@ -941,7 +953,7 @@ namespace VoxPopuli.WebPages
 
 
         //Loads Prior Votes of a User
-        protected void LoadVotes(string user, string state, string district, string Bill, ImageButton UpButton, ImageButton DownButton)
+        protected void LoadVotes(string user, string Bill, ImageButton UpButton, ImageButton DownButton)
         {
             //Define the DB Connection
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
@@ -975,7 +987,155 @@ namespace VoxPopuli.WebPages
             }
             catch
             {
-                //RepNameHolder.InnerText = "SELECT " + state + "District" + district + Bill + " FROM VP_Users WHERE Username= " + user + " OR Email= " + user + "";
+                
+            }
+            finally
+            {
+                db.Close();
+            }
+
+        }
+
+        protected void executeVote(int idnum, string user, string buttonID)
+        {
+            //Define the DB Connection
+            SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
+
+            //Define the Command to Grab the Prior Votes
+            string commandString = "SELECT " + state + "District" + district + "Bill"  +idnum+ " FROM VP_Users WHERE Username= @User OR Email= @User";
+            SqlCommand getPriorVoteCMD = new SqlCommand(commandString, db);
+            getPriorVoteCMD.Parameters.AddWithValue("@User", user);
+            db.Open();
+            try
+            {
+                int priorVote = (int)getPriorVoteCMD.ExecuteScalar();
+
+                //If user already upvoted, and are upvoting again, this will take the vote away and set the user vote value to 0.
+                //Also, decrement the representatives score by 1
+                if ((priorVote == 1 && buttonID.Contains("up")))
+                {
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '0' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD  = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+
+
+                }
+
+                //If user already downvoted, and are downvoting again, this will take the downvote away and set the user vote 
+                //value to 0. It will also increment the representatives score by 1.
+                else if (priorVote == -1 && buttonID.Contains("down"))
+                {
+
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '0' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+
+
+                }
+
+                //If the user has not voted on this item yet and upvotes, the user vote value will be set to 1
+                // and the represative score will be incremented by 1
+                else if (priorVote == 0 && buttonID.Contains("up"))
+                {
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '1' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+                }
+
+                //If the user has not voted on this item yet and downvotes, the user vote value will be set to -1
+                // and the representative score will be decremented by 1
+
+                else if(priorVote == 0 && buttonID.Contains("down"))
+                {
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '-1' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+                }
+
+                //If the user has already downvoted, and then upvotes, the user vote value will be set to 1
+                //and the rep score will be incremented by 2
+                else if(priorVote == -1 && buttonID.Contains("up"))
+                {
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '1' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+
+                }
+
+                //If the user has already upvoted, and then dowvotes, the user vote value will be set to -1
+                // and the rep score will be decremented by 2
+
+                else if(priorVote == 1 && buttonID.Contains("down"))
+                {
+                    string caseUserString = "UPDATE VP_Users SET " + state + "District" + district + "Bill" + idnum + " = '-1' WHERE Username = @User OR Email = @User";
+                    SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
+                    caseUserCMD.Parameters.AddWithValue("@User", user);
+
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    caseRepCMD.Parameters.AddWithValue("@congress", congress);
+                    caseRepCMD.Parameters.AddWithValue("@state", state);
+                    caseRepCMD.Parameters.AddWithValue("@district", district);
+
+
+                    //Database is updated accordingly
+                    caseUserCMD.ExecuteNonQuery();
+                    caseRepCMD.ExecuteNonQuery();
+                }
+            }
+
+            catch
+            {
+
             }
             finally
             {
