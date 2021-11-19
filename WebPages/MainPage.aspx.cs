@@ -143,11 +143,10 @@ namespace MapProject.WebPages
                 Page.ClientScript.RegisterStartupScript(this.GetType(),"TX34C", "mapColor(" + Rep34Affinity + ",district34C);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "TX35", "mapColor(" + Rep35Affinity + ",district35);", true);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "TX36", "mapColor(" + Rep36Affinity + ",district36);", true);
-                //Page.ClientScript.RegisterStartupScript(this.GetType(), "../JavaScript/MainPageMap.js", "paintDistrictBlack(district1);", true);
             }
             catch { 
                 
-               repphoto.Visible = false;
+
             }
             finally { db.Close(); }
 

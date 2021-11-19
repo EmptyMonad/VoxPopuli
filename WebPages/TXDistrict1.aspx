@@ -33,8 +33,8 @@
                 <p id="repvote1" class="bvote" runat="server"></p>
               
 
-            <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
-            <asp:Imagebutton id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked" MaintainScrollPositionOnPostBack="true" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
+            <asp:Imagebutton id="upvote2" runat="server" class="upvotebutton" type="button" OnClick="button_clicked" ImageUrl= "~/Images/upvote-png-clear.png"></asp:Imagebutton>
+            <asp:Imagebutton id="downvote2" runat="server" class="downvotebutton" type="button" onclick="button_clicked" ImageUrl="~/Images/downvote-clear.png"></asp:Imagebutton>
             <asp:Imagebutton id="Bill2" runat="server" class="billbutton" type="button" ImageUrl="~/Images/bill-default.png"></asp:Imagebutton>
                 <h2 id="billname2" class="bname" runat="server"></h2>
                 <p id="BillID2" class="bID" runat="server"></p>

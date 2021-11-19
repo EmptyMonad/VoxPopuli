@@ -665,21 +665,23 @@ namespace VoxPopuli.WebPages
         //Allowing the code to know what bill and bill items will be effected dynamically.
         protected int buttonconvert(string buttonID)
         {
-            int buttonnum = 0;
-            string tmp = buttonID;
-            try
-            {
-                tmp = Regex.Replace(tmp, "[^0-20]+", string.Empty);
-                buttonnum = Int32.Parse(tmp);
+            string[] split = buttonID.Split('e');
+            int ID = Int32.Parse(split[1]);
+            return ID;
+            //int buttonnum = 0;
+            //string tmp = buttonID;
+            //try
+            //{
+            //    tmp = Regex.Replace(tmp, "[^0-20]+", string.Empty);
+            //    buttonnum = Int32.Parse(tmp);
 
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("Error: String cannot be converted to Int");
-            } 
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("Error: String cannot be converted to Int");
+            //} 
             
 
-            return buttonnum;
         }
 
         protected void button_clicked(object sender, EventArgs e)
@@ -722,8 +724,13 @@ namespace VoxPopuli.WebPages
             ImageButton button = (ImageButton)sender;
             //Get button ID
             string buttonid = button.ID;
+            System.Diagnostics.Debug.WriteLine("Button clicked:" + buttonid);
+            //pass the string of the button to get the number.
+            int idnum = buttonconvert(buttonid);
+            System.Diagnostics.Debug.WriteLine("Button idnum clicked:" + idnum);
             //Call function to get the opposite of this button
-            ImageButton Opposite = getOppositeButton(buttonid);
+            ImageButton Opposite = getOppositeButton(buttonid,idnum);
+            System.Diagnostics.Debug.WriteLine("Opposite of this button: " + Opposite.ID);
 
             string path = button.ImageUrl;
 
@@ -734,7 +741,7 @@ namespace VoxPopuli.WebPages
                 button.ImageUrl = "~/Images/upvote-png-clear.png";
                 Opposite.ImageUrl = "~/Images/downvote-clear.png";
             }
-            else if(buttonid.Contains(up))
+            else if(buttonid.Contains(up) && path.Contains("clear"))
             {
                 button.ImageUrl = "~/Images/upvote-png-green.png";
                 Opposite.ImageUrl = "~/Images/downvote-clear.png";
@@ -759,198 +766,194 @@ namespace VoxPopuli.WebPages
 
         //This function is used to get the opposite button of another button.
         //For instance, if the button is Upvote1, then Downvote1 is returned.
-        protected ImageButton getOppositeButton(string btn)
+        protected ImageButton getOppositeButton(string btn, int idnum)
         {
-            string[] split = btn.Split('e');
-            if(btn.Contains("up") && split[1] == "1")
+            if(btn.Contains("up") && idnum == 1)
             {
-                return downvote1;
+                return downvote1; 
             }
-            else if(btn.Contains("down") && split[1] == "1")
+            else if(btn.Contains("down") && idnum == 1)
             {
                 return upvote1;
             }
 
-            if (btn.Contains("up") && split[1] == "2")
+            else if (btn.Contains("up") && idnum == 2)
             {
                 return downvote2;
             }
-            else if (btn.Contains("down") && split[1] == "2")
+            else if (btn.Contains("down") && idnum == 2)
             {
                 return upvote2;
             }
 
-            if (btn.Contains("up") && split[1] == "3")
+            else if (btn.Contains("up") && idnum == 3)
             {
+                
                 return downvote3;
             }
-            else if (btn.Contains("down") && split[1] == "3")
+            else if (btn.Contains("down") && idnum == 3)
             {
                 return upvote3;
             }
 
-            if (btn.Contains("up") && split[1] == "4")
+            else if (btn.Contains("up") && idnum == 4)
             {
                 return downvote4;
             }
-            else if (btn.Contains("down") && split[1] == "4")
+            else if (btn.Contains("down") && idnum == 4)
             {
                 return upvote4;
             }
 
-            if (btn.Contains("up") && split[1] == "5")
+            else if (btn.Contains("up") && idnum == 5)
             {
                 return downvote5;
             }
-            else if (btn.Contains("down") && split[1] == "5")
+            else if (btn.Contains("down") && idnum == 5)
             {
                 return upvote5;
             }
 
-            if (btn.Contains("up") && split[1] == "6")
+            else if (btn.Contains("up") && idnum == 6)
             {
                 return downvote6;
             }
-            else if (btn.Contains("down") && split[1] == "6")
+            else if (btn.Contains("down") && idnum == 6)
             {
                 return upvote6;
             }
 
-            if (btn.Contains("up") && split[1] == "7")
+            if (btn.Contains("up") && idnum == 7)
             {
                 return downvote7;
             }
-            else if (btn.Contains("down") && split[1] == "7")
+            else if (btn.Contains("down") && idnum == 7)
             {
                 return upvote7;
             }
 
-            if (btn.Contains("up") && split[1] == "8")
+            if (btn.Contains("up") && idnum == 8)
             {
                 return downvote8;
             }
-            else if (btn.Contains("down") && split[1] == "8")
+            else if (btn.Contains("down") && idnum == 8)
             {
                 return upvote8;
             }
 
-            if (btn.Contains("up") && split[1] == "9")
+            if (btn.Contains("up") && idnum == 9)
             {
                 return downvote9;
             }
-            else if (btn.Contains("down") && split[1] == "9")
+            else if (btn.Contains("down") && idnum == 9)
             {
                 return upvote9;
             }
 
-            if (btn.Contains("up") && split[1] == "10")
+            if (btn.Contains("up") && idnum == 10)
             {
                 return downvote10;
             }
-            else if (btn.Contains("down") && split[1] == "10")
+            else if (btn.Contains("down") && idnum == 10)
             {
                 return upvote10;
             }
 
-            if (btn.Contains("up") && split[1] == "11")
+            if (btn.Contains("up") && idnum == 11)
             {
                 return downvote11;
             }
-            else if (btn.Contains("down") && split[1] == "11")
+            else if (btn.Contains("down") && idnum == 11)
             {
                 return upvote11;
             }
 
-            if (btn.Contains("up") && split[1] == "12")
+            if (btn.Contains("up") && idnum == 12)
             {
                 return downvote12;
             }
-            else if (btn.Contains("down") && split[1] == "12")
+            else if (btn.Contains("down") && idnum == 12)
             {
                 return upvote12;
             }
 
-            if (btn.Contains("up") && split[1] == "13")
+            if (btn.Contains("up") && idnum == 13)
             {
                 return downvote13;
             }
-            else if (btn.Contains("down") && split[1] == "13")
+            else if (btn.Contains("down") && idnum == 13)
             {
                 return upvote13;
             }
 
-            if (btn.Contains("up") && split[1] == "14")
+            if (btn.Contains("up") && idnum == 14)
             {
                 return downvote14;
             }
-            else if (btn.Contains("down") && split[1] == "14")
+            else if (btn.Contains("down") && idnum == 14)
             {
                 return upvote14;
             }
 
-            if (btn.Contains("up") && split[1] == "15")
+            if (btn.Contains("up") && idnum == 15)
             {
                 return downvote15;
             }
-            else if (btn.Contains("down") && split[1] == "15")
+            else if (btn.Contains("down") && idnum == 15)
             {
                 return upvote15;
             }
 
-            if (btn.Contains("up") && split[1] == "16")
+            if (btn.Contains("up") && idnum == 16)
             {
                 return downvote16;
             }
-            else if (btn.Contains("down") && split[1] == "16")
+            else if (btn.Contains("down") && idnum == 16)
             {
                 return upvote16;
             }
 
-            if (btn.Contains("up") && split[1] == "17")
+            if (btn.Contains("up") && idnum == 17)
             {
                 return downvote17;
             }
-            else if (btn.Contains("down") && split[1] == "17")
+            else if (btn.Contains("down") && idnum == 17)
             {
                 return upvote17;
             }
 
 
-            if (btn.Contains("up") && split[1] == "18")
+            if (btn.Contains("up") && idnum == 18)
             {
                 return downvote18;
             }
-            else if (btn.Contains("down") && split[1] == "18")
+            else if (btn.Contains("down") && idnum == 18)
             {
                 return upvote18;
             }
 
-            if (btn.Contains("up") && split[1] == "19")
+            if (btn.Contains("up") && idnum == 19)
             {
                 return downvote19;
             }
-            else if (btn.Contains("down") && split[1] == "19")
+            else if (btn.Contains("down") && idnum == 19)
             {
                 return upvote19;
             }
-            if (btn.Contains("up") && split[1] == "20")
+            if (btn.Contains("up") && idnum == 20)
             {
                 return downvote20;
             }
-            else if (btn.Contains("down") && split[1] == "20")
+            else if (btn.Contains("down") && idnum == 20)
             {
                 return upvote20;
             }
-            return null;
+            else
+            {
+                return null;
+            }
+          
         }
-
-        //was thingking of passing the bill data to a function to make it all dynamic like
-        //that way the workload is easier.
-        protected void setbilldata()
-        {
-           
-        }
-
 
         //Loads Prior Votes of a User
         protected void LoadVotes(string user, string Bill, ImageButton UpButton, ImageButton DownButton)
@@ -1040,7 +1043,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
@@ -1061,7 +1064,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity + 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
@@ -1081,7 +1084,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
@@ -1100,7 +1103,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity + 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity + 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
@@ -1121,7 +1124,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity - 2 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
