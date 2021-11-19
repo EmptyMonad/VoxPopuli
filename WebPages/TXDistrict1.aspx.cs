@@ -430,6 +430,7 @@ namespace VoxPopuli.WebPages
                 //Replace HTML Elements Based off Information Pulled From The Database
                 RepNameHolder.InnerHtml = repFirstName + " " + repLastName;
                 twitterHandle.InnerHtml = "@" + repTwitter;
+                RepPicture.ImageUrl = "https://www." + repPicURL;
 
 
                 //Replace the Bill Information For Each Bill

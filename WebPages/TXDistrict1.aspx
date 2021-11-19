@@ -16,7 +16,7 @@
 
         <div id="RepInfo" class="Rep-Top">
             <!-- Image of the representative, default image used in case of error -->
-            <asp:Image ID="RepPicture" ImageUrl="~/Images/louieg.jpg" runat="server" />
+            <asp:Image ID="RepPicture" ImageUrl="~/Images/default_picture.png" runat="server" />
             <p id="RepNameHolder" runat="server">John Doe</p>
             <h2 id="twitterHandle" runat="server"></h2>
         </div>
