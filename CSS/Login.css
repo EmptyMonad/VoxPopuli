@@ -1,2 +1,61 @@
 ﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: #6abadeba;
+    font-family: 'Arial';
+}
+
+.login {
+    width: 21em;
+    overflow: hidden;
+    margin: 4em auto;
+    padding: 5em;
+    background: #23463f;
+    border-radius: 2em;
+    position: relative;
+    box-shadow: 0 1em 1em 0 grey;
+}
+
+.username {
+    width: 13em;
+    height: 1em;
+    border-radius: 0.5em;
+    padding-left: 0em;
+}
+
+.pass {
+    width: 13em;
+    height: 1em;
+    border-radius: 1em;
+    padding-left: 0em;
+}
+
+.reglbl {
+    color:white;
+}
+
+.btnreg {
+    width: 5em;
+    height: auto;
+    border-radius: 0.5em;
+    transition-duration: 0.4s;
+    background-color: #d4840c;
+}
+
+.welcome {
+    position: relative;
+    text-align:center;
+}
+
+.btnreg:hover {
+    background-color: #b45c54;
+    color: white;
+}
+
+.loginbtn {
+    width: 5em;
+    height: auto;
+    border-radius: 0.5em;
+    transition-duration: 0.4s;
+    background-color:cadetblue;
 }

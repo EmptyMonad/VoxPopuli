@@ -1,58 +1,77 @@
 ﻿body {
-     background: #C5E1A5;
     
+    background-color: #6abadeba;
+    font-family: 'Arial';
+    background-image: url(../Images/background-reg.jpeg);
+    opacity: 1.5;
 }
 
 
 
 #form1 {
-    
-    width: 30%;
-    margin: 60px auto;
-    background: #efefef;
-    padding: 60px 120px 80px 120px;
-    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-    display: grid;
-    position: relative
-    
-  
 }
 
+
+
 #userSec {
-    display: inherit;
-     position: relative;
-     margin: 2em auto;
+    width: 13em;
+    height: 1em;
+    border-radius: 0.5em;
+    padding-left: 0em;
+    position: relative;
+    left:-0.5em;
 }
 #passSec {
-    display: inherit;
+    width: 13em;
+    height: 1em;
+    border-radius: 1em;
+    padding-left: 0em;
     position: relative;
-    margin: 2em auto;
 }
 #emailSec {
     display: inherit;
     position: relative;
     margin: 2em auto;
+    border-radius: 1em;
+    left:2.1em;
 }
 #conPassSec {
     display: inherit;
     position: relative;
     margin: 2em auto;
-
+    border-radius: 1em;
+    left: -3.9em;
 }
 
 .register {
-    display: grid;
-    text-align: right;
+    width: 21em;
+    overflow: hidden;
+    margin: 4em auto;
+    padding: 5em;
+    background: #23463f;
+    border-radius: 2em;
+    position: relative;
+    box-shadow: 0 1em 1em 0 grey;
 }
 
-#btnRegister {
-    grid-row-start: 7;
-    margin: auto;
+.submitreg {
+    padding: 0.46em 1.63em;
+    border: 0.1em solid #000000;
+    margin: 0 0.2em 0.2em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#000000;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    background-color: peachpuff;
+    text-align:center;
+    transition: all 0.15s;
 }
 
 .txtbox {
-    grid-column-start:2
+    grid-column-start: 2 
 }
 
 .label {
@@ -63,3 +82,25 @@
     text-align: center;
 }
 
+.g-recaptcha {
+    position:relative;
+    margin:auto;
+    color:green;
+    display:inherit;
+    padding:1em;
+}
+
+.submitreg:hover {
+    text-shadow: 0 0 2em rgba(255,255,255,1);
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+@media all and (max-width:30em) {
+     .submitreg 
+    {
+        display: block;
+        margin: 0.4em auto;
+       
+    }
+}

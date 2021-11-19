@@ -123,6 +123,7 @@
     <Content Include="DB\ScriptofVoxPopuliv2.sql" />
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
+    <Content Include="Images\background-reg.jpeg" />
     <Content Include="Images\bill-default.png" />
     <Content Include="Images\downvote-clear.png" />
     <Content Include="Images\downvote-clicked.png" />
