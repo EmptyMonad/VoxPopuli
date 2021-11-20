@@ -8,6 +8,9 @@
     <title></title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+     <div id="PageTitle" class="DTitle">
+        <h1 id="DistrictTitle" runat="server"></h1>
+    </div>
      <div id="RepInfo" class="Rep-Top">
             <!-- Image of the representative, default image used in case of error -->
             <asp:Image ID="RepPicture" ImageUrl="~/Images/default_picture.png" runat="server" />

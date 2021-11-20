@@ -149,6 +149,7 @@
     <Content Include="WebPages\TXDistrict1.aspx" />
     <Content Include="WebPages\TX1.aspx" />
     <Content Include="WebPages\TX2.aspx" />
+    <Content Include="WebPages\TX3.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -206,6 +207,13 @@
     </Compile>
     <Compile Include="WebPages\TX2.aspx.designer.cs">
       <DependentUpon>TX2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX3.aspx.cs">
+      <DependentUpon>TX3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX3.aspx.designer.cs">
+      <DependentUpon>TX3.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

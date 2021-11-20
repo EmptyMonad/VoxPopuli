@@ -428,6 +428,7 @@ namespace VoxPopuli.WebPages
 
 
                 //Replace HTML Elements Based off Information Pulled From The Database
+                DistrictTitle.InnerHtml = "Representative of " + state + " District " + district;
                 RepNameHolder.InnerHtml = repFirstName + " " + repLastName;
                 twitterHandle.InnerHtml = "@" + repTwitter;
                 RepPicture.ImageUrl = "https://www." + repPicURL;
