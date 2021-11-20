@@ -51,12 +51,6 @@
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <div id ="repphoto" runat="server"><img src="\Photos\default_picture.png" id ="picture"/></div>
                 <div id ="textcontainer" ></div>
-                 <div> 
-    <object type="text/html" data="https://justfacts.votesmart.org/candidate/key-votes/50029/louie-gohmert" width="800" height="600" style="overflow:auto;border:5px ridge blue"></object>
-            </div>
-                <!-- <div id ="billcontainer" ><br />Bill1<br />Bill2<br />Bill3<br />Bill4<br />Bill5<br />Bill6<br />Bill7<br />Bill8<br />Bill9<br />Bill10<br /></div>-->
-
-            </div>
 
             <div class="sidebar-pane" id="messages">
                 <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
@@ -66,17 +60,15 @@
                 <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
         </div>
+        </div>
        </div>
         <div id="mapid" class="sidebar-map"></div>
-        <asp:Button ID="hbtn" runat="server" OnClientClick="Javascript:call();"/>
-
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js" ></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
-            <asp:Button ID="btn" runat="server" style="display:none;" autopostback="false" />
 
 
         
