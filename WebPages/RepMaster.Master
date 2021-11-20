@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="RepMaster.master.cs" Inherits="VoxPopuli.WebPages.RepMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="../CSS/RepPage.css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id ="BannerSection" class= "Banner">
+            <asp:ImageButton ID="BannerButton" runat="server" ImageUrl="~/Images/logo1.PNG" PostBackUrl="~/WebPages/MainPage.aspx" />
+                    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
+        </div>
+
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

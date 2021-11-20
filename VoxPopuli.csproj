@@ -146,8 +146,9 @@
     <Content Include="WebPages\MainPage.aspx" />
     <Content Include="WebPages\mouseroverfunctions.cpp" />
     <Content Include="WebPages\Register.aspx" />
-    <Content Include="WebPages\RepPage.aspx" />
     <Content Include="WebPages\TXDistrict1.aspx" />
+    <Content Include="WebPages\TX1.aspx" />
+    <Content Include="WebPages\TX2.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -178,12 +179,12 @@
     <Compile Include="WebPages\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebPages\RepPage.aspx.cs">
-      <DependentUpon>RepPage.aspx</DependentUpon>
+    <Compile Include="WebPages\RepMaster.Master.cs">
+      <DependentUpon>RepMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebPages\RepPage.aspx.designer.cs">
-      <DependentUpon>RepPage.aspx</DependentUpon>
+    <Compile Include="WebPages\RepMaster.Master.designer.cs">
+      <DependentUpon>RepMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="WebPages\TXDistrict1.aspx.cs">
       <DependentUpon>TXDistrict1.aspx</DependentUpon>
@@ -191,6 +192,20 @@
     </Compile>
     <Compile Include="WebPages\TXDistrict1.aspx.designer.cs">
       <DependentUpon>TXDistrict1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX1.aspx.cs">
+      <DependentUpon>TX1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX1.aspx.designer.cs">
+      <DependentUpon>TX1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX2.aspx.cs">
+      <DependentUpon>TX2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX2.aspx.designer.cs">
+      <DependentUpon>TX2.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +219,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="WebPages\RepMaster.Master" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

@@ -5255,18 +5255,16 @@ var district36 = L.polygon([
 //Mouseover and Mouseout Events For Each District. Note that Districts 14, 27, and 34 are grouped into A,B, and C shapes. Events are grouped for those shapes.
 
 
-
 district1.on('click', function () {
+    window.location = "TX1.aspx";
+});
+district1.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_1_gohmert_louie_200.jpg');
     $('#textcontainer').html('Representative Louie Gohmert<br/>Texas<br>District 1<br/> Republican<br/>@RepLouieGohmert<br/>');
 });
-district1.on('click', function () {
-
-    window.location.replace("../WebPages/TXDistrict1.aspx");
-});
 district2.on('click', function () {
  
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001120_200.jpg');
+    window.location = "TX2.aspx";
 });
 district2.on('mouseover', function () {
  

@@ -1,7 +1,12 @@
 ﻿body {
     background-color: #6ABADB;
 }
-
+.Banner {
+    text-align: center;
+}
+.DTitle {
+    text-align: center;
+}
 img#RepPicture {
     position: relative;
     height: auto;
