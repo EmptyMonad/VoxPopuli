@@ -150,6 +150,18 @@
     <Content Include="WebPages\TX1.aspx" />
     <Content Include="WebPages\TX2.aspx" />
     <Content Include="WebPages\TX3.aspx" />
+    <Content Include="WebPages\TX4.aspx" />
+    <Content Include="WebPages\TX5.aspx" />
+    <Content Include="WebPages\TX6.aspx" />
+    <Content Include="WebPages\TX7.aspx" />
+    <Content Include="WebPages\TX8.aspx" />
+    <Content Include="WebPages\TX9.aspx" />
+    <Content Include="WebPages\TX10.aspx" />
+    <Content Include="WebPages\TX11.aspx" />
+    <Content Include="WebPages\TX12.aspx" />
+    <Content Include="WebPages\TX13.aspx" />
+    <Content Include="WebPages\TX14.aspx" />
+    <Content Include="WebPages\TX15.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -214,6 +226,90 @@
     </Compile>
     <Compile Include="WebPages\TX3.aspx.designer.cs">
       <DependentUpon>TX3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX4.aspx.cs">
+      <DependentUpon>TX4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX4.aspx.designer.cs">
+      <DependentUpon>TX4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX5.aspx.cs">
+      <DependentUpon>TX5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX5.aspx.designer.cs">
+      <DependentUpon>TX5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX6.aspx.cs">
+      <DependentUpon>TX6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX6.aspx.designer.cs">
+      <DependentUpon>TX6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX7.aspx.cs">
+      <DependentUpon>TX7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX7.aspx.designer.cs">
+      <DependentUpon>TX7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX8.aspx.cs">
+      <DependentUpon>TX8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX8.aspx.designer.cs">
+      <DependentUpon>TX8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX9.aspx.cs">
+      <DependentUpon>TX9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX9.aspx.designer.cs">
+      <DependentUpon>TX9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX10.aspx.cs">
+      <DependentUpon>TX10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX10.aspx.designer.cs">
+      <DependentUpon>TX10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX11.aspx.cs">
+      <DependentUpon>TX11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX11.aspx.designer.cs">
+      <DependentUpon>TX11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX12.aspx.cs">
+      <DependentUpon>TX12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX12.aspx.designer.cs">
+      <DependentUpon>TX12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX13.aspx.cs">
+      <DependentUpon>TX13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX13.aspx.designer.cs">
+      <DependentUpon>TX13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX14.aspx.cs">
+      <DependentUpon>TX14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX14.aspx.designer.cs">
+      <DependentUpon>TX14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX15.aspx.cs">
+      <DependentUpon>TX15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX15.aspx.designer.cs">
+      <DependentUpon>TX15.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

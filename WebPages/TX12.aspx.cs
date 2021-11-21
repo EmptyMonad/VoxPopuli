@@ -10,13 +10,13 @@ using System.Web.UI.WebControls;
 
 namespace VoxPopuli.WebPages
 {
-    public partial class TX3 : System.Web.UI.Page
+    public partial class TX12 : System.Web.UI.Page
     {
         //These global variables are set uniquely to the webpage.
         //They are used in the SQL statements
         private string congress = "117";
         private string state = "TX";
-        private string district = "3";
+        private string district = "12";
         protected void Page_Load(object sender, EventArgs e)
         {
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebPages/RepMaster.Master" AutoEventWireup="true" CodeBehind="TX3.aspx.cs" Inherits="VoxPopuli.WebPages.TX3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebPages/RepMaster.Master" AutoEventWireup="true" CodeBehind="TX13.aspx.cs" Inherits="VoxPopuli.WebPages.TX13" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
        <!-- CSS for the RepPage -->
     <link rel="stylesheet" href="../CSS/RepPage.css" />
@@ -100,3 +100,4 @@
         </div>
     <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
 </asp:Content>
+

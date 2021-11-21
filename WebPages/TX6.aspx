@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebPages/RepMaster.Master" AutoEventWireup="true" CodeBehind="TX3.aspx.cs" Inherits="VoxPopuli.WebPages.TX3" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebPages/RepMaster.Master" AutoEventWireup="true" CodeBehind="TX6.aspx.cs" Inherits="VoxPopuli.WebPages.TX6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
        <!-- CSS for the RepPage -->
     <link rel="stylesheet" href="../CSS/RepPage.css" />
