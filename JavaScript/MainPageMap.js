@@ -5273,14 +5273,17 @@ district2.on('mouseover', function () {
 });
 district3.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/t000479_200.jpg');
+    window.location = "TX3.aspx";
 });
 district3.on('mouseover', function () {
 
     $('#picture').attr('src', 'https://www.congress.gov/img/member/t000479_200.jpg');
     $('#textcontainer').html('Representative Van Taylor<br/>Texas<br>District 3<br/> Republican<br/>@RepVanTaylor<br/>');
 });
+district4.on('click', function () {
 
+    window.location = "TX4.aspx";
+});
 district4.on('mouseover', function () {
  
     $('#picture').attr('src', 'https://www.congress.gov/img/member/f000246_200.jpg');
@@ -5288,8 +5291,8 @@ district4.on('mouseover', function () {
 });
 
 district5.on('click', function () {
-
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000589_200.jpg');
+    window.location = "TX5.aspx";
+    
 });
 district5.on('mouseover', function () {
 
@@ -5299,7 +5302,7 @@ district5.on('mouseover', function () {
 
 district6.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000827_200.jpg');
+    window.location = "TX6.aspx";
 });
 district6.on('mouseover', function () {
  
@@ -5309,7 +5312,7 @@ district6.on('mouseover', function () {
 
 district7.on('click', function () {
   
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/f000468_200.jpg');
+    window.location = "TX7.aspx";
 });
 district7.on('mouseover', function () {
   
@@ -5319,7 +5322,7 @@ district7.on('mouseover', function () {
 
 district8.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/b000755_200.jpg');
+    window.location = "TX8.aspx";
 });
 district8.on('mouseover', function () {
   
@@ -5329,7 +5332,7 @@ district8.on('mouseover', function () {
 
 district9.on('click', function () {
  
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_9_green_al_200.jpg');
+    window.location = "TX9.aspx";
 });
 district9.on('mouseover', function () {
  
@@ -5339,7 +5342,7 @@ district9.on('mouseover', function () {
 
 district10.on('click', function () {
   
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_10_mccaul_michael_200.jpg');
+    window.location = "TX10.aspx";
 });
 district10.on('mouseover', function () {
  
@@ -5349,7 +5352,7 @@ district10.on('mouseover', function () {
 
 district11.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/p000048_200.jpg');
+    window.location = "TX11.aspx";
 });
 district11.on('mouseover', function () {
   
@@ -5359,7 +5362,7 @@ district11.on('mouseover', function () {
 
 district12.on('click', function () {
   
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000377_200.jpg');
+    window.location = "TX12.aspx";
 });
 district12.on('mouseover', function () {
  
@@ -5369,7 +5372,7 @@ district12.on('mouseover', function () {
 
 district13.on('click', function () {
  
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000304_200.jpg');
+    window.location = "TX13.aspx";
 });
 district13.on('mouseover', function () {
   
@@ -5379,15 +5382,15 @@ district13.on('mouseover', function () {
 
 district14A.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    window.location = "TX14.aspx";
 });
 district14B.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    window.location = "TX14.aspx";
 });
 district14C.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000814_200.jpg');
+    window.location = "TX14.aspx";
 });
 district14A.on('mouseover', function () {
 
@@ -5411,7 +5414,7 @@ district14C.on('mouseover', function () {
 
 district15.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_15_gonzalez_vicente_200.jpg');
+    window.location = "TX15.aspx";
 });
 district15.on('mouseover', function () {
   
@@ -5421,7 +5424,7 @@ district15.on('mouseover', function () {
 
 district16.on('click', function () {
   
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/e000299_200.jpg');
+    window.location = "TX16.aspx";
 });
 district16.on('mouseover', function () {
  
@@ -5431,7 +5434,7 @@ district16.on('mouseover', function () {
 
 district17.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_32_sessions_pete_200.jpg');
+    window.location = "TX17.aspx";
 });
 district17.on('mouseover', function () {
  
@@ -5440,8 +5443,7 @@ district17.on('mouseover', function () {
 });
 
 district18.on('click', function () {
-
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/j000032_200.jpg');
+    window.location = "TX18.aspx";
 });
 district18.on('mouseover', function () {
 
@@ -5450,7 +5452,7 @@ district18.on('mouseover', function () {
 });
 district19.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_19_arrington_jodey_200.jpg');
+    window.location = "TX19.aspx";
 });
 district19.on('mouseover', function () {
 
@@ -5459,7 +5461,7 @@ district19.on('mouseover', function () {
 });
 
 district20.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001091_200.jpg');
+    window.location = "TX20.aspx";
 });
 district20.on('mouseover', function () {
 
@@ -5468,7 +5470,7 @@ district20.on('mouseover', function () {
 });
 district21.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/r000614_200.jpg');
+    window.location = "TX21.aspx";
 });
 district21.on('mouseover', function () {
 
@@ -5477,7 +5479,7 @@ district21.on('mouseover', function () {
 });
 district22.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/n000026_200.jpg');
+    window.location = "TX22.aspx";
 });
 district22.on('mouseover', function () {
  
@@ -5486,7 +5488,7 @@ district22.on('mouseover', function () {
 });
 district23.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000594_200.jpg');
+    window.location = "TX23.aspx";
 });
 district23.on('mouseover', function () {
 
@@ -5495,7 +5497,7 @@ district23.on('mouseover', function () {
 });
 district24.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.');
+    window.location = "TX24.aspx";
 });
 district24.on('mouseover', function () {
  
@@ -5504,7 +5506,7 @@ district24.on('mouseover', function () {
 });
 district25.on('click', function () {
  
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/w000816_200.jpg');
+    window.location = "TX25.aspx";
 });
 district25.on('mouseover', function () {
 
@@ -5513,7 +5515,7 @@ district25.on('mouseover', function () {
 });
 district26.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001248_200.jpg');
+    window.location = "TX26.aspx";
 });
 district26.on('mouseover', function () {
 
@@ -5521,16 +5523,15 @@ district26.on('mouseover', function () {
     $('#textcontainer').html('Representative Michael Burgess<br/>Texas<br>District 26<br/> Republican<br/>@MichaelCBurgess<br/>');
 });
 district27A.on('click', function () {
-
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    window.location = "TX27.aspx";
 });
 district27B.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    window.location = "TX27.aspx";
 });
 district27C.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/115_rp_tx_27_cloud_michael_200.jpg');
+    window.location = "TX27.aspx";
 });
 district27A.on('mouseover', function () {
 
@@ -5551,7 +5552,7 @@ district27C.on('mouseover', function () {
 });
 district28.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_28_cuellar_henry_200.jpg');
+    window.location = "TX28.aspx";
 });
 district28.on('mouseover', function () {
 
@@ -5560,7 +5561,7 @@ district28.on('mouseover', function () {
 });
 district29.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/g000587_200.jpg');
+    window.location = "TX29.aspx";
 });
 district29.on('mouseover', function () {
 
@@ -5569,7 +5570,7 @@ district29.on('mouseover', function () {
 });
 district30.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/116_rp_tx_30_johnson_eddie_200.jpg');
+    window.location = "TX30.aspx";
 });
 district30.on('mouseover', function () {
 
@@ -5578,7 +5579,7 @@ district30.on('mouseover', function () {
 });
 district31.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/c001051_200.jpg');
+    window.location = "TX31.aspx";
 });
 district31.on('mouseover', function () {
  
@@ -5587,27 +5588,27 @@ district31.on('mouseover', function () {
 });
 district32.on('click', function () {
 
-    $('#picture').attr('src', 'https://www.https://www.congress.gov/img/member/a000376_200.jpg');
+    window.location = "TX32.aspx";
 });
 district32.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/a000376_200.jpg');
     $('#textcontainer').html('Representative Colin Allred<br/>Texas<br>District 32<br/> Democratic<br/>@RepColinAllred<br/>');
 });
 district33.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000131_200.jpg');
+    window.location = "TX33.aspx";
 });
 district33.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/v000131_200.jpg');
     $('#textcontainer').html('Representative Marc Veasey<br/>Texas<br>District 33<br/> Democratic<br/>@RepVeasey<br/>');
 });
 district34A.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    window.location = "TX34.aspx";
 });
 district34B.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    window.location = "TX34.aspx";
 });
 district34C.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
+    window.location = "TX34.aspx";
 });
 district34A.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/v000132_200.jpg');
@@ -5623,7 +5624,7 @@ district34C.on('mouseover', function () {
     $('#textcontainer').html('Representative Filemon Vela<br/>Texas<br>District 34<br/> Democratic<br/>@RepFilemonVela<br/>');
 });
 district35.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/d000399_200.jpg');
+    window.location = "TX35.aspx";
 });
 district35.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/d000399_200.jpg');
@@ -5631,7 +5632,7 @@ district35.on('mouseover', function () {
 });
 
 district36.on('click', function () {
-    $('#picture').attr('src', 'https://www.congress.gov/img/member/b001291_200.jpg');
+    window.location = "TX36.aspx"
 });
 district36.on('mouseover', function () {
     $('#picture').attr('src', 'https://www.congress.gov/img/member/b001291_200.jpg');

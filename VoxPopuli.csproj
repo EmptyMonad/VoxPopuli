@@ -180,6 +180,9 @@
     <Content Include="WebPages\TX31.aspx" />
     <Content Include="WebPages\TX32.aspx" />
     <Content Include="WebPages\TX33.aspx" />
+    <Content Include="WebPages\TX34.aspx" />
+    <Content Include="WebPages\TX35.aspx" />
+    <Content Include="WebPages\TX36.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -454,6 +457,27 @@
     </Compile>
     <Compile Include="WebPages\TX33.aspx.designer.cs">
       <DependentUpon>TX33.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX34.aspx.cs">
+      <DependentUpon>TX34.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX34.aspx.designer.cs">
+      <DependentUpon>TX34.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX35.aspx.cs">
+      <DependentUpon>TX35.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX35.aspx.designer.cs">
+      <DependentUpon>TX35.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\TX36.aspx.cs">
+      <DependentUpon>TX36.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\TX36.aspx.designer.cs">
+      <DependentUpon>TX36.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
