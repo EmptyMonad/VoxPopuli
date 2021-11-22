@@ -1017,7 +1017,7 @@ namespace VoxPopuli.WebPages
                     SqlCommand caseUserCMD = new SqlCommand(caseUserString, db);
                     caseUserCMD.Parameters.AddWithValue("@User", user);
 
-                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
+                    SqlCommand caseRepCMD = new SqlCommand("UPDATE congress2 SET RepAffinity = RepAffinity - 1 WHERE results_congress= @congress AND results_members_state=@state AND results_members_district = @district", db);
                     caseRepCMD.Parameters.AddWithValue("@congress", congress);
                     caseRepCMD.Parameters.AddWithValue("@state", state);
                     caseRepCMD.Parameters.AddWithValue("@district", district);
