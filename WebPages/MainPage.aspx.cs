@@ -18,6 +18,7 @@ namespace MapProject.WebPages
         [WebMethod]
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             //get congressmen popularity 1-
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
 
@@ -160,6 +161,6 @@ namespace MapProject.WebPages
 
       
             
- 
-    }
+    
+    } 
 }

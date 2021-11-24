@@ -8,7 +8,7 @@
 
     <!-- This is the space used for api access and the hosted version
         of leaflet -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font for the Sidebar -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!-- Font for the Sidebar -->
 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -36,11 +36,13 @@
         <div class="sidebar-tabs">
             <ul role="tablist">
                 <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
+                <li><a href="Login.aspx" role="tab" target="_blank"><i class="fa fa-sign-in"></i></a></li>
+                <li><a href="Register.aspx" role="tab" target="_blank"><i class="fa fa-user-plus"></i></a></li>
             </ul>
 
-            <ul role="tablist">
-                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-            </ul>
+          
+
+            
         </div>
 
         <!-- Tab panes -->
@@ -51,24 +53,17 @@
                 <h1 class="sidebar-header" id="RepTitle" runat="server" >Representative Information<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
                 <div id ="repphoto" runat="server"><img src="\Photos\default_picture.png" id ="picture"/></div>
                 <div id ="textcontainer" ></div>
-
-            <div class="sidebar-pane" id="messages">
-                <h1 class="sidebar-header">Messages<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
             </div>
 
-            <div class="sidebar-pane" id="settings">
-                <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
-            </div>
-        </div>
-        </div>
-       </div>
+         </div>
+      </div>
         <div id="mapid" class="sidebar-map"></div>
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js" ></script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-            <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource> 
 
 
         
