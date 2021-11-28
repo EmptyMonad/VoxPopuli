@@ -98,5 +98,5 @@
         </ContentTemplate>
         </asp:UpdatePanel>
         </div>
-    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli2ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
 </asp:Content>

@@ -24,7 +24,7 @@
             <asp:Label ID="lblRegister" runat="server" Text="Don't have an account?" CssClass="reglbl"></asp:Label>
             <asp:Button ID="btnRegister" CssClass="btnreg" runat="server" Text="Register" OnClick="btnRegister_Click" PostBackUrl="~/WebPages/Register.aspx" />
             <br />
-            <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [VP_Users]"></asp:SqlDataSource>
+            <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli2ConnectionString %>" SelectCommand="SELECT * FROM [VP_Users]"></asp:SqlDataSource>
         </div>
     </form>
 </body>

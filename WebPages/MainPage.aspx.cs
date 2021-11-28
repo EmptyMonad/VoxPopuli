@@ -18,7 +18,14 @@ namespace MapProject.WebPages
         [WebMethod]
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
+            //If a user is already logged in, button for login will redirect to logout page rather than the login page
+            HttpCookie cookie = Request.Cookies["Userinfo"];
+            if (cookie != null)
+            {
+                Login.HRef = "Logout.aspx";
+            }
+
             //get congressmen popularity 1-
             SqlConnection db = new SqlConnection(VoxPopuliDB.ConnectionString);
 

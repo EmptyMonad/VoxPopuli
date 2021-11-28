@@ -124,6 +124,7 @@
     <Content Include="Districts\TexasD1.txt" />
     <Content Include="Global.asax" />
     <Content Include="Images\background-reg.jpeg" />
+    <Content Include="Images\backgroundimage.png" />
     <Content Include="Images\bill-default.png" />
     <Content Include="Images\downvote-clear.png" />
     <Content Include="Images\downvote-clicked.png" />
@@ -143,10 +144,10 @@
     <Content Include="Images\green_upvote.png" />
     <Content Include="Web.config" />
     <Content Include="WebPages\Login.aspx" />
+    <Content Include="WebPages\Logout.aspx" />
     <Content Include="WebPages\MainPage.aspx" />
     <Content Include="WebPages\mouseroverfunctions.cpp" />
     <Content Include="WebPages\Register.aspx" />
-    <Content Include="WebPages\TXDistrict1.aspx" />
     <Content Include="WebPages\TX1.aspx" />
     <Content Include="WebPages\TX2.aspx" />
     <Content Include="WebPages\TX3.aspx" />
@@ -199,6 +200,13 @@
     <Compile Include="WebPages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebPages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebPages\MainPage.aspx.cs">
       <DependentUpon>MainPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,13 +227,6 @@
     </Compile>
     <Compile Include="WebPages\RepMaster.Master.designer.cs">
       <DependentUpon>RepMaster.Master</DependentUpon>
-    </Compile>
-    <Compile Include="WebPages\TXDistrict1.aspx.cs">
-      <DependentUpon>TXDistrict1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebPages\TXDistrict1.aspx.designer.cs">
-      <DependentUpon>TXDistrict1.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebPages\TX1.aspx.cs">
       <DependentUpon>TX1.aspx</DependentUpon>

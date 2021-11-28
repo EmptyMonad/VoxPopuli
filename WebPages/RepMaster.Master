@@ -13,7 +13,7 @@
     <form id="form1" runat="server">
         <div id ="BannerSection" class= "Banner">
             <asp:ImageButton ID="BannerButton" runat="server" ImageUrl="~/Images/logo1.PNG" PostBackUrl="~/WebPages/MainPage.aspx" />
-                    <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli_ConnectionString %>" SelectCommand="SELECT * FROM [Bill3]"></asp:SqlDataSource>
+                   
         </div>
 
 
