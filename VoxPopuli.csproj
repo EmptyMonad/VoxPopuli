@@ -110,10 +110,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="App_Data\ScriptofVoxPopuli.sql" />
     <Content Include="CSS\Login.css" />
     <Content Include="CSS\MainPage.css" />
@@ -486,6 +482,7 @@
     <Content Include="Districts\District1.csv" />
     <Content Include="JavaScript\districts.geojson" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\VoxPopuli - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
