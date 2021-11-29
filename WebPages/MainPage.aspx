@@ -38,6 +38,7 @@
                 <li><a href="#profile" role="tab"><i class="fa fa-user"></i></a></li>
                 <li><a id="Login" runat="server" href="Login.aspx" role="tab" target="_blank"><i class="fa fa-sign-in"></i></a></li>
                 <li><a id="Register" runat="server" href="Register.aspx" role="tab" target="_blank"><i class="fa fa-user-plus"></i></a></li>
+                <li><a href="About.aspx" role="tab" target="_blank"><i class="fa fa-question"></i></a></li>
             </ul>
 
           
@@ -61,14 +62,8 @@
         <!-- Link to the Javascript for the main page -->
         <script src="../JavaScript/leaflet-sidebar.js"></script>
         <script src="../JavaScript/MainPageMap.js" ></script>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
             <asp:SqlDataSource ID="VoxPopuliDB" runat="server" ConnectionString="<%$ ConnectionStrings:VoxPopuli2ConnectionString %>" SelectCommand="SELECT * FROM [congress2]"></asp:SqlDataSource> 
-
-
-        
-           
-
         </form>
         
     </body>

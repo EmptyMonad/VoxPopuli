@@ -112,6 +112,7 @@
   <ItemGroup>
     <Content Include="App_Data\ScriptofVoxPopuli.sql" />
     <Content Include="CSS\Login.css" />
+    <Content Include="CSS\About.css" />
     <Content Include="CSS\MainPage.css" />
     <Content Include="CSS\RepPage.css" />
     <Content Include="CSS\sidebar.css" />
@@ -127,6 +128,12 @@
     <Content Include="Images\logo1.PNG" />
     <Content Include="Images\upvote-png-clear.png" />
     <Content Include="Images\upvote-png-green.png" />
+    <Content Include="JavaScript\AboutJs\breakpoints.min.js" />
+    <Content Include="JavaScript\AboutJs\browser.min.js" />
+    <Content Include="JavaScript\AboutJs\jquery.min.js" />
+    <Content Include="JavaScript\AboutJs\jquery.scrolly.min.js" />
+    <Content Include="JavaScript\AboutJs\main.js" />
+    <Content Include="JavaScript\AboutJs\util.js" />
     <Content Include="JavaScript\RepPage.js" />
     <Content Include="Recaptcha.dll" />
     <Content Include="WebPages\getBill.php" />
@@ -180,6 +187,7 @@
     <Content Include="WebPages\TX34.aspx" />
     <Content Include="WebPages\TX35.aspx" />
     <Content Include="WebPages\TX36.aspx" />
+    <Content Include="WebPages\About.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -475,6 +483,13 @@
     </Compile>
     <Compile Include="WebPages\TX36.aspx.designer.cs">
       <DependentUpon>TX36.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebPages\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebPages\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
